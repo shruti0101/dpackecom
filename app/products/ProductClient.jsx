@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { products } from "@/Data";
+import { categories } from "@/Data";
 
 export default function Page() {
 
@@ -26,11 +26,11 @@ export default function Page() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-          {products.map((product) => (
+          {categories.map((product) => (
 
             <Link
               key={product.id}
-              href={`/products/${product.slug}`} // ✅ slug routing
+              href={`/products/${product.id}`} // ✅ slug routing
               className="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group"
             >
 
