@@ -1,0 +1,315 @@
+"use client";
+
+import Image from "next/image";
+import { Star, Heart, ShoppingCart, Eye } from "lucide-react";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+export default function FlashSale() {
+
+    const [selected, setSelected] = useState(null);
+    const [activeImg, setActiveImg] = useState(null);
+
+  const products = [
+    {
+      img: "/feature/1.png",
+      hoverImg: "/feature/1_1.png",
+      title: "Air Bag (120mm x 180mm) 85 Pcs",
+      price: "Rs. 450.00",
+      old: "Rs. 540.00",
+  
+      reviews: 22,
+    },
+    {
+        img: "/feature/2.png",
+      hoverImg: "/feature/2_2.png",
+      title: "Air Bag (180mm x 230mm)_ 85 Pcs",
+      price: "Rs.575.00",
+      old: "Rs. 669.00",
+    
+      reviews: 58,
+      tag: "New",
+    },
+    {
+       img: "/feature/3.png",
+      hoverImg: "/feature/3_3.png",
+      title: "Air Bag (210mm x 330mm)_42 Pcs",
+      price: "Rs. 349.00",
+      old: "Rs. 439.00",
+    
+      reviews: 44,
+    },
+    {
+      img: "/feature/4.png",
+      hoverImg: "/feature/4_4.png",
+      title: "Air Bag (210mm x 375mm)_38 pcs",
+      price: "Rs. 341.00",
+      old: "Rs. 459.00",
+   
+      reviews: 98,
+    },
+    {
+      img: "/feature/5.png",
+      hoverImg: "/feature/5_5.png",
+      title: "Air Bag (210mm x300mm)_52 Pcs",
+      price: "Rs. 340.00",
+      old: "Rs. 418.00",
+   
+      reviews: 20,
+      tag: "New",
+    },
+
+     {
+      img: "/feature/4.png",
+      hoverImg: "/feature/4_4.png",
+      title: "Air Bag (210mm x 375mm)_38 pcs",
+      price: "Rs. 341.00",
+      old: "Rs. 459.00",
+    
+      reviews: 98,
+    },
+
+    {
+      img: "/feature/3.png",
+      hoverImg: "/feature/3_3.png",
+      title: "Air Bag (510mm x 455mm)_68 pcs",
+      price: "Rs. 741.00",
+      old: "Rs. 859.00",
+   
+      reviews: 98,
+    },
+
+     {
+      img: "/feature/1.png",
+      hoverImg: "/feature/1_1.png",
+      title:"Air Bag (180mm x 230mm)_ 85 Pcs",
+      price: "Rs. 541.00",
+      old: "Rs. 659.00",
+  
+      reviews: 98,
+    },
+
+     {
+      img: "/feature/2.png",
+      hoverImg: "/feature/2_2.png",
+      title: "Air Bag (100mm x 130mm)_ 35 Pcs",
+      price: "Rs. 241.00",
+      old: "Rs. 359.00",
+   
+      reviews: 98,
+    },
+  ];
+
+  return (
+    <div className="bg-white py-13 mt-9  px-6">
+
+      {/* HEADER */}
+      <div className="flex items-center justify-between max-w-[1250px] mx-auto mb-6">
+
+        <h2 className="text-3xl font-semibold relative">
+          <span className="relative z-10">Featured Products</span>
+          <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-8 -top-5 w-54 h-14 border-2  rounded-full z-20"></Image>
+        </h2>
+
+
+        <div className="text-sm text-gray-600 cursor-pointer">
+          View All →
+        </div>
+      </div>
+
+      {/* SWIPER */}
+      <div className="w-full px-12 mx-auto">
+
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          navigation
+          autoplay={{ delay: 3000 }}
+          spaceBetween={24}
+          slidesPerView={5}
+          breakpoints={{
+            320: { slidesPerView: 1.2 },
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+            1280: { slidesPerView: 5 },
+          }}
+        >
+          {products.map((item, i) => (
+   <SwiperSlide key={i}>
+  <div className="group bg-white h-100 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
+
+    {/* IMAGE BOX */}
+   <div className="relative bg-[#F6F6F6] rounded-xl h-[250px] flex items-center justify-center overflow-hidden">
+
+
+
+  {/* NEW TAG */}
+  {item.tag && (
+    <span className="absolute top-10 left-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full z-10 shadow">
+      {item.tag}
+    </span>
+  )}
+
+
+
+  {/* 🔥 IMAGE SWITCH */}
+  <div className="relative w-full h-full">
+
+    {/* MAIN IMAGE */}
+    <Image
+      src={item.img}
+      alt=""
+      width={500}
+      height={500}
+      className="object-cover transition-all duration-500 group-hover:opacity-0 group-hover:scale-110"
+    />
+
+    {/* HOVER IMAGE */}
+    <Image
+      src={item.hoverImg}
+      alt=""
+      width={900}
+      height={500}
+      className="object-contain absolute top-0 left-0 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-125"
+    />
+
+  </div>
+
+  {/* HOVER OVERLAY */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center pb-6">
+    
+    <div className="flex gap-3 translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+
+
+      <button
+    onClick={() => {
+  setSelected(item);
+  setActiveImg(item.img);
+}}
+        className="w-10 h-10 bg-white cursor-pointer flex items-center justify-center rounded-full shadow-md hover:bg-black hover:text-white transition"
+      >
+        <Eye size={18} />
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+    {/* CONTENT */}
+    <div className="mt-4">
+
+      <h3 className="text-[15px] font-semibold text-gray-800 leading-tight group-hover:text-orange-500 transition">
+        {item.title}
+      </h3>
+
+      {/* PRICE */}
+      <div className="mt-2 flex items-center gap-2">
+        <span className="text-orange-500 font-semibold">
+          {item.price}
+        </span>
+        <span className="text-gray-400 line-through text-sm">
+          {item.old}
+        </span>
+      </div>
+
+      {/* RATING */}
+      <div className="flex items-center gap-1 mt-2 text-orange-500">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} size={14} fill="orange" />
+        ))}
+        <span className="text-gray-500 text-sm ml-1">
+          ({item.reviews} Reviews)
+        </span>
+      </div>
+
+   
+    </div>
+  </div>
+</SwiperSlide>
+          ))}
+        </Swiper>
+
+
+        {selected && (
+  <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
+
+    <div className="bg-white rounded-2xl w-[800px] max-w-[90%] p-6 relative">
+
+      {/* CLOSE */}
+      <button
+        onClick={() => setSelected(null)}
+        className="absolute top-3 right-3 text-gray-500 hover:text-black"
+      >
+        ✕
+      </button>
+
+      <div className="grid grid-cols-2 gap-6">
+
+        {/* IMAGE */}
+ <div>
+  {/* MAIN IMAGE */}
+  <div className="bg-[#F3F3F3] rounded-xl flex items-center justify-center p-3 h-[320px]">
+    <Image
+      src={activeImg || selected.img}
+      alt=""
+      width={350}
+      height={300}
+      className="object-contain"
+    />
+  </div>
+
+  {/* 🔥 THUMBNAILS */}
+  <div className="flex gap-3 mt-4">
+
+    {[selected.img, selected.hoverImg].map((img, i) => (
+      <div
+        key={i}
+        onClick={() => setActiveImg(img)}
+        className={`w-20 h-20 rounded-lg overflow-hidden cursor-pointer border transition 
+          ${activeImg === img ? "border-orange-500" : "border-gray-200"}
+        `}
+      >
+        <Image
+          src={img}
+          alt=""
+          width={80}
+          height={80}
+          className="object-cover w-full h-full"
+        />
+      </div>
+    ))}
+
+  </div>
+</div>
+
+        {/* DETAILS */}
+        <div>
+          <h2 className="text-2xl font-semibold mb-3">
+            {selected.title}
+          </h2>
+
+      
+
+          <p className="text-gray-600 text-sm mb-4">
+            Premium quality product with modern design and comfort.
+          </p>
+
+          <button className="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-black transition">
+            Add to Cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+)}
+      </div>
+    </div>
+  );
+}
