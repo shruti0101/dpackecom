@@ -79,7 +79,7 @@ export default function HeroPixelPerfect() {
           </div>
         </div>
 
-        {/* ===== HERO CENTER ===== */}
+        {/*  HERO CENTER  */}
         <div className="col-span-1 lg:col-span-7 rounded-md  relative overflow-hidden flex  w-full ">
 
           <Image

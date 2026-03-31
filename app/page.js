@@ -6,14 +6,14 @@ import  Slidecat  from "@/components/Landingpage/Slidecat";
 import Cta from "@/components/Landingpage/Cta";
 
 
-import Faq from "@/components/Landingpage/Blogdesign";
+import Blogdesign from "@/components/Landingpage/Blogdesign";
 import TestimonialSlider from "@/components/Landingpage/Testimonials";
-
+import Dedicate from "@/components/Landingpage/Dedicate";
 // import Popup from "@/components/Popup";
 // import CityPage from "../components/City";
 
 import Otherproduct from "@/components/Landingpage/Otherpro";
-
+import Faq from "@/components/Landingpage/Faq";
 import Loactions from "@/components/Locations";
 
 
@@ -31,7 +31,7 @@ export default function Home() {
     
       <Cta></Cta>
   
-      
+      <Dedicate></Dedicate>
   
   
  
@@ -46,6 +46,7 @@ export default function Home() {
    
 
         <TestimonialSlider></TestimonialSlider>
+       <Blogdesign></Blogdesign>
        <Faq></Faq>
     </>
   );
