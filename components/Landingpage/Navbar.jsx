@@ -127,17 +127,17 @@ export default function Navbar() {
             </div>
 
             {/* NAV ITEMS */}
-            <Link href="/" className="text-orange-500 font-medium">Home</Link>
-            <span>Shop</span>
-            <span>Flash Deals</span>
-            <span>About Us</span>
-            <span>News & Articles</span>
-            <span>Contact Us</span>
+            <Link href="/" className="text-black hover:text-orange-500 font-medium">Home</Link>
+         <Link href="/" className="text-black hover:text-orange-500 font-medium">Shop</Link>
+            <Link href="/" className="text-black hover:text-orange-500 font-medium">Flash Deals</Link>
+            <Link href="/about" className="text-black hover:text-orange-500 font-medium">About Us</Link>
+            <Link href="/news" className="text-black hover:text-orange-500 font-medium">News & Articles</Link>
+            <Link href="/contact" className="text-black hover:text-orange-500 font-medium">Contact Us</Link>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className={`w-full lg:w-auto mt-3 lg:mt-0 ${open ? "block" : "hidden"} lg:block`}>
-            <button className="w-full lg:w-auto capitalize cursor-pointer bg-black text-white text-sm md:text-lg px-4 py-2">
+          <div className="w-50  mt-3 lg:mt-0"> 
+            <button className="w-full  capitalize cursor-pointer bg-black text-white text-sm md:text-md px-4 py-4">
               download brochure
             </button>
           </div>
