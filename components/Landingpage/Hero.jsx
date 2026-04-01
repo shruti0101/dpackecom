@@ -67,16 +67,18 @@ export default function HeroPixelPerfect() {
   <Link
     href={`/categories/${item.id}`}
     key={i}
-    className="px-4 py-4 border-b border-gray-200 text-md flex justify-between items-center text-gray-600"
+    className="px-4 py-6 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600"
   >
     {item.name}  <span>›</span>
   </Link>
 ))}
          
+<div className="mt-7">
 
-          <div className="px-4 py-4 text-sm font-medium">
-            View All Categories →
-          </div>
+          <Link href="/products" className="px-4 py-4  text-md font-medium">
+            View All Products →
+          </Link>
+</div>
         </div>
 
         {/*  HERO CENTER  */}

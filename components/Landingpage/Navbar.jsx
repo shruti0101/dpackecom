@@ -101,28 +101,28 @@ export default function Navbar() {
               <div className="absolute top-full left-0 mt-2 w-[220px] bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
 
                 {[
-                  "Dunnage Air Bags",
-                  "Women's Fashion",
-                  "Kid's Fashion",
-                  "Denim Collection",
-                  "Western Wear",
-                  "Sport Wear",
-                  "Footwear",
-                  "Fashion Jewellery",
-                  "Beauty & Cosmetics",
+                  "Dunnage Bag",
+                  "Air Column Roll",
+                  "Air Column Bag",
+                  "Packaging Air Bag",
+                  "Gap Filler",
+
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="px-4 py-3 border-b border-gray-200 text-sm flex justify-between items-center hover:bg-gray-50 text-gray-600 cursor-pointer"
+                    className="px-4 py-6 border-b border-gray-200 text-lg border-b border-gray-200  flex justify-between items-center hover:bg-gray-50 text-gray-600 cursor-pointer"
                   >
                     {item}
                     <span>›</span>
                   </div>
                 ))}
 
-                <div className="px-4 py-3 text-sm font-medium">
-                  View All Categories →
-                </div>
+<div className="my-4">
+
+                <Link href="/products" className="px-4 py-3 text-md font-medium">
+                  View All Products →
+                </Link>
+</div>
               </div>
             </div>
 
