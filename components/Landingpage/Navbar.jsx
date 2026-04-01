@@ -127,12 +127,12 @@ export default function Navbar() {
             </div>
 
             {/* NAV ITEMS */}
-            <Link href="/" className="text-black hover:text-orange-500 font-medium">Home</Link>
-         <Link href="/" className="text-black hover:text-orange-500 font-medium">Shop</Link>
-            <Link href="/" className="text-black hover:text-orange-500 font-medium">Flash Deals</Link>
-            <Link href="/about" className="text-black hover:text-orange-500 font-medium">About Us</Link>
-            <Link href="/news" className="text-black hover:text-orange-500 font-medium">News & Articles</Link>
-            <Link href="/contact" className="text-black hover:text-orange-500 font-medium">Contact Us</Link>
+            <Link href="/" className="text-black hover:text-[#D95026] font-medium">Home</Link>
+         <Link href="/" className="text-black hover:text-[#D95026] font-medium">Shop</Link>
+            <Link href="/" className="text-black hover:text-[#D95026] font-medium">Flash Deals</Link>
+            <Link href="/about" className="text-black hover:text-[#D95026] font-medium">About Us</Link>
+            <Link href="/news" className="text-black hover:text-[#D95026] font-medium">News & Articles</Link>
+            <Link href="/contact" className="text-black hover:text-[#D95026] font-medium">Contact Us</Link>
           </div>
 
           {/* RIGHT SIDE */}

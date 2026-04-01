@@ -178,29 +178,40 @@ export default function ProductPage({ productId  }) {
             </div>
           </div>
 
-          {/* SELLER CARD */}
-          <div className="col-span-2 ">
-            <div className="border   rounded-xl p-5 bg-gray-50 text-sm">
-              <p className="font-semibold mb-2">Shipping Worldwide</p>
-              <p className="text-black mb-3">Always Authentic</p>
-              <p className="text-black mb-3">Cash On Delivery Available</p>
+   {/* SELLER CARD */}
+<div className="col-span-2 ">
+  <div className="border rounded-xl p-5 bg-gray-50 text-sm">
+   
+  
 
-              <hr className="my-4" />
+    <p className="font-bold text-red-500 text-xl">DPACK</p>
+    <p className="text-md mt-1 mb-4">
+      Authentic and Premium Quality Products
+    </p>
 
-              <p className="font-semibold mb-3">Return & Warranty</p>
+    <hr className="my-4" />
 
-              <p className="text-black mb-2">14 Days Easy Return</p>
-              <p className="text-black mb-4">Warranty Not Available</p>
+    {/* WHY CHOOSE DPACK */}
+    <p className="font-semibold mb-2">Why Choose DPACK</p>
+    <ul className="list-disc  mb-3 text-black space-y-1">
+      <li>Quality-focused products</li>
+      <li>Reliable and consistent standards</li>
+      <li>Built for modern needs</li>
+    </ul>
 
-              <hr className="my-4" />
+  
 
-              <p className="font-bold text-red-500 text-xl ">DPACK </p>
+   
 
-              <p className="text-md  mt-1">
-                Authentic and Premium Quality Products
-              </p>
-            </div>
-          </div>
+    {/* ABOUT DPACK */}
+    <p className="font-semibold mb-2">About DPACK</p>
+    <ul className="list-disc  text-black space-y-1">
+      <li>Premium product solutions</li>
+      <li>Trust and quality driven</li>
+      <li>Commitment to excellence</li>
+    </ul>
+  </div>
+</div>
         </div>
 
         {/* PRODUCT DESCRIPTION SECTION */}
@@ -278,9 +289,17 @@ export default function ProductPage({ productId  }) {
             </div>
           )}
 
-          {tab === "reviews" && (
-            <div className="text-gray-600">No reviews yet.</div>
-          )}
+        {tab === "reviews" && (
+  <div className="text-gray-600">
+    
+    {/* 5 Star Rating */}
+    <div className="text-yellow-500 text-lg mb-2">
+      ★★★★★
+    </div>
+
+    <p> reviews </p>
+  </div>
+)}
         </div>
       </div>
 
