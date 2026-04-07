@@ -11,41 +11,30 @@ import {
   Instagram,
   Twitter,
   ArrowUpRight,
+  Rotate3d,
 } from "lucide-react";
-
 import { categories } from "@/Data";
-
 import { ShoppingCart, Eye } from "lucide-react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
+import Product360Modal from "@/components/360View";
 
-export default function ProductPage({ productId  }) {
+export default function ProductPage({ productId }) {
   const [selected, setSelected] = useState(null);
-
-
-
-
   const allProducts = categories.flatMap((cat) => cat.products);
-
   const product = allProducts.find((p) => p.id === productId);
-
-    if (!product) {
+  const [open, setOpen] = useState(false);
+  if (!product) {
     return <div className="text-center py-20">Product not found</div>;
   }
 
-  const relatedProducts = allProducts
-    .filter((p) => p.id !== productId)
-    .slice(0, 4);
+  const relatedProducts = allProducts.filter((p) => p.id !== productId).slice(0, 4);
 
   const [tab, setTab] = useState("description");
-
   const [index, setIndex] = useState(0);
   const images = product.image?.map((img) => img.src) || [];
-
   const [activeImage, setActiveImage] = useState(images[0]);
 
   useEffect(() => {
@@ -87,7 +76,6 @@ export default function ProductPage({ productId  }) {
 
       <div className="w-full mx-auto px-15 py-10">
         <div className="grid grid-cols-12 gap-10">
-          {/* LEFT THUMBNAILS */}
           <div className="col-span-1 flex flex-col gap-4">
             {images.map((img, i) => (
               <div
@@ -99,9 +87,20 @@ export default function ProductPage({ productId  }) {
                 className={`p-2 rounded-lg border cursor-pointer transition
               ${activeImage === img ? "border-orange-500" : "border-gray-200"}`}
               >
-                <Image src={img} alt="" width={70} height={70} />
+                <Image src={img} alt="no image" width={70} height={70} />
               </div>
             ))}
+
+            <button onClick={() => setOpen(true)}
+              className="flex flex-col items-center justify-center gap-1 px-2 py-3 
+  border border-orange-500 rounded-xl   text-orange-600 hover:bg-orange-50   transition-all duration-200   cursor-pointer shadow-sm hover:shadow-md"
+            >
+              <Rotate3d size={28} />
+
+              <span className="text-xs font-medium tracking-wide">
+                360 View
+              </span>
+            </button>
           </div>
 
           {/* MAIN IMAGE WITH ANIMATION */}
@@ -118,7 +117,7 @@ export default function ProductPage({ productId  }) {
                   src={activeImage}
                   width={600}
                   height={600}
-                  alt={product.name}
+                  alt={product.name || "no image"}
                   className="object-cover"
                 />
               </motion.div>
@@ -178,40 +177,40 @@ export default function ProductPage({ productId  }) {
             </div>
           </div>
 
-   {/* SELLER CARD */}
-<div className="col-span-2 ">
-  <div className="border rounded-xl p-5 bg-gray-50 text-sm">
-   
-  
+          {/* SELLER CARD */}
+          <div className="col-span-2 ">
+            <div className="border rounded-xl p-5 bg-gray-50 text-sm">
 
-    <p className="font-bold text-red-500 text-xl">DPACK</p>
-    <p className="text-md mt-1 mb-4">
-      Authentic and Premium Quality Products
-    </p>
 
-    <hr className="my-4" />
 
-    {/* WHY CHOOSE DPACK */}
-    <p className="font-semibold mb-2">Why Choose DPACK</p>
-    <ul className="list-disc  mb-3 text-black space-y-1">
-      <li>Quality-focused products</li>
-      <li>Reliable and consistent standards</li>
-      <li>Built for modern needs</li>
-    </ul>
+              <p className="font-bold text-red-500 text-xl">DPACK</p>
+              <p className="text-md mt-1 mb-4">
+                Authentic and Premium Quality Products
+              </p>
 
-  
+              <hr className="my-4" />
 
-   
+              {/* WHY CHOOSE DPACK */}
+              <p className="font-semibold mb-2">Why Choose DPACK</p>
+              <ul className="list-disc  mb-3 text-black space-y-1">
+                <li>Quality-focused products</li>
+                <li>Reliable and consistent standards</li>
+                <li>Built for modern needs</li>
+              </ul>
 
-    {/* ABOUT DPACK */}
-    <p className="font-semibold mb-2">About DPACK</p>
-    <ul className="list-disc  text-black space-y-1">
-      <li>Premium product solutions</li>
-      <li>Trust and quality driven</li>
-      <li>Commitment to excellence</li>
-    </ul>
-  </div>
-</div>
+
+
+
+
+              {/* ABOUT DPACK */}
+              <p className="font-semibold mb-2">About DPACK</p>
+              <ul className="list-disc  text-black space-y-1">
+                <li>Premium product solutions</li>
+                <li>Trust and quality driven</li>
+                <li>Commitment to excellence</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* PRODUCT DESCRIPTION SECTION */}
@@ -223,11 +222,10 @@ export default function ProductPage({ productId  }) {
                 key={item}
                 onClick={() => setTab(item)}
                 className={`px-6 py-2 rounded-full border text-sm capitalize transition
-        ${
-          tab === item
-            ? "bg-orange-100 text-orange-600 border-orange-200"
-            : "text-gray-600 border-gray-300 hover:border-gray-400"
-        }`}
+        ${tab === item
+                    ? "bg-orange-100 text-orange-600 border-orange-200"
+                    : "text-gray-600 border-gray-300 hover:border-gray-400"
+                  }`}
               >
                 {item === "info" ? "Additional info" : item}
               </button>
@@ -289,21 +287,21 @@ export default function ProductPage({ productId  }) {
             </div>
           )}
 
-        {tab === "reviews" && (
-  <div className="text-gray-600">
-    
-    {/* 5 Star Rating */}
-    <div className="text-yellow-500 text-lg mb-2">
-      ★★★★★
-    </div>
+          {tab === "reviews" && (
+            <div className="text-gray-600">
 
-    <p> reviews </p>
-  </div>
-)}
+              {/* 5 Star Rating */}
+              <div className="text-yellow-500 text-lg mb-2">
+                ★★★★★
+              </div>
+
+              <p> reviews </p>
+            </div>
+          )}
         </div>
       </div>
 
-      <div className="bg-white py-13   px-6">
+      <div className="bg-white py-13 px-6">
         {/* HEADER */}
         <div className="flex items-center justify-between max-w-[1300px] mx-auto mb-6">
           <h2 className="text-3xl font-semibold relative">
@@ -334,16 +332,16 @@ export default function ProductPage({ productId  }) {
             {relatedProducts.map((item, i) => (
               <SwiperSlide key={i}>
                 <Link href={`/products/${item.id}`} className="group bg-white h-100 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
-              
+
                   <div className="relative bg-[#F6F6F6] rounded-xl h-[250px] flex items-center justify-center overflow-hidden">
-                
+
                     <Image
                       src={item.image?.[0]?.src}
                       alt=""
                       fill
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-125 "
                     />
-                    
+
 
                     {/* HOVER OVERLAY */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center pb-6">
@@ -423,6 +421,12 @@ export default function ProductPage({ productId  }) {
           )}
         </div>
       </div>
+
+      <Product360Modal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        images={product.images360}
+      />
     </>
   );
 }
