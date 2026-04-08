@@ -268,7 +268,18 @@ export const categories = [
           //   "src": "/check/container-dunnage2.png",
           //   "alt": "Paper Dunnage Bag for Container Shipping"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Paper Dunnage Air Bag/1.png',
+          '/360/Paper Dunnage Air Bag/2.png',
+          '/360/Paper Dunnage Air Bag/3.png',
+          '/360/Paper Dunnage Air Bag/4.png',
+          '/360/Paper Dunnage Air Bag/5.png',
+          '/360/Paper Dunnage Air Bag/6.png',
+          '/360/Paper Dunnage Air Bag/7.png',
+          '/360/Paper Dunnage Air Bag/8.png',
+          '/360/Paper Dunnage Air Bag/9.png',
+        ],
       },
 
       {
@@ -350,7 +361,18 @@ export const categories = [
           //   "src": "/check/dunnage-container2.png",
           //   "alt": "Dunnage Bag for Shipping Containers"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Paper Dunnage Air Bag/1.png',
+          '/360/Paper Dunnage Air Bag/2.png',
+          '/360/Paper Dunnage Air Bag/3.png',
+          '/360/Paper Dunnage Air Bag/4.png',
+          '/360/Paper Dunnage Air Bag/5.png',
+          '/360/Paper Dunnage Air Bag/6.png',
+          '/360/Paper Dunnage Air Bag/7.png',
+          '/360/Paper Dunnage Air Bag/8.png',
+          '/360/Paper Dunnage Air Bag/9.png',
+        ],
       },
 
       {
@@ -436,7 +458,18 @@ export const categories = [
           //   "src": "/check/pp-dunnage2.png",
           //   "alt": "PP Dunnage Bag"
           // }
-        ]
+        ],
+        images360: [
+          '/360/PP Dunnage Bag/1.png',
+          '/360/PP Dunnage Bag/2.png',
+          '/360/PP Dunnage Bag/3.png',
+          '/360/PP Dunnage Bag/4.png',
+          '/360/PP Dunnage Bag/5.png',
+          '/360/PP Dunnage Bag/6.png',
+          '/360/PP Dunnage Bag/7.png',
+          '/360/PP Dunnage Bag/8.png',
+          '/360/PP Dunnage Bag/9.png',
+        ],
       },
 
       {
@@ -520,7 +553,18 @@ export const categories = [
           //   "src": "/check/dunnage-manufacturer2.png",
           //   "alt": "Dunnage Bag Manufacturer"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Paper Dunnage Air Bag/1.png',
+          '/360/Paper Dunnage Air Bag/2.png',
+          '/360/Paper Dunnage Air Bag/3.png',
+          '/360/Paper Dunnage Air Bag/4.png',
+          '/360/Paper Dunnage Air Bag/5.png',
+          '/360/Paper Dunnage Air Bag/6.png',
+          '/360/Paper Dunnage Air Bag/7.png',
+          '/360/Paper Dunnage Air Bag/8.png',
+          '/360/Paper Dunnage Air Bag/9.png',
+        ],
       },
 
       {
@@ -603,7 +647,18 @@ export const categories = [
           //   "src": "/check/pp-airbag2.png",
           //   "alt": "Polypropylene Dunnage Air Bag"
           // }
-        ]
+        ],
+        images360: [
+          '/360/PP Dunnage Bag/1.png',
+          '/360/PP Dunnage Bag/2.png',
+          '/360/PP Dunnage Bag/3.png',
+          '/360/PP Dunnage Bag/4.png',
+          '/360/PP Dunnage Bag/5.png',
+          '/360/PP Dunnage Bag/6.png',
+          '/360/PP Dunnage Bag/7.png',
+          '/360/PP Dunnage Bag/8.png',
+          '/360/PP Dunnage Bag/9.png',
+        ],
       },
 
       {
@@ -689,7 +744,18 @@ export const categories = [
           //   "src": "/check/square-dunnage2.png",
           //   "alt": "Square Dunnage Air Bags"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Square Dunnage Air Bags/1.png',
+          '/360/Square Dunnage Air Bags/2.png',
+          '/360/Square Dunnage Air Bags/3.png',
+          '/360/Square Dunnage Air Bags/4.png',
+          '/360/Square Dunnage Air Bags/5.png',
+          '/360/Square Dunnage Air Bags/6.png',
+          '/360/Square Dunnage Air Bags/7.png',
+          '/360/Square Dunnage Air Bags/8.png',
+          '/360/Square Dunnage Air Bags/9.png',
+        ],
       },
 
       {
@@ -774,7 +840,18 @@ export const categories = [
           //   "src": "/check/dunnage-airbags2.png",
           //   "alt": "Dunnage Bags Air Bags"
           // }
-        ]
+        ],
+        images360: [
+          '/360/PP Dunnage Bag/1.png',
+          '/360/PP Dunnage Bag/2.png',
+          '/360/PP Dunnage Bag/3.png',
+          '/360/PP Dunnage Bag/4.png',
+          '/360/PP Dunnage Bag/5.png',
+          '/360/PP Dunnage Bag/6.png',
+          '/360/PP Dunnage Bag/7.png',
+          '/360/PP Dunnage Bag/8.png',
+          '/360/PP Dunnage Bag/9.png',
+        ],
       },
     ],
   },
@@ -879,7 +956,17 @@ export const categories = [
           //   "src": "/check/air-column-roll2.png",
           //   "alt": "Perfume Packaging Air Column Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Perfume Packaging Air Column Roll/1.png',
+          '/360/Perfume Packaging Air Column Roll/2.png',
+          '/360/Perfume Packaging Air Column Roll/3.png',
+          '/360/Perfume Packaging Air Column Roll/4.png',
+          '/360/Perfume Packaging Air Column Roll/5.png',
+          '/360/Perfume Packaging Air Column Roll/6.png',
+          '/360/Perfume Packaging Air Column Roll/7.png',
+          '/360/Perfume Packaging Air Column Roll/8.png',
+        ],
       },
 
       {
@@ -963,7 +1050,17 @@ export const categories = [
           //   "src": "/check/air-tubes2.png",
           //   "alt": "Air Tubes Rolls"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Tubes Rolls/1.png',
+          '/360/Air Tubes Rolls/2.png',
+          '/360/Air Tubes Rolls/3.png',
+          '/360/Air Tubes Rolls/4.png',
+          '/360/Air Tubes Rolls/5.png',
+          '/360/Air Tubes Rolls/6.png',
+          '/360/Air Tubes Rolls/7.png',
+          '/360/Air Tubes Rolls/8.png',
+        ],
       },
 
       {
@@ -1047,7 +1144,17 @@ export const categories = [
           //   "src": "/check/air-column-cushion2.png",
           //   "alt": "Air Column Cushion Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Column Cushion Roll/1.png',
+          '/360/Air Column Cushion Roll/2.png',
+          '/360/Air Column Cushion Roll/3.png',
+          '/360/Air Column Cushion Roll/4.png',
+          '/360/Air Column Cushion Roll/5.png',
+          '/360/Air Column Cushion Roll/6.png',
+          '/360/Air Column Cushion Roll/7.png',
+          '/360/Air Column Cushion Roll/8.png',
+        ],
       },
 
       {
@@ -1145,7 +1252,17 @@ export const categories = [
             "alt": "Air Cushion Film Roll"
           },
 
-        ]
+        ],
+        images360: [
+          '/360/Air Tubes Rolls/1.png',
+          '/360/Air Tubes Rolls/2.png',
+          '/360/Air Tubes Rolls/3.png',
+          '/360/Air Tubes Rolls/4.png',
+          '/360/Air Tubes Rolls/5.png',
+          '/360/Air Tubes Rolls/6.png',
+          '/360/Air Tubes Rolls/7.png',
+          '/360/Air Tubes Rolls/8.png',
+        ],
       },
 
       {
@@ -1229,7 +1346,15 @@ export const categories = [
           //   "src": "/check/inflatable-air-column2.png",
           //   "alt": "Inflatable Air Column Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Inflatable Air Column Roll/1.png',
+          '/360/Inflatable Air Column Roll/2.png',
+          '/360/Inflatable Air Column Roll/3.png',
+          '/360/Inflatable Air Column Roll/4.png',
+          '/360/Inflatable Air Column Roll/5.png',
+          '/360/Inflatable Air Column Roll/6.png',
+        ],
       },
 
       {
@@ -1311,7 +1436,17 @@ export const categories = [
           //   "src": "/check/air-tube-column2.png",
           //   "alt": "Air Tube Column Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Tubes Rolls/1.png',
+          '/360/Air Tubes Rolls/2.png',
+          '/360/Air Tubes Rolls/3.png',
+          '/360/Air Tubes Rolls/4.png',
+          '/360/Air Tubes Rolls/5.png',
+          '/360/Air Tubes Rolls/6.png',
+          '/360/Air Tubes Rolls/7.png',
+          '/360/Air Tubes Rolls/8.png',
+        ],
       },
 
       {
@@ -1400,7 +1535,20 @@ export const categories = [
           //   "src": "/check/jam-bottle2.png",
           //   "alt": "Jam Bottle Air Column Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Jam Bottle Air Column Roll/1.png',
+          '/360/Jam Bottle Air Column Roll/2.png',
+          '/360/Jam Bottle Air Column Roll/3.png',
+          '/360/Jam Bottle Air Column Roll/4.png',
+          '/360/Jam Bottle Air Column Roll/5.png',
+          '/360/Jam Bottle Air Column Roll/6.png',
+          '/360/Jam Bottle Air Column Roll/7.png',
+          '/360/Jam Bottle Air Column Roll/8.png',
+          '/360/Jam Bottle Air Column Roll/9.png',
+          '/360/Jam Bottle Air Column Roll/10.png',
+          '/360/Jam Bottle Air Column Roll/11.png',
+        ],
       },
 
       {
@@ -1486,7 +1634,19 @@ export const categories = [
           //   "src": "/check/glass-bottle2.png",
           //   "alt": "Glass Bottle Air Column Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Glass Bottle Air Column Roll/1.png',
+          '/360/Glass Bottle Air Column Roll/2.png',
+          '/360/Glass Bottle Air Column Roll/3.png',
+          '/360/Glass Bottle Air Column Roll/4.png',
+          '/360/Glass Bottle Air Column Roll/5.png',
+          '/360/Glass Bottle Air Column Roll/6.png',
+          '/360/Glass Bottle Air Column Roll/7.png',
+          '/360/Glass Bottle Air Column Roll/8.png',
+          '/360/Glass Bottle Air Column Roll/9.png',
+          '/360/Glass Bottle Air Column Roll/10.png',
+        ],
       },
 
       {
@@ -1570,7 +1730,27 @@ export const categories = [
           //   "src": "/check/column-airbag2.png",
           //   "alt": "Packaging Column Airbag Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Packaging Column Airbag Roll/1.png',
+          '/360/Packaging Column Airbag Roll/2.png',
+          '/360/Packaging Column Airbag Roll/3.png',
+          '/360/Packaging Column Airbag Roll/4.png',
+          '/360/Packaging Column Airbag Roll/5.png',
+          '/360/Packaging Column Airbag Roll/6.png',
+          '/360/Packaging Column Airbag Roll/7.png',
+          '/360/Packaging Column Airbag Roll/8.png',
+          '/360/Packaging Column Airbag Roll/9.png',
+          '/360/Packaging Column Airbag Roll/10.png',
+          '/360/Packaging Column Airbag Roll/11.png',
+          '/360/Packaging Column Airbag Roll/12.png',
+          '/360/Packaging Column Airbag Roll/13.png',
+          '/360/Packaging Column Airbag Roll/14.png',
+          '/360/Packaging Column Airbag Roll/15.png',
+          '/360/Packaging Column Airbag Roll/16.png',
+          '/360/Packaging Column Airbag Roll/17.png',
+          '/360/Packaging Column Airbag Roll/18.png',
+        ],
       },
 
       {
@@ -1654,7 +1834,19 @@ export const categories = [
           //   "src": "/check/wrapping-column2.png",
           //   "alt": "Inflatable Wrapping Column Plastic Film Air Bag Roll Packing"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Glass Bottle Air Column Roll/1.png',
+          '/360/Glass Bottle Air Column Roll/2.png',
+          '/360/Glass Bottle Air Column Roll/3.png',
+          '/360/Glass Bottle Air Column Roll/4.png',
+          '/360/Glass Bottle Air Column Roll/5.png',
+          '/360/Glass Bottle Air Column Roll/6.png',
+          '/360/Glass Bottle Air Column Roll/7.png',
+          '/360/Glass Bottle Air Column Roll/8.png',
+          '/360/Glass Bottle Air Column Roll/9.png',
+          '/360/Glass Bottle Air Column Roll/10.png',
+        ],
       },
 
       {
@@ -1741,7 +1933,19 @@ export const categories = [
           //   "src": "/check/bubble-film2.png",
           //   "alt": "Air Bubble Cushion film Roll"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Glass Bottle Air Column Roll/1.png',
+          '/360/Glass Bottle Air Column Roll/2.png',
+          '/360/Glass Bottle Air Column Roll/3.png',
+          '/360/Glass Bottle Air Column Roll/4.png',
+          '/360/Glass Bottle Air Column Roll/5.png',
+          '/360/Glass Bottle Air Column Roll/6.png',
+          '/360/Glass Bottle Air Column Roll/7.png',
+          '/360/Glass Bottle Air Column Roll/8.png',
+          '/360/Glass Bottle Air Column Roll/9.png',
+          '/360/Glass Bottle Air Column Roll/10.png',
+        ],
       },
     ],
   },
@@ -1839,7 +2043,20 @@ export const categories = [
           //   "src": "/check/laptop-airbag2.png",
           //   "alt": "Air Column Bag for Laptop"
           // }
-        ]
+        ],
+
+        images360: [
+          '/360/Air Column Bag for Laptop/1.png',
+          '/360/Air Column Bag for Laptop/2.png',
+          '/360/Air Column Bag for Laptop/3.png',
+          '/360/Air Column Bag for Laptop/4.png',
+          '/360/Air Column Bag for Laptop/5.png',
+          '/360/Air Column Bag for Laptop/6.png',
+          '/360/Air Column Bag for Laptop/7.png',
+          '/360/Air Column Bag for Laptop/8.png',
+          '/360/Air Column Bag for Laptop/9.png',
+          '/360/Air Column Bag for Laptop/10.png',
+        ],
       },
 
       {
@@ -1924,7 +2141,23 @@ export const categories = [
           //   "src": "/check/electronics-airbag2.png",
           //   "alt": "Air Column Bags for Electronics"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Column Bags for Electronics/1.png',
+          '/360/Air Column Bags for Electronics/2.png',
+          '/360/Air Column Bags for Electronics/3.png',
+          '/360/Air Column Bags for Electronics/4.png',
+          '/360/Air Column Bags for Electronics/5.png',
+          '/360/Air Column Bags for Electronics/6.png',
+          '/360/Air Column Bags for Electronics/7.png',
+          '/360/Air Column Bags for Electronics/8.png',
+          '/360/Air Column Bags for Electronics/9.png',
+          '/360/Air Column Bags for Electronics/10.png',
+          '/360/Air Column Bags for Electronics/11.png',
+          '/360/Air Column Bags for Electronics/12.png',
+          '/360/Air Column Bags for Electronics/13.png',
+          '/360/Air Column Bags for Electronics/14.png',
+        ],
       },
 
       {
@@ -2011,7 +2244,23 @@ export const categories = [
           //   "src": "/check/wine-airbag2.png",
           //   "alt": "Air Column Cushion Bag for Wine"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Column Cushion Bag for Wine/1.png',
+          '/360/Air Column Cushion Bag for Wine/2.png',
+          '/360/Air Column Cushion Bag for Wine/3.png',
+          '/360/Air Column Cushion Bag for Wine/4.png',
+          '/360/Air Column Cushion Bag for Wine/5.png',
+          '/360/Air Column Cushion Bag for Wine/6.png',
+          '/360/Air Column Cushion Bag for Wine/7.png',
+          '/360/Air Column Cushion Bag for Wine/8.png',
+          '/360/Air Column Cushion Bag for Wine/9.png',
+          '/360/Air Column Cushion Bag for Wine/10.png',
+          '/360/Air Column Cushion Bag for Wine/11.png',
+          '/360/Air Column Cushion Bag for Wine/12.png',
+          '/360/Air Column Cushion Bag for Wine/13.png',
+          '/360/Air Column Cushion Bag for Wine/14.png',
+        ],
       },
 
       {
@@ -2097,7 +2346,19 @@ export const categories = [
           //   "src": "/check/macbook-airbag2.png",
           //   "alt": "Transparent Air Column Bag for Mac Book, For Safe Packaging"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Column Bag for Laptop/1.png',
+          '/360/Air Column Bag for Laptop/2.png',
+          '/360/Air Column Bag for Laptop/3.png',
+          '/360/Air Column Bag for Laptop/4.png',
+          '/360/Air Column Bag for Laptop/5.png',
+          '/360/Air Column Bag for Laptop/6.png',
+          '/360/Air Column Bag for Laptop/7.png',
+          '/360/Air Column Bag for Laptop/8.png',
+          '/360/Air Column Bag for Laptop/9.png',
+          '/360/Air Column Bag for Laptop/10.png',
+        ],
       },
 
       {
@@ -2178,12 +2439,30 @@ export const categories = [
           //   "src": "/check/column-bag2.png",
           //   "alt": "Air Column Packaging Bag"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Column Packaging Bag/1.png',
+          '/360/Air Column Packaging Bag/2.png',
+          '/360/Air Column Packaging Bag/3.png',
+          '/360/Air Column Packaging Bag/4.png',
+          '/360/Air Column Packaging Bag/5.png',
+          '/360/Air Column Packaging Bag/6.png',
+          '/360/Air Column Packaging Bag/7.png',
+          '/360/Air Column Packaging Bag/8.png',
+          '/360/Air Column Packaging Bag/9.png',
+          '/360/Air Column Packaging Bag/10.png',
+          '/360/Air Column Packaging Bag/11.png',
+          '/360/Air Column Packaging Bag/12.png',
+          '/360/Air Column Packaging Bag/13.png',
+          '/360/Air Column Packaging Bag/14.png',
+          '/360/Air Column Packaging Bag/15.png',
+          '/360/Air Column Packaging Bag/16.png',
+        ],
       },
 
       {
         id: "ghee-jar-air-column-bag",
-        name: "Ghee Jar Air Column BAG",
+        name: "Ghee Jar Air Column Bag",
         metaTitle: "Ghee Jar Air Column Bag | Protective Packaging for Ghee Jars",
         metaDescription: "High-quality Ghee Jar Air Column Bag designed for safe transport. Leak-proof, durable PE material with 360° cushioning for secure packaging.",
         overview: "Air column bags designed to safely transport ghee jars without leakage or damage.",
@@ -2264,7 +2543,23 @@ export const categories = [
           //   "src": "/check/ghee-jar2.png",
           //   "alt": "Ghee Jar Air Column BAG"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Ghee Jar Air Column Bag/1.png',
+          '/360/Ghee Jar Air Column Bag/2.png',
+          '/360/Ghee Jar Air Column Bag/3.png',
+          '/360/Ghee Jar Air Column Bag/4.png',
+          '/360/Ghee Jar Air Column Bag/5.png',
+          '/360/Ghee Jar Air Column Bag/6.png',
+          '/360/Ghee Jar Air Column Bag/7.png',
+          '/360/Ghee Jar Air Column Bag/8.png',
+          '/360/Ghee Jar Air Column Bag/9.png',
+          '/360/Ghee Jar Air Column Bag/10.png',
+          '/360/Ghee Jar Air Column Bag/11.png',
+          '/360/Ghee Jar Air Column Bag/12.png',
+          '/360/Ghee Jar Air Column Bag/13.png',
+          '/360/Ghee Jar Air Column Bag/14.png',
+        ],
       },
 
       {
@@ -2443,7 +2738,23 @@ export const categories = [
             "alt": "Shoes Packing Air Cushion Bag"
           },
 
-        ]
+        ],
+        images360: [
+          '/360/Shoes Packing Air Cushion Bag/1.png',
+          '/360/Shoes Packing Air Cushion Bag/2.png',
+          '/360/Shoes Packing Air Cushion Bag/3.png',
+          '/360/Shoes Packing Air Cushion Bag/4.png',
+          '/360/Shoes Packing Air Cushion Bag/5.png',
+          '/360/Shoes Packing Air Cushion Bag/6.png',
+          '/360/Shoes Packing Air Cushion Bag/7.png',
+          '/360/Shoes Packing Air Cushion Bag/8.png',
+          '/360/Shoes Packing Air Cushion Bag/9.png',
+          '/360/Shoes Packing Air Cushion Bag/10.png',
+          '/360/Shoes Packing Air Cushion Bag/11.png',
+          '/360/Shoes Packing Air Cushion Bag/12.png',
+          '/360/Shoes Packing Air Cushion Bag/13.png',
+          '/360/Shoes Packing Air Cushion Bag/14.png',
+        ],
       },
 
       {
@@ -2526,7 +2837,17 @@ export const categories = [
           //   "src": "/check/self-inflated2.png",
           //   "alt": "Self-Inflated Packaging Air Bag"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Column Cushion Roll/1.png',
+          '/360/Air Column Cushion Roll/2.png',
+          '/360/Air Column Cushion Roll/3.png',
+          '/360/Air Column Cushion Roll/4.png',
+          '/360/Air Column Cushion Roll/5.png',
+          '/360/Air Column Cushion Roll/6.png',
+          '/360/Air Column Cushion Roll/7.png',
+          '/360/Air Column Cushion Roll/8.png',
+        ],
       },
 
       {
@@ -2609,7 +2930,20 @@ export const categories = [
           //   "src": "/check/tube-jar2.png",
           //   "alt": "Protective Air Tube Bag Packaging for Jars & Containers"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Jam Bottle Air Column Roll/1.png',
+          '/360/Jam Bottle Air Column Roll/2.png',
+          '/360/Jam Bottle Air Column Roll/3.png',
+          '/360/Jam Bottle Air Column Roll/4.png',
+          '/360/Jam Bottle Air Column Roll/5.png',
+          '/360/Jam Bottle Air Column Roll/6.png',
+          '/360/Jam Bottle Air Column Roll/7.png',
+          '/360/Jam Bottle Air Column Roll/8.png',
+          '/360/Jam Bottle Air Column Roll/9.png',
+          '/360/Jam Bottle Air Column Roll/10.png',
+          '/360/Jam Bottle Air Column Roll/11.png',
+        ],
       },
 
       {
@@ -2701,7 +3035,19 @@ export const categories = [
           //   "src": "/check/glass-airbag-pack2.png",
           //   "alt": "Glass Bottle Airbag Packaging"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Glass Bottle Air Column Roll/1.png',
+          '/360/Glass Bottle Air Column Roll/2.png',
+          '/360/Glass Bottle Air Column Roll/3.png',
+          '/360/Glass Bottle Air Column Roll/4.png',
+          '/360/Glass Bottle Air Column Roll/5.png',
+          '/360/Glass Bottle Air Column Roll/6.png',
+          '/360/Glass Bottle Air Column Roll/7.png',
+          '/360/Glass Bottle Air Column Roll/8.png',
+          '/360/Glass Bottle Air Column Roll/9.png',
+          '/360/Glass Bottle Air Column Roll/10.png',
+        ],
       },
 
       {
@@ -2786,7 +3132,25 @@ export const categories = [
           //   "src": "/check/inflatable-bag2.png",
           //   "alt": "Inflatable Air Packaging Bags"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Air Column Packaging Bag/1.png',
+          '/360/Air Column Packaging Bag/2.png',
+          '/360/Air Column Packaging Bag/3.png',
+          '/360/Air Column Packaging Bag/4.png',
+          '/360/Air Column Packaging Bag/5.png',
+          '/360/Air Column Packaging Bag/6.png',
+          '/360/Air Column Packaging Bag/7.png',
+          '/360/Air Column Packaging Bag/8.png',
+          '/360/Air Column Packaging Bag/9.png',
+          '/360/Air Column Packaging Bag/10.png',
+          '/360/Air Column Packaging Bag/11.png',
+          '/360/Air Column Packaging Bag/12.png',
+          '/360/Air Column Packaging Bag/13.png',
+          '/360/Air Column Packaging Bag/14.png',
+          '/360/Air Column Packaging Bag/15.png',
+          '/360/Air Column Packaging Bag/16.png',
+        ],
       },
 
       {
@@ -2869,7 +3233,23 @@ export const categories = [
           //   "src": "/check/air-filled2.png",
           //   "alt": "Air Filled Cushioning Bag"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Shoes Packing Air Cushion Bag/1.png',
+          '/360/Shoes Packing Air Cushion Bag/2.png',
+          '/360/Shoes Packing Air Cushion Bag/3.png',
+          '/360/Shoes Packing Air Cushion Bag/4.png',
+          '/360/Shoes Packing Air Cushion Bag/5.png',
+          '/360/Shoes Packing Air Cushion Bag/6.png',
+          '/360/Shoes Packing Air Cushion Bag/7.png',
+          '/360/Shoes Packing Air Cushion Bag/8.png',
+          '/360/Shoes Packing Air Cushion Bag/9.png',
+          '/360/Shoes Packing Air Cushion Bag/10.png',
+          '/360/Shoes Packing Air Cushion Bag/11.png',
+          '/360/Shoes Packing Air Cushion Bag/12.png',
+          '/360/Shoes Packing Air Cushion Bag/13.png',
+          '/360/Shoes Packing Air Cushion Bag/14.png',
+        ],
       },
 
       {
@@ -2951,7 +3331,19 @@ export const categories = [
           //   "src": "/check/tube-bag2.png",
           //   "alt": "Air Tube Bag for Packaging"
           // }
-        ]
+        ],
+
+        images360: [
+          '/360/Air Tube Bag for Packaging/1.png',
+          '/360/Air Tube Bag for Packaging/2.png',
+          '/360/Air Tube Bag for Packaging/3.png',
+          '/360/Air Tube Bag for Packaging/4.png',
+          '/360/Air Tube Bag for Packaging/5.png',
+          '/360/Air Tube Bag for Packaging/6.png',
+          '/360/Air Tube Bag for Packaging/7.png',
+          '/360/Air Tube Bag for Packaging/8.png',
+          '/360/Air Tube Bag for Packaging/9.png',
+        ],
       },
 
       {
@@ -3027,7 +3419,19 @@ export const categories = [
           //   "src": "/check/trolley-airbag2.png",
           //   "alt": "Trolley Packaging Air Bag"
           // }
-        ]
+        ],
+
+        images360: [
+          '/360/Trolley Packaging Air Bag/1.png',
+          '/360/Trolley Packaging Air Bag/2.png',
+          '/360/Trolley Packaging Air Bag/3.png',
+          '/360/Trolley Packaging Air Bag/4.png',
+          '/360/Trolley Packaging Air Bag/5.png',
+          '/360/Trolley Packaging Air Bag/6.png',
+          '/360/Trolley Packaging Air Bag/7.png',
+          '/360/Trolley Packaging Air Bag/8.png',
+          '/360/Trolley Packaging Air Bag/9.png',
+        ],
       },
     ],
   },
@@ -3121,7 +3525,8 @@ export const categories = [
           //   "src": "/check/purse-pouch2.png",
           //   "alt": "Purse Gap Filler Pouch"
           // }
-        ]
+        ],
+
       },
 
       {
@@ -3204,7 +3609,22 @@ export const categories = [
           //   "src": "/check/void-roll2.png",
           //   "alt": "White Air Cushion Void Filling Rolls Gap Filler"
           // }
-        ]
+        ],
+        images360: [
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/1.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/2.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/3.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/4.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/5.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/6.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/7.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/8.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/9.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/10.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/11.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/12.png',
+          '/360/White Air Cushion Void Filling Rolls Gap Filler/13.png',
+        ],
       },
 
       {
@@ -3288,7 +3708,25 @@ export const categories = [
           //   "src": "/check/void-gap2.png",
           //   "alt": "Void or Gap Filling Air Cushion Bags"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Void or Gap Filling Air Cushion Bags/1.png',
+          '/360/Void or Gap Filling Air Cushion Bags/2.png',
+          '/360/Void or Gap Filling Air Cushion Bags/3.png',
+          '/360/Void or Gap Filling Air Cushion Bags/4.png',
+          '/360/Void or Gap Filling Air Cushion Bags/5.png',
+          '/360/Void or Gap Filling Air Cushion Bags/6.png',
+          '/360/Void or Gap Filling Air Cushion Bags/7.png',
+          '/360/Void or Gap Filling Air Cushion Bags/8.png',
+          '/360/Void or Gap Filling Air Cushion Bags/9.png',
+          '/360/Void or Gap Filling Air Cushion Bags/10.png',
+          '/360/Void or Gap Filling Air Cushion Bags/11.png',
+          '/360/Void or Gap Filling Air Cushion Bags/12.png',
+          '/360/Void or Gap Filling Air Cushion Bags/13.png',
+          '/360/Void or Gap Filling Air Cushion Bags/14.png',
+          '/360/Void or Gap Filling Air Cushion Bags/15.png',
+          '/360/Void or Gap Filling Air Cushion Bags/16.png',
+        ],
       },
 
       {
@@ -3373,7 +3811,22 @@ export const categories = [
           //   "src": "/check/gap-pouch2.png",
           //   "alt": "Gap Filler Pouch"
           // }
-        ]
+        ],
+        images360: [
+          '/360/Gap Filler Pouch/1.png',
+          '/360/Gap Filler Pouch/2.png',
+          '/360/Gap Filler Pouch/3.png',
+          '/360/Gap Filler Pouch/4.png',
+          '/360/Gap Filler Pouch/5.png',
+          '/360/Gap Filler Pouch/6.png',
+          '/360/Gap Filler Pouch/7.png',
+          '/360/Gap Filler Pouch/8.png',
+          '/360/Gap Filler Pouch/9.png',
+          '/360/Gap Filler Pouch/10.png',
+          '/360/Gap Filler Pouch/11.png',
+          '/360/Gap Filler Pouch/12.png',
+          '/360/Gap Filler Pouch/13.png',
+        ],
       },
     ],
   },
