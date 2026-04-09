@@ -1,5 +1,4 @@
 "use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
@@ -9,12 +8,11 @@ import {
   Menu,
   ChevronDown,
 } from "lucide-react";
+import SearchBar from "./SearchBar";
 
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-
-
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -36,7 +34,6 @@ export default function Navbar() {
   return (
     <>
       <section>
-
         {/* ================= TOP HEADER ================= */}
         <div className="bg-white px-4 md:px-10 lg:px-20 py-2 flex flex-col lg:flex-row items-center justify-between gap-4 shadow-sm">
 
@@ -54,21 +51,7 @@ export default function Navbar() {
           </div>
 
           {/* SEARCH BAR */}
-          <div className="w-full lg:w-[500px] flex items-center bg-[#F5F5F5] rounded-full overflow-hidden border">
-
-            <div className="hidden sm:flex px-4 items-center gap-2 text-sm text-gray-600 border-r">
-              All Categories <ChevronDown size={14} />
-            </div>
-
-            <input
-              placeholder="Search your product..."
-              className="flex-1 px-4 py-2 bg-transparent outline-none text-sm"
-            />
-
-            <button className="bg-black text-white w-10 h-10 flex items-center justify-center m-1 rounded-full">
-              <Search size={16} />
-            </button>
-          </div>
+          <SearchBar />
 
           {/* RIGHT */}
           <div className="hidden md:flex items-center gap-6 text-sm">

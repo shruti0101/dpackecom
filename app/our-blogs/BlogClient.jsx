@@ -33,7 +33,7 @@ export default function BlogsPage() {
     <>
       {/* Hero Section */}
       <section
-        style={{ backgroundImage: "url('/bag/bg-other.webp')" }}
+        style={{ backgroundImage: "url('/banner/4.jpeg')" }}
         className="w-full bg-cover h-[50vh] md:h-[90vh]  relative"
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
