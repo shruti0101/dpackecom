@@ -3,7 +3,7 @@ import About from "@/components/Landingpage/About";
 export default function AboutSection() {
 
 
- const features = [
+  const features = [
     {
       title: "10+ Years of Industry Experience",
       desc: "With over a decade of expertise, we understand packaging challenges and provide solutions that ensure maximum product protection.",
@@ -58,72 +58,92 @@ export default function AboutSection() {
     },
   ];
 
-  return (
+  return (<>
+    <section style={{ backgroundImage: "url('/banner/2.jpeg')" }}
+      className="w-full h-[60vh] md:h-[75vh] bg-cover bg-center relative flex items-center justify-center"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
 
-    <>
-    
-    <section className="bg-white py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto">
-        
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          10+ Years of Industry Experience
-        </h2>
+      <div className="relative text-center text-white px-6">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          About Us
+        </h1>
+        {/* <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-200">
+            Leading Anti Smog Gun & Construction Equipment Manufacturer in India
+          </p> */}
+      </div>
+    </section>
 
-        {/* Intro */}
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          At <span className="font-semibold text-gray-900">D Pack</span>, we appreciate your trust in choosing us as your packaging solutions partner. Supporting your business with dependable and innovative products is something we take great pride in.
-        </p>
+    <section className="bg-white py-10 px-4 md:px-15">
+      <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="md:w-1/2">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            10+ Years of Industry Experience
+          </h2>
 
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          With over 10 years of experience, we specialize in manufacturing high-performance Packaging Air Bags, including Air Cushion Bags, Dunnage Air Bags, and Air Column Bags.
-        </p>
+          <p className="text-gray-600 mb-6 leading-relaxed">
+            At <span className="font-semibold text-gray-900">D Pack</span>, we appreciate your trust in choosing us as your packaging solutions partner. Supporting your business with dependable and innovative products is something we take great pride in.
+          </p>
 
-        <p className="text-gray-600 mb-10 leading-relaxed">
-          Our goal is to deliver packaging solutions that ensure maximum protection, efficiency, and cost savings for your business.
-        </p>
+          <p className="text-gray-600 mb-6 leading-relaxed">
+            With over 10 years of experience, we specialize in manufacturing high-performance Packaging Air Bags, including Air Cushion Bags, Dunnage Air Bags, and Air Column Bags.
+          </p>
 
-        {/* Grid Sections */}
-        <div className="grid md:grid-cols-3 gap-8">
+          <p className="text-gray-600 leading-relaxed">
+            Our goal is to deliver packaging solutions that ensure maximum protection, efficiency, and cost savings for your business.
+          </p>
+        </div>
 
-          {/* Journey */}
-          <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">
-              Our Journey
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Over the years, D Pack has built a strong reputation as a trusted Packaging Air Bag Manufacturer, Supplier, and Wholesaler. Driven by innovation and consistency, we have expanded our product range from Air Column Packaging Rolls to advanced Air Tube Bag Packaging, serving multiple industries with reliable solutions.
-            </p>
-          </div>
-
-          {/* Customer Commitment */}
-          <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">
-              Customer Commitment
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Customer satisfaction is at the core of our business. We work closely with our clients to understand their needs and deliver customized packaging solutions that improve product safety and efficiency. Our commitment to quality and service helps us build long-term relationships.
-            </p>
-          </div>
-
-          {/* Quality Standards */}
-          <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">
-              Quality Standards
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              We follow strict quality control processes to ensure every product meets high-performance standards. Our Packaging Air Bags, including Air Cushion Bags, Dunnage Bags, and Air Column Bags, are made using premium materials and advanced technology to ensure durability and reliability.
-            </p>
-          </div>
-
+        {/* Right - Image */}
+        <div className="md:w-1/2">
+          <img
+            src="/check/bg1.webp" // replace with your image path
+            alt="Packaging Solutions"
+            className="w-full h-94 rounded-xl shadow-md object-cover"
+          />
         </div>
       </div>
     </section>
 
-            <About />
+    {/* Grid Sections */}
+    <div className="bg-gray-50 py-10 px-4 md:px-15">
+      <div className="grid md:grid-cols-3 gap-8">
 
+        {/* Journey */}
+        <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 className="text-xl font-semibold mb-3 text-gray-900">
+            Our Journey
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Over the years, D Pack has built a strong reputation as a trusted Packaging Air Bag Manufacturer, Supplier, and Wholesaler. Driven by innovation and consistency, we have expanded our product range from Air Column Packaging Rolls to advanced Air Tube Bag Packaging, serving multiple industries with reliable solutions.
+          </p>
+        </div>
 
-  <section className="bg-gray-100 py-16 px-6 md:px-20">
+        {/* Customer Commitment */}
+        <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 className="text-xl font-semibold mb-3 text-gray-900">
+            Customer Commitment
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Customer satisfaction is at the core of our business. We work closely with our clients to understand their needs and deliver customized packaging solutions that improve product safety and efficiency. Our commitment to quality and service helps us build long-term relationships.
+          </p>
+        </div>
+
+        {/* Quality Standards */}
+        <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 className="text-xl font-semibold mb-3 text-gray-900">
+            Quality Standards
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            We follow strict quality control processes to ensure every product meets high-performance standards. Our Packaging Air Bags, including Air Cushion Bags, Dunnage Bags, and Air Column Bags, are made using premium materials and advanced technology to ensure durability and reliability.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <About />
+    <section className="bg-gray-100 py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Heading */}
@@ -155,8 +175,7 @@ export default function AboutSection() {
       </div>
     </section>
 
-
-<section className="bg-white py-14 px-6 md:px-20">
+    <section className="bg-white py-14 px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -194,7 +213,6 @@ export default function AboutSection() {
 
       </div>
     </section>
-
-    </>
+  </>
   );
 }

@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Facebook,
   Twitter,
@@ -8,18 +7,16 @@ import {
   MapPin,
   Phone,
   Mail,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-export default function Footer() {
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
-  const cat = [
-    { name: "Dunnage Bag", link: "/categories/dunnage-bag" },
-    { name: "Air Column Roll", link: "/categories/air-column-roll" },
-    { name: "Air Column Bag", link: "/categories/air-column-bag" },
-    { name: "Packaging Air Bag", link: "/categories/packaging-air-bag" },
-    { name: "Gap Filler", link: "/categories/gap-filler" },
-  ]
+export default function Footer() {
+  const [open, setOpen] = useState(false);
+
   return (
     <footer style={{ backgroundImage: "url(/footerbg.jpg)" }} className="relative bg-cover  text-white pt-16 pb-10 px-6 md:px-12 overflow-hidden">
       <div className="absolute inset-0 opacity-10 bg-[url('/wave.png')] bg-cover bg-center"></div>
@@ -59,6 +56,8 @@ export default function Footer() {
             <li className="hover:text-white cursor-pointer"><Link href={"/about"}>About Us</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/contact"}>Contact Us</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/our-blogs"}>Our Articles</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
           </ul>
         </div>
 
@@ -73,15 +72,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-3 text-sm text-white/70">
-            <li className="hover:text-white cursor-pointer"><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
-            <li className="hover:text-white cursor-pointer"><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
-            <li className="hover:text-white cursor-pointer"><Link href={"/contact"}>Request a Quote</Link></li>
-          </ul>
-        </div>
-
         {/* CONTACT */}
         <div>
           <h3 className="font-semibold mb-4">Contact Us</h3>
@@ -92,19 +82,78 @@ export default function Footer() {
           </p>
 
           <div className="space-y-3 text-sm text-white/80">
-            <div className="flex items-center gap-2">
-              <MapPin size={16} /> Industrial Area, Delhi, India
+            <div className="flex items-start gap-2">
+              <MapPin size={16} /> Shakti Auto, Second Floor, 24/54B, <br /> Lala Ganesh Das Marg, Tilak Nagar, <br /> West Delhi New Delhi - 110018, Delhi, India
             </div>
             <div className="flex items-center gap-2">
-              <Phone size={16} /> +91 98765 43210
+              <Phone size={16} /> +91 76699 88825
             </div>
             <div className="flex items-center gap-2">
-              <Mail size={16} /> sales@dunnagepro.com
+              <Mail size={16} /> dpacksolutionindia@gmail.com
             </div>
           </div>
         </div>
 
+        {/* Certificate */}
+        <div>
+          <h3 className="text-white font-semibold mb-3">Trust Elite</h3>
+          <p className="text-base">
+          We are proud to present the TrustElite Certificate of Excellence to D Pack, recognizing their commitment to exceptional customer service, outstanding business practices, and a dedication to building trust with their customers.
+          </p>
+
+          <div className="mt-4 flex justify-center md:justify-start">
+            <img
+              src="/TRUST-ELITE.webp"
+              alt="Trust Seal"
+              onClick={() => setOpen(true)}
+              className="h-20 cursor-pointer hover:scale-105 transition"
+            />
+          </div>
+        </div>
+
       </div>
+
+      {/* Popup */}
+      <AnimatePresence>
+        {open && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 bg-black/70 z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+            />
+
+            {/* Modal */}
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center px-4"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+            >
+              <div className="relative bg-white rounded-xl shadow-lg max-w-2xl w-full">
+
+                {/* Close Button */}
+                <button
+                  onClick={() => setOpen(false)}
+                  className="absolute top-3 right-3 text-gray-600 hover:text-black"
+                >
+                  <X size={24} />
+                </button>
+
+                {/* Image */}
+                <img
+                  src="/Dpack-1-1024x791.webp"
+                  alt="Trust Seal Large"
+                  className="w-full h-auto object-contain rounded"
+                />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* BOTTOM */}
       <div className="border-t border-white/10 mt-12 pt-6 text-center text-sm text-white/60">

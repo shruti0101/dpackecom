@@ -17,29 +17,29 @@ export default function HeroPixelPerfect() {
   const features = [
     {
       icon: <Truck size={26} />,
-      title: "Return & refund",
-      desc: "Money back guarantee",
+      title: "Hassle-Free Support",
+      desc: "Get assistance for product selection, setup, and queries.",
       bg: "bg-[#F5E6C8]",
       iconBg: "bg-orange-500",
     },
     {
       icon: <Headphones size={26} />,
-      title: "Quality Support",
-      desc: "Always online 24/7",
+      title: "Expert Guidance",
+      desc: "Our team provides complete technical consultation.",
       bg: "bg-[#D9EEF3]",
       iconBg: "bg-[#20B2C9]",
     },
     {
       icon: <ShieldCheck size={26} />,
-      title: "Secure Payment",
-      desc: "30% off by subscribing",
+      title: "Reliable Solutions",
+      desc: "High-quality machines designed for long-term performance.",
       bg: "bg-[#DDF2E1]",
       iconBg: "bg-green-500",
     },
     {
       icon: <Tag size={26} />,
-      title: "Daily Offers",
-      desc: "20% off by subscribing",
+      title: "Industry Insights",
+      desc: "Stay updated with latest trends and manufacturing solutions.",
       bg: "bg-[#D9EEF3]",
       iconBg: "bg-[#0FB9B1]",
     },
@@ -153,14 +153,14 @@ export default function HeroPixelPerfect() {
 
       {/* ===== FEATURES ===== */}
       <div className="w-full bg-white py-6 px-4 md:px-6">
-        <div className="max-w-[1250px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
           {features.map((item, i) => (
             <div
               key={i}
               className={`${item.bg} rounded-2xl px-4 sm:px-6 py-5 flex items-center gap-4`}
             >
-              <div className={`${item.iconBg} text-white w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl`}>
+              <div className={`${item.iconBg} text-white w-12 h-12 sm:w-16 sm:h-14 flex items-center justify-center rounded-xl`}>
                 {item.icon}
               </div>
 

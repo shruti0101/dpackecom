@@ -22,8 +22,8 @@ export default function ContactPage() {
 
     try {
       const formData = {
-        platform: "Kapmix Machinery Contact Form",
-        platformEmail: "info@kapmix.com",
+        platform: "DPACK Contact Form",
+        platformEmail: "dpacksolutionindia@gmail.com",
         name,
         phone,
         email,
@@ -48,7 +48,7 @@ Message: ${message}
 Contact: ${phone}`;
 
         window.open(
-          `https://wa.me/919810057441?text=${encodeURIComponent(
+          `https://wa.me/917669988825?text=${encodeURIComponent(
             whatsappText
           )}`,
           "_blank"
@@ -75,18 +75,18 @@ Contact: ${phone}`;
 
       {/* HERO */}
       <section
-        style={{ backgroundImage: "url('/Anti-smog-gun-copy.jpg')" }}
-        className="w-full h-[60vh] md:h-[85vh] bg-cover bg-center relative flex items-center justify-center"
+        style={{ backgroundImage: "url('/banner/1.jpeg')" }}
+        className="w-full h-[60vh] md:h-[75vh] bg-cover bg-center relative flex items-center justify-center"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
 
         <div className="relative text-center text-white px-6">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Contact Kapmix Machinery
+            Contact Us
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-200">
+          {/* <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-200">
             Leading Anti Smog Gun & Construction Equipment Manufacturer in India
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -99,8 +99,7 @@ Contact: ${phone}`;
           <div className="bg-gradient-to-br from-red-600 to-red-800 text-white p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
             <Phone size={38} className="mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-            <p className="text-lg">+91-9810057441</p>
-            <p className="text-lg">+91-9810026034</p>
+            <p className="text-lg">+91 7669988825</p>
           </div>
 
           {/* Email */}
@@ -110,18 +109,18 @@ Contact: ${phone}`;
               Email Address
             </h3>
             <p className="text-gray-800 text-lg">
-              info@kapmix.com
+              dpacksolutionindia@gmail.com
             </p>
           </div>
 
           {/* Address */}
           <div className="bg-gradient-to-br from-red-600 to-red-800 text-white p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
             <MapPin size={38} className="mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Factory Address</h3>
+            <h3 className="text-xl font-semibold mb-2">Address</h3>
             <p className="text-sm leading-relaxed">
-              Kapmix Machinery Pvt. Ltd. <br />
-              Wazirpur Industrial Area, <br />
-              New Delhi – 110052, India
+              Shakti Auto, Second Floor, 24/54B,<br />
+              Lala Ganesh Das Marg, Tilak Nagar,<br />
+              West Delhi New Delhi - 110018, Delhi, India
             </p>
           </div>
 
@@ -223,11 +222,15 @@ Contact: ${phone}`;
 
           {/* MAP */}
           <div className="rounded-3xl overflow-hidden shadow-2xl border">
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps?q=Wazirpur%20Industrial%20Area%20Delhi&output=embed"
               className="w-full h-[500px]"
               loading="lazy"
-            ></iframe>
+            ></iframe> */}
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d448464.0016371671!2d77.186946!3d28.581021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0514d5bc617f%3A0x956288c4b1ee3c64!2sDpack!5e0!3m2!1sen!2sus!4v1775736735172!5m2!1sen!2sus"
+              className="w-full h-[500px]" allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>

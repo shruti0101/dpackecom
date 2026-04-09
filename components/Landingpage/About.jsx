@@ -122,6 +122,16 @@ export default function FlashSale() {
     },
   ];
 
+  const features = [
+    "Trusted Packaging Air Bag Manufacturer, Supplier, and Wholesaler with proven industry expertise",
+    "High-quality PP Dunnage Bags designed for durability, strength, and reliable performance",
+    "Cost-effective solutions that help reduce cargo damage and optimize logistics operations",
+    "Customized packaging options available to meet specific business requirements",
+    "Strong production capacity ensuring timely delivery and bulk availability",
+    "Dedicated customer support for product selection and after-sales assistance",
+    "Commitment to quality, innovation, and long-term customer satisfaction"
+  ];
+
   return (
     <div className="bg-white py-13 mt-9 px-6">
       {/* HEADER */}
@@ -237,7 +247,6 @@ export default function FlashSale() {
               </button>
 
               <div className="grid grid-cols-2 gap-6">
-
                 {/* IMAGE */}
                 <div>
                   {/* MAIN IMAGE */}
@@ -275,23 +284,25 @@ export default function FlashSale() {
                   </div>
                 </div>
 
-                {/* DETAILS */}
                 <div>
                   <h2 className="text-2xl font-semibold mb-3">
                     {selected.title}
                   </h2>
+                  <ul className="space-y-2 text-gray-600 text-sm mb-4">
+                    {features.map((item, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <span className="text-orange-500 mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-
-
-                  <p className="text-gray-600 text-sm mb-4">
-                    Premium quality product with modern design and comfort.
-                  </p>
-
-                  <button className="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-black transition">
-                    Add to Cart
-                  </button>
+                  <div className="flex justify-center items-center">
+                    <a href="tel:+917669988825" target="blank" className="bg-orange-500 mx-auto hover:bg-orange-600 text-white px-4 py-3 rounded-md">
+                      Inquiry Now
+                    </a>
+                  </div>
                 </div>
-
               </div>
             </div>
           </div>
