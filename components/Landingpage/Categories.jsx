@@ -1,23 +1,27 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const category = [
   {
     id: 1,
     name: "Premium Dunnage Bags Collection",
     image: "/banner/1.jpeg",
+    link: "/categories/dunnage-bag",
     subtext: "Secure cargo with high-strength void filling solutions",
   },
   {
     id: 2,
     name: "Gap Fillers",
+    link: "/categories/gap-filler",
     image: "/banner/2.jpeg",
     subtext: "Prevent load movement with reliable cushioning support",
   },
   {
     id: 3,
     name: "Air Column Bags",
+    link: "/categories/air-column-bag",
     image: "/banner/3.jpeg",
     subtext: "Advanced air cushioning for fragile product protection",
   },
@@ -25,12 +29,14 @@ const category = [
     id: 4,
     name: "Courier Bags",
     image: "/banner/4.jpeg",
+    link: "/categories/dunnage-bag",
     subtext: "Durable and tamper-proof packaging for safe deliveries",
   },
   {
     id: 5,
     name: "Air Bags",
     image: "/banner/5.jpeg",
+    link: "/categories/packaging-air-bag",
     subtext: "Lightweight inflatable protection for transit safety",
   },
 ];
@@ -66,9 +72,9 @@ export default function BestsellerSection() {
                 {item.subtext}
               </p>
 
-              <button className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm hover:bg-orange-600 transition">
+              <Link href={item.link} className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm hover:bg-orange-600 transition">
                 Shop Now →
-              </button>
+              </Link>
             </div>
           </div>
         ))}
@@ -99,9 +105,9 @@ export default function BestsellerSection() {
                 {item.subtext}
               </p>
 
-              <button className="bg-white text-black px-3 py-2 rounded-md text-xs hover:bg-gray-200 transition">
+              <Link href={item.link} className="bg-white text-black px-3 py-2 rounded-md text-xs hover:bg-gray-200 transition">
                 Explore →
-              </button>
+              </Link>
             </div>
           </div>
         ))}

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 
 export default function PackagingSection() {
   return (
@@ -51,13 +52,13 @@ export default function PackagingSection() {
 
           {/* CTA */}
           <div className="flex flex-wrap gap-4 mt-6">
-            <button className="px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition">
+            <Link href={"/contact"} className="px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition">
               Get Quote
-            </button>
+            </Link>
 
-            <button className="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition">
+            <Link href={"/products"} className="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition">
               Explore Products
-            </button>
+            </Link>
           </div>
 
         </div>

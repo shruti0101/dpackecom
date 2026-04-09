@@ -20,9 +20,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: " anti smog gun",
+  title: "DPACK",
   description:
-    "anti smog gun",
+    "Dpack",
   icons: {
     icon: "/logo.png",
   },

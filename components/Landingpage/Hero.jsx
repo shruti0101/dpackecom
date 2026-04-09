@@ -62,23 +62,21 @@ export default function HeroPixelPerfect() {
 
         {/* ===== SIDEBAR ===== */}
         <div className="hidden lg:block lg:col-span-2 bg-white overflow-hidden">
+          {categories.map((item, i) => (
+            <Link
+              href={`/categories/${item.id}`}
+              key={i}
+              className="px-4 py-4 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600"
+            >
+              {item.name}  <span>›</span>
+            </Link>
+          ))}
 
-        {categories.map((item, i) => (
-  <Link
-    href={`/categories/${item.id}`}
-    key={i}
-    className="px-4 py-6 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600"
-  >
-    {item.name}  <span>›</span>
-  </Link>
-))}
-         
-<div className="mt-7">
-
-          <Link href="/products" className="px-4 py-4  text-md font-medium">
-            View All Products →
-          </Link>
-</div>
+          <div className="px-4 py-4 border-b border-b-gray-200">
+            <Link href="/products" className="text-md font-medium">
+              View All Products →
+            </Link>
+          </div>
         </div>
 
         {/*  HERO CENTER  */}
@@ -98,9 +96,8 @@ export default function HeroPixelPerfect() {
               <div
                 key={i}
                 onClick={() => setActive(i)}
-                className={`w-2 h-2 rounded-full cursor-pointer ${
-                  i === active ? "bg-orange-500" : "bg-gray-300"
-                }`}
+                className={`w-2 h-2 rounded-full cursor-pointer ${i === active ? "bg-orange-500" : "bg-gray-300"
+                  }`}
               />
             ))}
           </div>
@@ -124,9 +121,9 @@ export default function HeroPixelPerfect() {
                 Heavy Duty
               </span>
 
-              <button className="mt-2 bg-orange-500 text-white px-3 py-1.5 rounded text-sm">
+              <Link href={"/products"} className="mt-2 bg-orange-500 text-white px-3 py-1.5 rounded text-sm">
                 Shop →
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -145,9 +142,9 @@ export default function HeroPixelPerfect() {
                 Secure Packaging
               </span>
 
-              <button className="mt-2 bg-white text-black px-3 py-1.5 rounded text-sm">
+              <Link href={"/products"} className="mt-2 bg-white text-black px-3 py-1.5 rounded text-sm">
                 Explore →
-              </button>
+              </Link>
             </div>
           </div>
 

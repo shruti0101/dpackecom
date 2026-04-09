@@ -10,25 +10,29 @@ import {
   Mail,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 export default function Footer() {
+
+  const cat = [
+    { name: "Dunnage Bag", link: "/categories/dunnage-bag" },
+    { name: "Air Column Roll", link: "/categories/air-column-roll" },
+    { name: "Air Column Bag", link: "/categories/air-column-bag" },
+    { name: "Packaging Air Bag", link: "/categories/packaging-air-bag" },
+    { name: "Gap Filler", link: "/categories/gap-filler" },
+  ]
   return (
-    <footer style={{backgroundImage:"url(/footerbg.jpg)"}} className="relative bg-cover  text-white pt-16 pb-10 px-6 md:px-12 overflow-hidden">
-
-      {/* BACKGROUND TEXTURE */}
+    <footer style={{ backgroundImage: "url(/footerbg.jpg)" }} className="relative bg-cover  text-white pt-16 pb-10 px-6 md:px-12 overflow-hidden">
       <div className="absolute inset-0 opacity-10 bg-[url('/wave.png')] bg-cover bg-center"></div>
-
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-
-        {/* BRAND */}
         <div>
-           {/* LOGO */}
-              <div className="flex items-center gap-3">
-              <Image width={150} height={100} src="/logo.webp"></Image>
-              </div>
+          {/* LOGO */}
+          <div className="flex items-center gap-3">
+            <Image width={150} height={100} src="/logo.webp"></Image>
+          </div>
 
           <p className="text-white/70 text-sm leading-relaxed mb-6">
-            We provide high-quality dunnage bags and protective packaging solutions 
-            designed to secure cargo, prevent movement, and ensure safe transportation 
+            We provide high-quality dunnage bags and protective packaging solutions
+            designed to secure cargo, prevent movement, and ensure safe transportation
             across all logistics environments.
           </p>
 
@@ -47,39 +51,34 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* COMPANY */}
         <div>
           <h3 className="font-semibold mb-4">Company</h3>
           <ul className="space-y-3 text-sm text-white/70">
-            <li className="hover:text-white cursor-pointer">About Us</li>
-            <li className="hover:text-white cursor-pointer">Our Solutions</li>
-            <li className="hover:text-white cursor-pointer">Industries We Serve</li>
-            <li className="hover:text-white cursor-pointer">Careers</li>
-            <li className="hover:text-white cursor-pointer">Latest Updates</li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/"}>Home</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/products"}>Products</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/about"}>About Us</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/contact"}>Contact Us</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/our-blogs"}>Our Articles</Link></li>
           </ul>
         </div>
 
-        {/* PRODUCTS */}
         <div>
           <h3 className="font-semibold mb-4">Products</h3>
           <ul className="space-y-3 text-sm text-white/70">
-            <li>Dunnage Air Bags</li>
-            <li>Container Void Fillers</li>
-            <li>Air Column Bags</li>
-            <li>Inflatable Packaging</li>
-            <li>Protective Courier Bags</li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/categories/dunnage-bag"}>Dunnage Bag</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/categories/air-column-roll"}>Air Column Roll</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/categories/air-column-bag"}>Air Column Bag</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/categories/packaging-air-bag"}>Packaging Air Bag</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/categories/gap-filler"}>Gap Filler</Link></li>
           </ul>
         </div>
 
-        {/* QUICK LINKS */}
         <div>
           <h3 className="font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-3 text-sm text-white/70">
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
-            <li>Shipping & Delivery</li>
-            <li>FAQs</li>
-            <li>Request a Quote</li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/contact"}>Request a Quote</Link></li>
           </ul>
         </div>
 
@@ -88,7 +87,7 @@ export default function Footer() {
           <h3 className="font-semibold mb-4">Contact Us</h3>
 
           <p className="text-sm text-white/70 mb-4 leading-relaxed">
-            Get in touch with us for customized packaging solutions and bulk 
+            Get in touch with us for customized packaging solutions and bulk
             requirements. Our team is ready to assist you.
           </p>
 
