@@ -106,16 +106,16 @@ export default function HeroPixelPerfect() {
         </div>
 
         {/* ===== RIGHT SECTION ===== */}
-        <div className="col-span-1 lg:col-span-3 mt-3 flex flex-col sm:flex-row lg:flex-col gap-5">
+        <div className="col-span-1 lg:col-span-3 mt-3 flex flex-col sm:flex-row lg:flex-col gap-2">
 
           {/* TOP CARD */}
-          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[300px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[250px] rounded-2xl overflow-hidden group">
 
             <Image
-              src="/sideBanner.jpeg"
+              src="/newBanner.jpeg"
               alt=""
               fill
-              style={{objectPosition:"50% 35%"}}
+              // style={{objectPosition:"50% 35%"}}
               className="object-cover group-hover:scale-105 transition duration-700"
             />
 
@@ -131,10 +131,10 @@ export default function HeroPixelPerfect() {
           </div>
 
           {/* BOTTOM CARD */}
-          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[300px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[270px] rounded-2xl overflow-hidden group">
 
             <Image
-              src="/sideBanner1.jpeg"
+              src="/dpack banner (2).webp"
               alt=""
               fill
               className="object-cover group-hover:scale-105 transition duration-700"
