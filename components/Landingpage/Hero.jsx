@@ -9,6 +9,8 @@ import { categories } from "@/Data";
 export default function HeroPixelPerfect() {
 
   const slides = [
+    { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/homeBanner (1).jpeg" },
+    { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/homeBanner (2).jpeg" },
     { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/bg1.jpeg" },
     { title: "Upgrade Your Style Today", subtitle: "Trending Now", img: "/bg2.jpeg" },
     { title: "New Arrivals Just Landed", subtitle: "Limited Offer", img: "/bg3.jpeg" },
@@ -107,12 +109,13 @@ export default function HeroPixelPerfect() {
         <div className="col-span-1 lg:col-span-3 mt-3 flex flex-col sm:flex-row lg:flex-col gap-5">
 
           {/* TOP CARD */}
-          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[260px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[300px] rounded-2xl overflow-hidden group">
 
             <Image
-              src="/sidebanner.png"
+              src="/sideBanner.jpeg"
               alt=""
               fill
+              style={{objectPosition:"50% 35%"}}
               className="object-cover group-hover:scale-105 transition duration-700"
             />
 
@@ -128,10 +131,10 @@ export default function HeroPixelPerfect() {
           </div>
 
           {/* BOTTOM CARD */}
-          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[260px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[300px] rounded-2xl overflow-hidden group">
 
             <Image
-              src="/sideimg.png"
+              src="/sideBanner1.jpeg"
               alt=""
               fill
               className="object-cover group-hover:scale-105 transition duration-700"
