@@ -8,10 +8,8 @@ export default function Page() {
 
   return (
     <div>
-
-      {/* HERO */}
       <section
-        style={{ backgroundImage: "url('/bag/bg-other.webp')" }}
+        style={{ backgroundImage: "url('/banner/4.jpeg')" }}
         className="w-full bg-cover bg-center h-[50vh] md:h-[70vh] relative"
       >
         <div className="absolute inset-0 flex items-center justify-center">
@@ -21,45 +19,34 @@ export default function Page() {
         </div>
       </section>
 
-      {/* PRODUCTS GRID */}
       <div className="max-w-7xl mx-auto px-6 py-12">
+        {categories.map((category) => (
+          <div key={category.id} className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">{category.name}</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {category.products.map((product, index) => (
+                <Link key={index} href={`/products/${product.id}`}
+                  className="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group"
+                >
+                  <div className="relative w-full h-[250px] bg-gray-100 overflow-hidden">
+                    <Image
+                      src={product.image?.[0]?.src || "/placeholder.png"}
+                      alt={product.name} fill
+                      className="object-cover group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
 
-          {categories.map((product) => (
-
-            <Link
-              key={product.id}
-              href={`/products/${product.id}`} // ✅ slug routing
-              className="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group"
-            >
-
-              {/* IMAGE */}
-              <div className="relative w-full h-[250px] bg-gray-100 overflow-hidden">
-                <Image
-                  src={product.images?.[0] || "/placeholder.png"} // ✅ FIXED
-                  alt={product.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition duration-500"
-                />
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-4 text-center">
-                <h2 className="text-lg font-semibold group-hover:text-orange-500 transition">
-                  {product.name}
-                </h2>
-
-                <p className="text-gray-500 text-sm mt-1">
-                  {product.category}
-                </p>
-              </div>
-
-            </Link>
-          ))}
-
-        </div>
-
+                  <div className="p-4 text-center">
+                    <h2 className="text-lg font-semibold group-hover:text-orange-500 transition">
+                      {product.name}
+                    </h2>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

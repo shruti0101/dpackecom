@@ -60,7 +60,7 @@ export default function Navbar() {
               <Phone size={18} />
               <div>
                 <p className="text-gray-500 text-xs">Hotline:</p>
-                <p className="font-semibold text-sm">+(91) - 7632824643</p>
+                <p className="font-semibold text-sm">+(91) - 7669988825</p>
               </div>
             </div>
 

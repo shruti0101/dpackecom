@@ -3,24 +3,26 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronDown, Search } from "lucide-react";
+import { categories } from "@/Data";
 
-const cat = [
-    { name: "Dunnage Bag", link: "/categories/dunnage-bag" },
-    { name: "Air Column Roll", link: "/categories/air-column-roll" },
-    { name: "Air Column Bag", link: "/categories/air-column-bag" },
-    { name: "Packaging Air Bag", link: "/categories/packaging-air-bag" },
-    { name: "Gap Filler", link: "/categories/gap-filler" },
-];
+const allProducts = categories.flatMap((cat) =>
+    cat.products.map((product) => ({
+        ...product,
+        link: `/product/${product.id}`,
+    }))
+);
 
 export default function SearchBar() {
     const [query, setQuery] = useState("");
     const [filtered, setFiltered] = useState([]);
     const [show, setShow] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(-1);
 
     const router = useRouter();
 
     const handleSearch = (value) => {
         setQuery(value);
+        setActiveIndex(-1);
 
         if (value.trim() === "") {
             setFiltered([]);
@@ -28,7 +30,7 @@ export default function SearchBar() {
             return;
         }
 
-        const results = cat.filter((item) =>
+        const results = allProducts.filter((item) =>
             item.name.toLowerCase().includes(value.toLowerCase())
         );
 
@@ -36,10 +38,39 @@ export default function SearchBar() {
         setShow(true);
     };
 
-    const handleSelect = (link) => {
+    const handleSelect = (id) => {
         setQuery("");
         setShow(false);
-        router.push(link);
+        setActiveIndex(-1);
+        router.push(`/products/${id}`);
+    };
+
+    const handleKeyDown = (e) => {
+        if (!show) return;
+
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setActiveIndex((prev) =>
+                prev < filtered.length - 1 ? prev + 1 : 0
+            );
+        }
+
+        if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setActiveIndex((prev) =>
+                prev > 0 ? prev - 1 : filtered.length - 1
+            );
+        }
+
+        if (e.key === "Enter") {
+            if (activeIndex >= 0 && filtered[activeIndex]) {
+                handleSelect(filtered[activeIndex].id);
+            }
+        }
+
+        if (e.key === "Escape") {
+            setShow(false);
+        }
     };
 
     return (
@@ -47,12 +78,13 @@ export default function SearchBar() {
             {/* Search Bar */}
             <div className="flex items-center bg-[#F5F5F5] rounded-full overflow-hidden border">
                 <div className="hidden sm:flex px-4 items-center gap-2 text-sm text-gray-600 border-r">
-                    All Categories <ChevronDown size={14} />
+                    All Products <ChevronDown size={14} />
                 </div>
 
                 <input
                     value={query}
                     onChange={(e) => handleSearch(e.target.value)}
+                    onKeyDown={handleKeyDown}
                     placeholder="Search your product..."
                     className="flex-1 px-4 py-2 bg-transparent outline-none text-sm"
                 />
@@ -64,23 +96,26 @@ export default function SearchBar() {
 
             {/* Dropdown */}
             {show && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-md rounded-lg mt-2 z-50">
+                <div className="absolute top-full left-0 w-full bg-white shadow-md rounded-lg mt-2 z-50 max-h-60 overflow-y-auto">
                     {filtered.length > 0 ? (
                         filtered.map((item, index) => (
                             <div
                                 key={index}
-                                onClick={() => handleSelect(item.link)}
-                                className="px-4 py-2 cursor-pointer hover:bg-gray-100 text-sm"
+                                onClick={() => handleSelect(item.id)}
+                                className={`px-4 py-2 cursor-pointer text-sm ${
+                                    index === activeIndex
+                                        ? "bg-gray-200"
+                                        : "hover:bg-gray-100"
+                                }`}
                             >
                                 {item.name}
                             </div>
                         ))
                     ) : (
                         <div className="px-4 py-2 text-sm text-gray-500">
-                            No results found
+                            No products found
                         </div>
                     )}
-
                 </div>
             )}
         </div>
