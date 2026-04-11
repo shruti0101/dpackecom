@@ -24,7 +24,7 @@ export default function Footer() {
         <div>
           {/* LOGO */}
           <div className="flex items-center gap-3">
-            <Image width={150} height={100} src="/logo.webp"></Image>
+            <Image width={150} height={100} src="/logo-new.png"></Image>
           </div>
 
           <p className="text-white/70 text-sm leading-relaxed mb-6">

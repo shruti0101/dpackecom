@@ -39,7 +39,7 @@ export default function Navbar() {
 
           {/* LOGO + MOBILE MENU */}
           <div className="flex items-center justify-between w-full lg:w-auto">
-            <Image width={120} height={80} src="/logo.webp" alt="logo" />
+            <Image width={120} height={80} src="/logo-new.png" alt="logo" />
 
             {/* MOBILE MENU BUTTON */}
             <button
