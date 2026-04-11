@@ -23,11 +23,11 @@ export default function Footer() {
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         <div>
           {/* LOGO */}
-          <div className="flex items-center gap-3">
-            <Image width={150} height={100} src="/logo-new.png"></Image>
+          <div className="flex items-center gap-3 mb-3">
+            <Image className="bg-white p-2" width={150} height={100} src="/logo-new.png"></Image>
           </div>
 
-          <p className="text-white/70 text-sm leading-relaxed mb-6">
+          <p className="text-white text-sm leading-relaxed mb-6">
             We provide high-quality dunnage bags and protective packaging solutions
             designed to secure cargo, prevent movement, and ensure safe transportation
             across all logistics environments.
@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div>
           <h3 className="font-semibold mb-4">Company</h3>
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-sm text-white">
             <li className="hover:text-white cursor-pointer"><Link href={"/"}>Home</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/products"}>Products</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/about"}>About Us</Link></li>
@@ -63,7 +63,7 @@ export default function Footer() {
 
         <div>
           <h3 className="font-semibold mb-4">Products</h3>
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-sm text-white">
             <li className="hover:text-white cursor-pointer"><Link href={"/categories/dunnage-bag"}>Dunnage Bag</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/categories/air-column-roll"}>Air Column Roll</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/categories/air-column-bag"}>Air Column Bag</Link></li>
@@ -76,7 +76,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-4">Contact Us</h3>
 
-          <p className="text-sm text-white/70 mb-4 leading-relaxed">
+          <p className="text-sm text-white mb-4 leading-relaxed">
             Get in touch with us for customized packaging solutions and bulk
             requirements. Our team is ready to assist you.
           </p>
