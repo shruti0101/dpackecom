@@ -74,9 +74,9 @@ export default function ProductPage({ productId }) {
         </div>
       </section>
 
-      <div className="w-full mx-auto px-15 py-10">
-        <div className="grid grid-cols-12 gap-10">
-          <div className="col-span-1 flex flex-col gap-4">
+      <div className="w-full mx-auto px-4 lg:px-15 lg:py-10 py-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+          <div className="col-span-1 hidden lg:flex flex-col gap-4">
             {images.map((img, i) => (
               <div
                 key={i}
@@ -93,7 +93,7 @@ export default function ProductPage({ productId }) {
 
             <button onClick={() => setOpen(true)}
               className="flex flex-col items-center justify-center gap-1 px-2 py-3 
-  border border-orange-500 rounded-xl   text-orange-600 hover:bg-orange-50   transition-all duration-200   cursor-pointer shadow-sm hover:shadow-md"
+  border border-orange-500 rounded-xl   text-orange-600 hover:bg-orange-50   transition-all duration-200   cursor-pointer shadow-sm hover:shadow-lg"
             >
               <Rotate3d size={28} />
 
@@ -104,7 +104,7 @@ export default function ProductPage({ productId }) {
           </div>
 
           {/* MAIN IMAGE WITH ANIMATION */}
-          <div className="col-span-5 bg-gray-100 rounded-xl flex items-center justify-center p-4 overflow-hidden">
+          <div className="col-span-1 lg:col-span-5 bg-gray-100 rounded-xl flex items-center justify-center p-4 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeImage}
@@ -124,8 +124,35 @@ export default function ProductPage({ productId }) {
             </AnimatePresence>
           </div>
 
+          <div className="col-span-1 lg:hidden flex gap-4">
+            {images.map((img, i) => (
+              <div
+                key={i}
+                onClick={() => {
+                  setActiveImage(img);
+                  setIndex(i);
+                }}
+                className={`p-2 rounded-lg border cursor-pointer transition
+              ${activeImage === img ? "border-orange-500" : "border-gray-200"}`}
+              >
+                <Image src={img} alt="no image" width={70} height={70} />
+              </div>
+            ))}
+
+            <button onClick={() => setOpen(true)}
+              className="flex flex-col items-center justify-center gap-1 px-2 py-3 
+  border border-orange-500 rounded-xl   text-orange-600 hover:bg-orange-50   transition-all duration-200   cursor-pointer shadow-sm hover:shadow-lg"
+            >
+              <Rotate3d size={28} />
+
+              <span className="text-xs font-medium tracking-wide">
+                360 View
+              </span>
+            </button>
+          </div>
+
           {/* PRODUCT DETAILS */}
-          <div className="col-span-4 space-y-12">
+          <div className="col-span-1 lg:col-span-4 space-y-12">
             <p className="text-gray-500 mb-4">{product.category}</p>
 
             <h1 className="text-5xl font-semibold mb-4">{product.name}</h1>
@@ -137,39 +164,39 @@ export default function ProductPage({ productId }) {
               </span>
 
               <div className="flex items-center gap-1 text-yellow-400">
-                <Star size={18} />
-                <Star size={18} />
-                <Star size={18} />
-                <Star size={18} />
-                <Star size={18} />
+                <Star size={18} fill="orange" />
+                <Star size={18} fill="orange" />
+                <Star size={18} fill="orange" />
+                <Star size={18} fill="orange" />
+                <Star size={18} fill="orange" />
               </div>
 
               <span className="text-gray-500 text-sm">(93 Reviews)</span>
             </div>
 
-            <p className="text-gray-800 mb-7">{product.overview}</p>
+            <p className="text-gray-800 mb-4">{product.overview}</p>
 
             {/* WISHLIST */}
-            <div className="flex items-center gap-6 text-black ">
-              <button className="flex curspor-pointer bg-orange-600 items-center text-white px-1 py-3 text-md gap-2 ">
+            <div className="mb-4 flex flex-col sm:flex-row gap-4">
+              <button className="flex curspor-pointer bg-orange-600 items-center justify-center rounded-lg text-white px-2 py-3 text-lg gap-2 ">
                 <ArrowUpRight size={18} />
                 Enquire About Product
               </button>
 
-              <button className="flex bg-green-700 curspor-pointer items-center text-white px-2 py-3 text-md gap-2 ">
+              <button className="flex bg-green-700 curspor-pointer items-center justify-center rounded-lg text-white px-2 py-3 text-lg gap-2 ">
                 <ArrowUpRight size={18} />
                 Whatsapp Us
               </button>
             </div>
 
             {/* META */}
-            <div className="mt-6 border-t pt-4 text-sm text-gray-600">
-              <p>SKU: HRYUSG67EG</p>
-              <p>Category: Dunnage Bags</p>
-              <p>Tag: Dunnage bags</p>
+            <div className="border-t pt-4 text-sm text-gray-600">
+              {product.specs.map((i, idx) => (
+                <p key={idx} className="flex ju"><span className="font-bold">{i.label}</span>: {i?.value}</p>
+              ))}
 
-              <div className="flex  items-center gap-3 mt-2">
-                <span>Visit Us:</span>
+              <div className="flex items-center gap-3 mt-2">
+                <span className="font-bold">Visit Us:</span>
                 <Facebook className="text-orange-600" size={18} />
                 <Instagram className="text-orange-600" size={18} />
                 <Twitter className="text-orange-600" size={18} />
@@ -178,13 +205,13 @@ export default function ProductPage({ productId }) {
           </div>
 
           {/* SELLER CARD */}
-          <div className="col-span-2 ">
+          <div className="col-span-1 lg:col-span-2">
             <div className="border rounded-xl p-5 bg-gray-50 text-sm">
 
 
 
               <p className="font-bold text-red-500 text-xl">DPACK</p>
-              <p className="text-md mt-1 mb-4">
+              <p className="text-lg mt-1 mb-4">
                 Authentic and Premium Quality Products
               </p>
 
@@ -214,10 +241,10 @@ export default function ProductPage({ productId }) {
         </div>
 
         {/* PRODUCT DESCRIPTION SECTION */}
-        <div className="mt-15 max-w-5xl px-10">
+        <div className="lg:mt-15 mt-6">
           {/* TABS */}
-          <div className="flex gap-4 mb-10">
-            {["description", "info", "reviews"].map((item) => (
+          <div className="flex gap-4 mb-5 lg:mb-10">
+            {["description", "info"].map((item) => (
               <button
                 key={item}
                 onClick={() => setTab(item)}
@@ -233,7 +260,6 @@ export default function ProductPage({ productId }) {
           </div>
 
           {/* TAB CONTENT */}
-
           {tab === "description" && (
             <div className="space-y-6 text-black text-lg leading-7">
               {product.description.map((block, i) => {
@@ -301,7 +327,7 @@ export default function ProductPage({ productId }) {
         </div>
       </div>
 
-      <div className="bg-white py-13 px-6">
+      <div className="bg-white py-13 px-4">
         {/* HEADER */}
         <div className="flex items-center justify-between max-w-[1300px] mx-auto mb-6">
           <h2 className="text-3xl font-semibold relative">
@@ -324,14 +350,14 @@ export default function ProductPage({ productId }) {
             spaceBetween={24}
             slidesPerView={5}
             breakpoints={{
-              320: { slidesPerView: 1.2 },
+              320: { slidesPerView: 1 },
               640: { slidesPerView: 2 },
               768: { slidesPerView: 3 },
             }}
           >
             {relatedProducts.map((item, i) => (
               <SwiperSlide key={i}>
-                <Link href={`/products/${item.id}`} className="group bg-white h-100 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
+                <Link href={`/products/${item.id}`} className="group bg-white h-100 rounded-2xl p-4 shadow-lg hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
 
                   <div className="relative bg-[#F6F6F6] rounded-xl h-[250px] flex items-center justify-center overflow-hidden">
 
@@ -349,7 +375,7 @@ export default function ProductPage({ productId }) {
                         {/* QUICK VIEW */}
                         <button
                           onClick={() => setSelected(item)}
-                          className="w-10 h-10 bg-white cursor-pointer flex items-center justify-center rounded-full shadow-md hover:bg-black hover:text-white transition"
+                          className="w-10 h-10 bg-white cursor-pointer flex items-center justify-center rounded-full shadow-lg hover:bg-black hover:text-white transition"
                         >
                           <Eye size={18} />
                         </button>

@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ArrowBigLeftDash, ArrowBigRightDash } from "lucide-react";
 
 export default function Product360Modal({ isOpen, onClose, images = [] }) {
     const [index, setIndex] = useState(0);
@@ -83,8 +84,8 @@ export default function Product360Modal({ isOpen, onClose, images = [] }) {
                             />
                         </div>
 
-                        <p className="text-sm text-gray-500 mt-3 text-center">
-                            Drag left/right to rotate
+                        <p className="flex justify-center items-center gap-4 text-sm text-gray-800 mt-3 text-center font-bold">
+                         <ArrowBigLeftDash /> Drag left/right to rotate <ArrowBigRightDash />
                         </p>
                     </motion.div>
                 </motion.div>

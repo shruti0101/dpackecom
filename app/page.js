@@ -2,7 +2,7 @@ import Image from "next/image";
 import Hero from "@/components/Landingpage/Hero";
 import About from "@/components/Landingpage/About";
 import Categories from "@/components/Landingpage/Categories";
-import  Slidecat  from "@/components/Landingpage/Slidecat";
+import Slidecat from "@/components/Landingpage/Slidecat";
 import Cta from "@/components/Landingpage/Cta";
 
 
@@ -23,31 +23,31 @@ export default function Home() {
     <>
       {/* <Popup></Popup> */}
       <Hero />
-  
+
       <About />
-           <Slidecat></Slidecat>
-         <Categories />
-               <Otherproduct></Otherproduct>
-    
+      <Slidecat></Slidecat>
+      <Categories />
+      <Otherproduct></Otherproduct>
+
       <Cta></Cta>
-  
+
       <Dedicate></Dedicate>
-  
-  
- 
-     
-  
 
-   
 
-   
 
-    
-   
 
-        <TestimonialSlider></TestimonialSlider>
-       <Blogdesign></Blogdesign>
-       <Faq></Faq>
+
+
+
+
+
+
+
+
+
+      <TestimonialSlider></TestimonialSlider>
+      <Blogdesign></Blogdesign>
+      <Faq></Faq>
     </>
   );
 }

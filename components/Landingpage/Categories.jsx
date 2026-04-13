@@ -73,7 +73,7 @@ export default function BestsellerSection() {
               </p>
 
               <Link href={item.link} className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm hover:bg-orange-600 transition">
-                Learn More →
+                View More →
               </Link>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function BestsellerSection() {
               </p>
 
               <Link href={item.link} className="bg-white text-black px-3 py-2 rounded-md text-xs hover:bg-gray-200 transition">
-                Learn More →
+                View More →
               </Link>
             </div>
           </div>

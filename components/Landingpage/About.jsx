@@ -147,24 +147,10 @@ export default function FlashSale() {
       </div>
 
       {/* SWIPER */}
-      <div className="w-full px-12 mx-auto">
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          navigation
-          // autoplay={{ delay: 3000 }}
-          spaceBetween={24}
-          slidesPerView={5}
-          breakpoints={{
-            320: { slidesPerView: 1.2 },
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-            1280: { slidesPerView: 5 },
-          }}
-        >
+      <div className="w-full px-12 mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
           {products.map((item, i) => (
             <SwiperSlide key={i}>
-              <div className="mb-10 group bg-white h-90 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
+              <div className="group bg-white h-90 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
                 {/* IMAGE BOX */}
                 <div className="relative bg-[#F6F6F6] rounded-xl h-[250px] flex items-center justify-center overflow-hidden">
                   {/* NEW TAG */}
@@ -232,8 +218,6 @@ export default function FlashSale() {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
-
 
         {selected && (
           <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">

@@ -107,6 +107,26 @@ export default function HeroPixelPerfect() {
 
         {/* ===== RIGHT SECTION ===== */}
         <div className="col-span-1 lg:col-span-3 mt-3 flex flex-col sm:flex-row lg:flex-col gap-2">
+          {/* BOTTOM CARD */}
+          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[270px] rounded-2xl overflow-hidden group">
+
+            <Image
+              src="/dpack banner (2).webp"
+              alt=""
+              fill
+              className="object-cover group-hover:scale-105 transition duration-700"
+            />
+
+            <div className="absolute bottom-4 left-4 right-4 z-10">
+              <span className="text-orange-500 text-[12px] bg-white px-2 py-1 rounded-full inline-block">
+                Secure Packaging
+              </span>
+
+              <Link href={"/products"} className="mt-2 bg-white text-black px-3 py-1.5 rounded text-sm">
+                Explore →
+              </Link>
+            </div>
+          </div>
 
           {/* TOP CARD */}
           <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[250px] rounded-2xl overflow-hidden group">
@@ -129,28 +149,6 @@ export default function HeroPixelPerfect() {
               </Link>
             </div>
           </div>
-
-          {/* BOTTOM CARD */}
-          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[270px] rounded-2xl overflow-hidden group">
-
-            <Image
-              src="/dpack banner (2).webp"
-              alt=""
-              fill
-              className="object-cover group-hover:scale-105 transition duration-700"
-            />
-
-            <div className="absolute bottom-4 left-4 right-4 z-10">
-              <span className="text-orange-500 text-[12px] bg-white px-2 py-1 rounded-full inline-block">
-                Secure Packaging
-              </span>
-
-              <Link href={"/products"} className="mt-2 bg-white text-black px-3 py-1.5 rounded text-sm">
-                Explore →
-              </Link>
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -180,7 +178,6 @@ export default function HeroPixelPerfect() {
 
         </div>
       </div>
-
     </div>
   );
 }
