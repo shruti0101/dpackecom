@@ -1,13 +1,12 @@
 "use client";
-
 import Image from "next/image";
 import { Truck, Headphones, ShieldCheck, Tag } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { categories } from "@/Data";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroPixelPerfect() {
-
   const slides = [
     { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/homeBanner (1).jpeg" },
     { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/homeBanner (2).jpeg" },
@@ -48,7 +47,7 @@ export default function HeroPixelPerfect() {
   ];
 
   const [active, setActive] = useState(0);
-
+  const [hover, sethover] = useState(null);
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
@@ -58,20 +57,49 @@ export default function HeroPixelPerfect() {
 
   return (
     <div className="bg-white h-screen">
-
       {/* ================= MAIN ================= */}
       <div className="w-full mx-auto mt-2 px-4 md:px-6 grid grid-cols-1 lg:grid-cols-12 gap-5">
 
         {/* ===== SIDEBAR ===== */}
-        <div className="hidden lg:block lg:col-span-2 bg-white overflow-hidden">
+        <div className="hidden lg:block lg:col-span-2 bg-white">
           {categories.map((item, i) => (
-            <Link
-              href={`/categories/${item.id}`}
-              key={i}
-              className="px-4 py-4 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600"
+            <div key={i} onMouseEnter={() => sethover(i)} onMouseLeave={() => sethover(null)}
+              className="relative"
             >
-              {item.name}  <span>›</span>
-            </Link>
+              <Link
+                href={`/categories/${item.id}`}
+                className="px-4 py-4 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600 hover:bg-gray-50 transition"
+              >
+                {item.name}
+                <span className="transition-transform duration-200 group-hover:translate-x-1">
+                  ›
+                </span>
+              </Link>
+
+              <AnimatePresence>
+                {hover === i && (
+                  <motion.div
+                    initial={{ opacity: 0, x: 40, scale: 0.95 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: 40, scale: 0.95 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    className="absolute left-full top-1 w-64 bg-white shadow-xl rounded-lg z-50 border"
+                  >
+                    <div className="flex flex-col gap-2">
+                      {item.products.map((prod, idx) => (
+                        <Link
+                          key={idx}
+                          href={`/products/${prod.id}`}
+                          className="text-base p-4 border-b border-gray-200 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200"
+                        >
+                          {prod.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           ))}
 
           <div className="px-4 py-4 border-b border-b-gray-200">
@@ -83,7 +111,6 @@ export default function HeroPixelPerfect() {
 
         {/*  HERO CENTER  */}
         <div className="col-span-1 lg:col-span-7 rounded-md  relative overflow-hidden flex  w-full ">
-
           <Image
             src={slides[active].img}
             alt=""
@@ -117,7 +144,7 @@ export default function HeroPixelPerfect() {
               className="object-cover group-hover:scale-105 transition duration-700"
             />
 
-            <div className="absolute bottom-4 left-4 right-4 z-10">
+            <div className="absolute bottom-4 left-4 right-4 z-10 gap-2">
               <span className="text-orange-500 text-[12px] bg-white px-2 py-1 rounded-full inline-block">
                 Secure Packaging
               </span>
@@ -139,7 +166,7 @@ export default function HeroPixelPerfect() {
               className="object-cover group-hover:scale-105 transition duration-700"
             />
 
-            <div className="absolute bottom-4 left-4 right-4 z-10">
+            <div className="absolute bottom-4 left-4 right-4 z-10 gap-2">
               <span className="text-orange-500 text-[13px] bg-white px-2 py-1 rounded-full inline-block">
                 Heavy Duty
               </span>
@@ -178,6 +205,6 @@ export default function HeroPixelPerfect() {
 
         </div>
       </div>
-    </div>
+    </div >
   );
 }
