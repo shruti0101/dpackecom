@@ -43,14 +43,12 @@ const category = [
 
 export default function BestsellerSection() {
   return (
-    <section className="w-full py-10 px-8 lg:px-10">
-      <div className="grid grid-cols-6 gap-8">
-
-        {/* BIG CARDS */}
+    <section className="w-full py-10 px-4 lg:px-10">
+      <div className="grid grid-cols-1 md:grid-cols-6 lg:gap-8 gap-4">
         {category.slice(0, 2).map((item) => (
           <div
             key={item.id}
-            className="col-span-3 h-[330px] relative rounded-[22px] overflow-hidden group"
+            className="col-span-1 md:col-span-3 h-[330px] relative rounded-[22px] overflow-hidden group"
           >
             <Image
               src={item.image}
@@ -79,11 +77,10 @@ export default function BestsellerSection() {
           </div>
         ))}
 
-        {/* SMALL CARDS */}
         {category.slice(2, 5).map((item) => (
           <div
             key={item.id}
-            className="col-span-2 h-[260px] relative rounded-[22px] overflow-hidden group"
+            className="col-span-1 md:col-span-2 h-[260px] relative rounded-[22px] overflow-hidden group"
           >
             <Image
               src={item.image}
@@ -111,7 +108,6 @@ export default function BestsellerSection() {
             </div>
           </div>
         ))}
-
       </div>
     </section>
   );

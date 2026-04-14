@@ -5,15 +5,10 @@ import Link from "next/link"
 
 export default function PackagingSection() {
   return (
-    <section className="w-full bg-[#F8FAFC] py-15 px-6 md:px-12 lg:px-20 overflow-hidden">
-      
-      <div className="w-full mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-    
-
-        {/* RIGHT CONTENT */}
+    <section className="w-full bg-[#F8FAFC] py-12 px-4 md:px-10 lg:px-20 overflow-hidden">
+      <div className="w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          
+
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Packaging Air Bag Manufacturer, Supplier and Wholesaler
           </h1>
@@ -63,10 +58,8 @@ export default function PackagingSection() {
 
         </div>
 
-
-    {/* LEFT IMAGE */}
         <div className="relative w-full h-[350px] md:h-[620px]">
-          
+
           <Image
             src="/sidebanner.png" // 👈 replace with your image
             alt="Packaging Air Bags"
@@ -78,7 +71,6 @@ export default function PackagingSection() {
           <div className="absolute -z-10 top-10 left-10 w-72 h-72 bg-orange-400/20 blur-3xl rounded-full"></div>
         </div>
       </div>
-
     </section>
   )
 }

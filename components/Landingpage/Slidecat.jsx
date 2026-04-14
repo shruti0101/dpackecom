@@ -45,7 +45,7 @@ export default function CategorySlider() {
           spaceBetween={10}
           slidesPerView={6}
           breakpoints={{
-            0: { slidesPerView: 2.2 },
+            0: { slidesPerView: 2 },
             640: { slidesPerView: 3 },
             1024: { slidesPerView: 5 },
           }}

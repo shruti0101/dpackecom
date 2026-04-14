@@ -54,7 +54,7 @@ export default function Navbar() {
           <SearchBar />
 
           {/* RIGHT */}
-          <div className="hidden md:flex items-center gap-6 text-sm">
+          <div className="hidden lg:flex items-center gap-6 text-sm">
 
             <div className="flex items-center gap-2">
               <Phone size={18} />

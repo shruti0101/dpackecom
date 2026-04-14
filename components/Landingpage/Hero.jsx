@@ -56,11 +56,8 @@ export default function HeroPixelPerfect() {
   }, []);
 
   return (
-    <div className="bg-white h-screen">
-      {/* ================= MAIN ================= */}
+    <div className="bg-white">
       <div className="w-full mx-auto mt-2 px-4 md:px-6 grid grid-cols-1 lg:grid-cols-12 gap-5">
-
-        {/* ===== SIDEBAR ===== */}
         <div className="hidden lg:block lg:col-span-2 bg-white">
           {categories.map((item, i) => (
             <div key={i} onMouseEnter={() => sethover(i)} onMouseLeave={() => sethover(null)}
@@ -109,8 +106,7 @@ export default function HeroPixelPerfect() {
           </div>
         </div>
 
-        {/*  HERO CENTER  */}
-        <div className="col-span-1 lg:col-span-7 rounded-md  relative overflow-hidden flex  w-full ">
+        <div className="col-span-1 lg:col-span-7 rounded-md  relative overflow-hidden flex  w-full">
           <Image
             src={slides[active].img}
             alt=""
@@ -132,10 +128,9 @@ export default function HeroPixelPerfect() {
           </div>
         </div>
 
-        {/* ===== RIGHT SECTION ===== */}
         <div className="col-span-1 lg:col-span-3 mt-3 flex flex-col sm:flex-row lg:flex-col gap-2">
           {/* BOTTOM CARD */}
-          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[270px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[280px] sm:h-[250px] lg:h-[270px] rounded-2xl overflow-hidden group">
 
             <Image
               src="/dpack banner (2).webp"
@@ -156,7 +151,7 @@ export default function HeroPixelPerfect() {
           </div>
 
           {/* TOP CARD */}
-          <div className="relative w-full h-[200px] sm:h-[220px] lg:h-[250px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[280px] sm:h-[250px] lg:h-[250px] rounded-2xl overflow-hidden group">
 
             <Image
               src="/newBanner.jpeg"
@@ -179,9 +174,8 @@ export default function HeroPixelPerfect() {
         </div>
       </div>
 
-      {/* ===== FEATURES ===== */}
       <div className="w-full bg-white py-6 px-4 md:px-6">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {features.map((item, i) => (
             <div
@@ -205,6 +199,6 @@ export default function HeroPixelPerfect() {
 
         </div>
       </div>
-    </div >
+    </div>
   );
 }

@@ -133,12 +133,11 @@ export default function FlashSale() {
   ];
 
   return (
-    <div className="bg-white py-13 mt-9 px-6">
-      {/* HEADER */}
-      <div className="flex items-center justify-between max-w-[1250px] mx-auto mb-6">
+    <div className="bg-gray-50 py-10 lg:px-15 px-4">
+      <div className="flex items-center justify-between mx-auto mb-4">
         <h2 className="text-3xl font-semibold relative">
           <span className="relative z-10">Featured Products</span>
-          <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-8 -top-5 w-54 h-14 border-2  rounded-full z-20"></Image>
+          {/* <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image> */}
         </h2>
 
         <Link href="/products" className="text-sm hover:text-blue-600 text-gray-800 cursor-pointer hover:underline">
@@ -146,13 +145,12 @@ export default function FlashSale() {
         </Link>
       </div>
 
-      {/* SWIPER */}
-      <div className="w-full px-12 mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {products.map((item, i) => (
             <SwiperSlide key={i}>
-              <div className="group bg-white h-90 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
+              <div className="group bg-white h-96 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
                 {/* IMAGE BOX */}
-                <div className="relative bg-[#F6F6F6] rounded-xl h-[250px] flex items-center justify-center overflow-hidden">
+                <div className="relative bg-[#F6F6F6] rounded-xl h-[280px] flex items-center justify-center overflow-hidden">
                   {/* NEW TAG */}
                   {item.tag && (
                     <span className="absolute top-10 left-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full z-10 shadow">

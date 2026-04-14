@@ -31,11 +31,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="w-full py-20 px-6 bg-white">
+    <section className="w-full pt-10 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADING */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-semibold text-gray-900">
             What Our Clients Say
           </h2>
@@ -56,6 +56,7 @@ export default function Testimonials() {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
+          className="!pb-10"
         >
           {data.map((item, i) => (
             <SwiperSlide key={i}>

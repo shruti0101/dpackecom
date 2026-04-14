@@ -23,18 +23,13 @@ const products = [
 
 export default function BestSelling() {
   return (
-    <div className="w-full bg-white py-14 px-6 md:px-10">
-
-      {/* HEADER */}
-      <div className="flex items-center justify-between max-w-[1250px] mx-auto mb-7">
-
+    <div className="w-full bg-white py-10 px-4 lg:px-10">
+      <div className="flex items-center justify-between mb-6">
         <h2 className="text-4xl font-semibold relative">
           <span className="relative z-10">Our Best Selling Products</span>
-          <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-8 -top-5 w-54 h-14 border-2  rounded-full z-20"></Image>
+          <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image>
         </h2>
-
-
-        <Link href={"/products"} className="text-md text-black cursor-pointer hover:underline">
+        <Link href={"/products"} className="text-md text-black cursor-pointer hover:underline text-nowrap">
           View All →
         </Link>
       </div>
