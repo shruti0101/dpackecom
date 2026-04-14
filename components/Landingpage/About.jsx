@@ -129,7 +129,7 @@ export default function FlashSale() {
     "Customized packaging options available to meet specific business requirements",
     "Strong production capacity ensuring timely delivery and bulk availability",
     "Dedicated customer support for product selection and after-sales assistance",
-    "Commitment to quality, innovation, and long-term customer satisfaction"
+    // "Commitment to quality, innovation, and long-term customer satisfaction"
   ];
 
   return (
@@ -146,76 +146,77 @@ export default function FlashSale() {
       </div>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {products.map((item, i) => (
-            <SwiperSlide key={i}>
-              <div className="group bg-white h-96 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
-                {/* IMAGE BOX */}
-                <div className="relative bg-[#F6F6F6] rounded-xl h-[280px] flex items-center justify-center overflow-hidden">
-                  {/* NEW TAG */}
-                  {item.tag && (
-                    <span className="absolute top-10 left-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full z-10 shadow">
-                      {item.tag}
-                    </span>
-                  )}
+        {products.map((item, i) => (
+          <SwiperSlide key={i}>
+            <div onClick={() => { setSelected(item); setActiveImg(item.img); }}
+              className="group bg-white h-96 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
+              {/* IMAGE BOX */}
+              <div className="relative bg-[#F6F6F6] rounded-xl h-[280px] flex items-center justify-center overflow-hidden">
+                {/* NEW TAG */}
+                {item.tag && (
+                  <span className="absolute top-10 left-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full z-10 shadow">
+                    {item.tag}
+                  </span>
+                )}
 
-                  {/* 🔥 IMAGE SWITCH */}
-                  <div className="relative w-full h-full">
-                    {/* MAIN IMAGE */}
-                    <Image
-                      src={item.img}
-                      alt="loading"
-                      width={500}
-                      height={500}
-                      className="object-cover transition-all duration-500 group-hover:opacity-0 group-hover:scale-110"
-                    />
+                {/* 🔥 IMAGE SWITCH */}
+                <div className="relative w-full h-full">
+                  {/* MAIN IMAGE */}
+                  <Image
+                    src={item.img}
+                    alt="loading"
+                    width={500}
+                    height={500}
+                    className="object-cover transition-all duration-500 group-hover:opacity-0 group-hover:scale-110"
+                  />
 
-                    {/* HOVER IMAGE */}
-                    <Image
-                      src={item.hoverImg}
-                      alt="loading"
-                      width={900}
-                      height={500}
-                      className="object-contain absolute top-0 left-0 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-125"
-                    />
+                  {/* HOVER IMAGE */}
+                  <Image
+                    src={item.hoverImg}
+                    alt="loading"
+                    width={900}
+                    height={500}
+                    className="object-contain absolute top-0 left-0 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-125"
+                  />
 
-                  </div>
-                  {/* HOVER OVERLAY */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center pb-6">
-                    <div className="flex gap-3 translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <button
-                        onClick={() => {
-                          setSelected(item);
-                          setActiveImg(item.img);
-                        }}
-                        className="w-10 h-10 bg-white cursor-pointer flex items-center justify-center rounded-full shadow-md hover:bg-black hover:text-white transition"
-                      >
-                        <Eye size={18} />
-                      </button>
-
-                    </div>
-
-                  </div>
                 </div>
+                {/* HOVER OVERLAY */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center pb-6">
+                  <div className="flex gap-3 translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <button
+                      onClick={() => {
+                        setSelected(item);
+                        setActiveImg(item.img);
+                      }}
+                      className="w-10 h-10 bg-white cursor-pointer flex items-center justify-center rounded-full shadow-md hover:bg-black hover:text-white transition"
+                    >
+                      <Eye size={18} />
+                    </button>
 
-                {/* CONTENT */}
-                <div className="mt-4">
-                  <h3 className="text-[15px] font-semibold text-gray-800 leading-tight group-hover:text-orange-500 transition">
-                    {item.title}
-                  </h3>
-
-                  {/* RATING */}
-                  <div className="flex items-center gap-1 mt-2 text-orange-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={15} fill="orange" />
-                    ))}
-                    <span className="text-gray-500 text-sm ml-1">
-                      ({item.reviews} Reviews)
-                    </span>
                   </div>
+
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
+
+              {/* CONTENT */}
+              <div className="mt-4">
+                <h3 className="text-[15px] font-semibold text-gray-800 leading-tight group-hover:text-orange-500 transition">
+                  {item.title}
+                </h3>
+
+                {/* RATING */}
+                <div className="flex items-center gap-1 mt-2 text-orange-500">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={15} fill="orange" />
+                  ))}
+                  <span className="text-gray-500 text-sm ml-1">
+                    ({item.reviews} Reviews)
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
 
         {selected && (
           <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
@@ -228,7 +229,7 @@ export default function FlashSale() {
                 ✕
               </button>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 md:gap-6 gap-2">
                 {/* IMAGE */}
                 <div>
                   {/* MAIN IMAGE */}

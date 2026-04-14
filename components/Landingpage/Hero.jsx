@@ -5,6 +5,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { categories } from "@/Data";
 import { motion, AnimatePresence } from "framer-motion";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 
 export default function HeroPixelPerfect() {
   const slides = [
@@ -84,10 +88,8 @@ export default function HeroPixelPerfect() {
                   >
                     <div className="flex flex-col gap-2">
                       {item.products.map((prod, idx) => (
-                        <Link
-                          key={idx}
-                          href={`/products/${prod.id}`}
-                          className="text-base p-4 border-b border-gray-200 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200"
+                        <Link key={idx} href={`/products/${prod.id}`}
+                          className="text-base px-4 py-2 border-b border-gray-200 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200"
                         >
                           {prod.name}
                         </Link>
@@ -107,51 +109,50 @@ export default function HeroPixelPerfect() {
         </div>
 
         <div className="col-span-1 lg:col-span-7 rounded-md  relative overflow-hidden flex  w-full">
-          <Image
-            src={slides[active].img}
-            alt=""
-            width={2000}
-            height={1000}
-            className="object-contain max-w-full h-auto mb-15"
-          />
-
-          {/* DOTS */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {slides.map((_, i) => (
-              <div
-                key={i}
-                onClick={() => setActive(i)}
-                className={`w-2 h-2 rounded-full cursor-pointer ${i === active ? "bg-orange-500" : "bg-gray-300"
-                  }`}
-              />
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000 }}
+            loop={true}
+            className="w-full"
+          >
+            {slides.map((slide, i) => (
+              <SwiperSlide key={i}>
+                <Image
+                  src={slide.img}
+                  alt=""
+                  width={2000}
+                  height={1000}
+                  className="object-contain w-full h-auto"
+                />
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
 
         <div className="col-span-1 lg:col-span-3 mt-3 flex flex-col sm:flex-row lg:flex-col gap-2">
           {/* BOTTOM CARD */}
-          <div className="relative w-full h-[280px] sm:h-[250px] lg:h-[270px] rounded-2xl overflow-hidden group">
-
+          <div className="relative w-full h-[235px] sm:h-[250px] lg:h-[270px] rounded-2xl overflow-hidden group">
             <Image
               src="/dpack banner (2).webp"
               alt=""
               fill
-              className="object-cover group-hover:scale-105 transition duration-700"
+              className="object-cover group-hover:scale-105 transition duration-700 h-full w-full"
             />
 
-            <div className="absolute bottom-4 left-4 right-4 z-10 gap-2">
+            <div className="absolute bottom-4 left-4 right-4 z-10 flex justify-start items-center gap-2">
               <span className="text-orange-500 text-[12px] bg-white px-2 py-1 rounded-full inline-block">
                 Secure Packaging
               </span>
 
-              <Link href={"/products"} className="mt-2 bg-white text-black px-3 py-1.5 rounded text-sm">
+              <Link href={"/products"} className="bg-white text-black px-3 py-1.5 rounded text-sm">
                 Explore →
               </Link>
             </div>
           </div>
 
           {/* TOP CARD */}
-          <div className="relative w-full h-[280px] sm:h-[250px] lg:h-[250px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[235px] sm:h-[250px] lg:h-[250px] rounded-2xl overflow-hidden group">
 
             <Image
               src="/newBanner.jpeg"
@@ -161,12 +162,12 @@ export default function HeroPixelPerfect() {
               className="object-cover group-hover:scale-105 transition duration-700"
             />
 
-            <div className="absolute bottom-4 left-4 right-4 z-10 gap-2">
-              <span className="text-orange-500 text-[13px] bg-white px-2 py-1 rounded-full inline-block">
+            <div className="absolute bottom-4 left-4 right-4 z-10 flex justify-start items-center gap-2">
+              <span className="text-orange-500 text-[12px] bg-white px-2 py-1 rounded-full inline-block">
                 Heavy Duty
               </span>
 
-              <Link href={"/products"} className="mt-2 bg-orange-500 text-white px-3 py-1.5 rounded text-sm">
+              <Link href={"/products"} className="bg-orange-500 text-white px-3 py-1.5 rounded text-sm">
                 Shop →
               </Link>
             </div>

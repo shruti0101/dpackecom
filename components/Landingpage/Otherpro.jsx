@@ -25,7 +25,7 @@ export default function BestSelling() {
   return (
     <div className="w-full bg-white py-10 px-4 lg:px-10">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-4xl font-semibold relative">
+        <h2 className="text-3xl lg:text-4xl font-semibold relative">
           <span className="relative z-10">Our Best Selling Products</span>
           <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image>
         </h2>

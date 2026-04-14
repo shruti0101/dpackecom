@@ -13,6 +13,7 @@ import SearchBar from "./SearchBar";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [categoryOpen, setCategoryOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -77,18 +78,35 @@ export default function Navbar() {
           <div className={`flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 text-sm md:text-[17px] w-full ${open ? "block" : "hidden"} lg:flex`}>
             {/* BROWSE CATEGORIES */}
             <div className="relative group w-full lg:w-auto">
-              <div className="bg-[#D95026] text-white px-4 py-4 flex items-center justify-between lg:justify-center gap-2 cursor-pointer">
+              {/* BUTTON */}
+              <div
+                onClick={() => setCategoryOpen(!categoryOpen)}
+                className="bg-[#D95026] text-white px-4 py-4 flex items-center justify-between lg:justify-center gap-2 cursor-pointer"
+              >
                 <Menu size={20} />
                 Browse Categories
                 <ChevronDown size={20} />
               </div>
 
               {/* DROPDOWN */}
-              <div className="absolute top-full left-0 mt- w-[220px] bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div
+                className={`
+          absolute top-full left-0 w-[220px] bg-white shadow-xl rounded-lg z-50
+          
+          /* MOBILE (click) */
+          ${categoryOpen ? "block" : "hidden"} 
+          
+          /* DESKTOP (hover) */
+          lg:block lg:opacity-0 lg:invisible 
+          lg:group-hover:opacity-100 lg:group-hover:visible 
+          lg:transition-all lg:duration-300
+        `}
+              >
                 {cat.map((item, i) => (
-                  <Link href={item.link}
+                  <Link
+                    href={item.link}
                     key={i}
-                    className="px-4 py-4 border-b border-gray-200 text-lg border-b border-gray-200  flex justify-between items-center hover:bg-gray-50 text-gray-600 cursor-pointer"
+                    className="px-4 py-4 border-b border-gray-200 text-lg flex justify-between items-center hover:bg-gray-50 text-gray-600 cursor-pointer"
                   >
                     {item.name}
                     <span>›</span>
@@ -109,10 +127,13 @@ export default function Navbar() {
             <Link href="/about" className="text-black hover:text-[#D95026] font-medium">About Us</Link>
             <Link href="/our-blogs" className="text-black hover:text-[#D95026] font-medium">News & Articles</Link>
             <Link href="/contact" className="text-black hover:text-[#D95026] font-medium">Contact Us</Link>
+            <button className="w-full lg:hidden block capitalize cursor-pointer bg-black text-white text-sm md:text-md px-4 py-4">
+              download brochure
+            </button>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="w-50  mt-3 lg:mt-0">
+          <div className="w-50  mt-3 lg:mt-0 lg:block hidden">
             <button className="w-full  capitalize cursor-pointer bg-black text-white text-sm md:text-md px-4 py-4">
               download brochure
             </button>

@@ -33,6 +33,31 @@ export default function Product360Modal({ isOpen, onClose, images = [] }) {
         isDragging.current = false;
     };
 
+    const handleTouchStart = (e) => {
+        isDragging.current = true;
+        startX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        if (!isDragging.current) return;
+
+        const currentX = e.touches[0].clientX;
+        const diff = currentX - startX.current;
+
+        if (Math.abs(diff) > 20) {
+            setIndex((prev) =>
+                diff > 0
+                    ? (prev - 1 + images.length) % images.length
+                    : (prev + 1) % images.length
+            );
+            startX.current = currentX;
+        }
+    };
+
+    const handleTouchEnd = () => {
+        isDragging.current = false;
+    };
+
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -76,6 +101,9 @@ export default function Product360Modal({ isOpen, onClose, images = [] }) {
                             onMouseMove={handleMouseMove}
                             onMouseUp={handleMouseUp}
                             onMouseLeave={handleMouseUp}
+                            onTouchStart={handleTouchStart}
+                            onTouchMove={handleTouchMove}
+                            onTouchEnd={handleTouchEnd}
                         >
                             <img
                                 src={images[index]}
@@ -85,7 +113,7 @@ export default function Product360Modal({ isOpen, onClose, images = [] }) {
                         </div>
 
                         <p className="flex justify-center items-center gap-4 text-sm text-gray-800 mt-3 text-center font-bold">
-                         <ArrowBigLeftDash /> Drag left/right to rotate <ArrowBigRightDash />
+                            <ArrowBigLeftDash /> Drag left/right to rotate <ArrowBigRightDash />
                         </p>
                     </motion.div>
                 </motion.div>
