@@ -456,7 +456,7 @@ export default function ProductPage({ productId }) {
               <SwiperSlide key={i}>
                 <Link href={`/products/${item.id}`} className="group bg-white h-100 rounded-2xl p-4 shadow-lg hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
 
-                  <div className="relative bg-[#F6F6F6] rounded-xl h-[280px] flex items-center justify-center overflow-hidden">
+                  <div className="relative bg-[#F6F6F6] rounded-xl h-[300px] flex items-center justify-center overflow-hidden">
 
                     <Image
                       src={item.image?.[0]?.src}

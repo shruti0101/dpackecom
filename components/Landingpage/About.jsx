@@ -163,7 +163,7 @@ export default function FlashSale() {
             <div onClick={() => { setSelected(item); setActiveImg(item.img); }}
               className="group bg-white h-96 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
               {/* IMAGE BOX */}
-              <div className="relative bg-[#F6F6F6] rounded-xl h-[280px] flex items-center justify-center overflow-hidden">
+              <div className="relative bg-[#F6F6F6] rounded-xl h-[300px] flex items-center justify-center overflow-hidden">
                 {/* NEW TAG */}
                 {item.tag && (
                   <span className="absolute top-10 left-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full z-10 shadow">
