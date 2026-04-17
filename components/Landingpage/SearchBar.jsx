@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronDown, Search } from "lucide-react";
 import { categories } from "@/Data";
@@ -19,6 +19,25 @@ export default function SearchBar() {
     const [activeIndex, setActiveIndex] = useState(-1);
 
     const router = useRouter();
+    const wrapperRef = useRef(null);
+
+    // ✅ Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                wrapperRef.current &&
+                !wrapperRef.current.contains(event.target)
+            ) {
+                setShow(false);
+                setActiveIndex(-1);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     const handleSearch = (value) => {
         setQuery(value);
@@ -74,7 +93,7 @@ export default function SearchBar() {
     };
 
     return (
-        <div className="relative w-full lg:w-[500px]">
+        <div ref={wrapperRef} className="relative w-full lg:w-[500px]">
             {/* Search Bar */}
             <div className="flex items-center bg-[#F5F5F5] rounded-full overflow-hidden border">
                 <div className="hidden sm:flex px-4 items-center gap-2 text-sm text-gray-600 border-r">
@@ -102,11 +121,10 @@ export default function SearchBar() {
                             <div
                                 key={index}
                                 onClick={() => handleSelect(item.id)}
-                                className={`px-4 py-2 cursor-pointer text-sm ${
-                                    index === activeIndex
+                                className={`px-4 py-2 cursor-pointer text-sm ${index === activeIndex
                                         ? "bg-gray-200"
                                         : "hover:bg-gray-100"
-                                }`}
+                                    }`}
                             >
                                 {item.name}
                             </div>

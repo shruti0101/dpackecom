@@ -88,11 +88,13 @@ export const categories = [
             "src": "/air bubble roll/1.png",
             "alt": "Dunnage Air Bags"
           },
-          // {
-          //  "src": "/air bubble roll/1.png",
-          //   "alt": "Dunnage Air Bags"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          }
         ],
+
+        productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
 
         images360: [
           '/360/Dunnage Air Bags/1.png',
@@ -167,12 +169,12 @@ export const categories = [
             "src": "/air bubble roll/2.png",
             "alt": "Paper Dunnage Air Bag"
           },
-          // {
-          //   "src": "/check/paper-dunnage2.png",
-          //   "alt": "Paper Dunnage Air Bag"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          }
         ],
-
+        productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         images360: [
           '/360/Paper Dunnage Air Bag/1.png',
           '/360/Paper Dunnage Air Bag/2.png',
@@ -264,11 +266,11 @@ export const categories = [
             "src": "/air bubble roll/3.png",
             "alt": "Paper Dunnage Bag for Container Shipping"
           },
-          // {
-          //   "src": "/check/container-dunnage2.png",
-          //   "alt": "Paper Dunnage Bag for Container Shipping"
-          // }
-        ],
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          }
+        ], productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         images360: [
           '/360/Paper Dunnage Air Bag/1.png',
           '/360/Paper Dunnage Air Bag/2.png',
@@ -350,17 +352,17 @@ export const categories = [
           { "label": "Material", "value": "Paper" },
           { "label": "Model Name/Number", "value": "DD001" },
           { "label": "Weight", "value": "200 gram" }
-        ],
+        ], productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
 
         image: [
           {
             "src": "/air bubble roll/4.png",
             "alt": "Dunnage Bag for Shipping Containers"
           },
-          // {
-          //   "src": "/check/dunnage-container2.png",
-          //   "alt": "Dunnage Bag for Shipping Containers"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          }
         ],
         images360: [
           '/360/Paper Dunnage Air Bag/1.png',
@@ -447,18 +449,23 @@ export const categories = [
           { "label": "Waterproof", "value": "Yes" },
           { "label": "Material", "value": "PP" },
           { "label": "Country of Origin", "value": "Made in India" }
-        ],
+        ], productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
 
         image: [
           {
             "src": "/air bubble roll/5.png",
             "alt": "PP Dunnage Bag"
           },
-          // {
-          //   "src": "/check/pp-dunnage2.png",
-          //   "alt": "PP Dunnage Bag"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          },
+          {
+            "src": "/PP2.png",
+            "alt": "PP Dunnage Bag"
+          }
         ],
+
         images360: [
           '/360/PP Dunnage Bag/1.png',
           '/360/PP Dunnage Bag/2.png',
@@ -532,7 +539,7 @@ export const categories = [
             ]
           }
 
-        ],
+        ], productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
 
         specs: [
           { "label": "Minimum Order Quantity", "value": "1000 Piece" },
@@ -549,10 +556,10 @@ export const categories = [
             "src": "/air bubble roll/6.png",
             "alt": "Dunnage Bag Manufacturer"
           },
-          // {
-          //   "src": "/check/dunnage-manufacturer2.png",
-          //   "alt": "Dunnage Bag Manufacturer"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          }
         ],
         images360: [
           '/360/Paper Dunnage Air Bag/1.png',
@@ -573,7 +580,7 @@ export const categories = [
         metaTitle: "Polypropylene Dunnage Air Bag | PP Inflatable Bags for Cargo Stabilization",
         metaDescription: "High-performance Polypropylene Dunnage Air Bags for cargo stabilization. Waterproof, durable, and ideal for wooden furniture protection and logistics applications.",
         overview: "Strong PP-based inflatable bags ideal for stabilizing heavy loads during long-distance transport.",
-
+        productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         description: [
 
           {
@@ -643,10 +650,14 @@ export const categories = [
             "src": "/air bubble roll/7.png",
             "alt": "Polypropylene Dunnage Air Bag"
           },
-          // {
-          //   "src": "/check/pp-airbag2.png",
-          //   "alt": "Polypropylene Dunnage Air Bag"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          },
+          {
+            "src": "/PP2.png",
+            "alt": "PP Dunnage Bag"
+          }
         ],
         images360: [
           '/360/PP Dunnage Bag/1.png',
@@ -667,7 +678,7 @@ export const categories = [
         metaTitle: "Square Dunnage Air Bags | Heavy Duty PP Air Bags for Cargo Stabilization",
         metaDescription: "High-strength Square Dunnage Air Bags made from PP material for effective gap filling and load distribution. Ideal for heavy cargo with 5 Ton capacity and 90 PSI working pressure.",
         overview: "Uniform square-shaped air bags designed for effective gap filling and load distribution.",
-
+        productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         description: [
 
           {
@@ -740,10 +751,14 @@ export const categories = [
             "src": "/air bubble roll/8.png",
             "alt": "Square Dunnage Air Bags"
           },
-          // {
-          //   "src": "/check/square-dunnage2.png",
-          //   "alt": "Square Dunnage Air Bags"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          },
+          {
+            "src": "/PP2.png",
+            "alt": "PP Dunnage Bag"
+          }
         ],
         images360: [
           '/360/Square Dunnage Air Bags/1.png',
@@ -764,7 +779,7 @@ export const categories = [
         metaTitle: "Dunnage Bags Air Bags | Paper Air Bags for Cargo Securing and Load Stabilization",
         metaDescription: "High-quality Dunnage Bags Air Bags for cargo securing and transport safety. Durable, airtight, and ideal for containers, trucks, and industrial logistics applications.",
         overview: "Versatile inflatable air bags suitable for securing and protecting various types of cargo.",
-
+        productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         description: [
 
           {
@@ -836,10 +851,10 @@ export const categories = [
             "src": "/air bubble roll/9.png",
             "alt": "Dunnage Bags Air Bags"
           },
-          // {
-          //   "src": "/check/dunnage-airbags2.png",
-          //   "alt": "Dunnage Bags Air Bags"
-          // }
+          {
+            "src": "/Dunnage2.jpg",
+            "alt": "Dunnage Air Bags"
+          }
         ],
         images360: [
           '/360/PP Dunnage Bag/1.png',
@@ -1947,6 +1962,109 @@ export const categories = [
           '/360/Glass Bottle Air Column Roll/10.png',
         ],
       },
+
+      {
+        "id": "air-bubble-packaging-film-roll",
+        "name": "Air Bubble Packaging Film Roll",
+        "metaTitle": "Air Bubble Packaging Film Roll | Protective Bubble Packaging Roll",
+        "metaDescription": "High-quality Air Bubble Packaging Film Roll for cushioning and protection of fragile goods. Waterproof, durable, and ideal for furniture and industrial packaging.",
+        "overview": "Air Bubble Packaging Film Rolls designed for effective cushioning, shock absorption, and surface protection during storage and transportation.",
+
+        "description": [
+          {
+            "type": "h2",
+            "text": "Product Overview"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Air Bubble Packaging Film Rolls are designed to provide effective cushioning and protection for products during storage and transportation.",
+              "The bubble structure creates a protective barrier that absorbs shocks, vibrations, and impact, reducing the risk of damage.",
+              "Manufactured using high-quality materials to ensure durability, flexibility, and long-lasting performance.",
+              "Ideal for wrapping wooden furniture and protecting surfaces from scratches, dents, and external damage.",
+              "Waterproof construction makes it suitable for use in humid and varying environmental conditions.",
+              "Lightweight and easy to handle, helping reduce overall packaging and shipping costs."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Key Features"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Provides excellent shock absorption and cushioning performance.",
+              "Protects products from scratches, dust, and handling damage.",
+              "Flexible and easy to wrap around various shapes and sizes.",
+              "Lightweight material reduces shipping and packaging costs.",
+              "Durable construction ensures reliable protection during transit.",
+              "Easy to cut and customize as per packaging requirements."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Applications"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Packaging and protection of wooden furniture.",
+              "E-commerce and courier shipments.",
+              "Wrapping of fragile and delicate items.",
+              "Warehouse storage and handling protection.",
+              "Industrial packaging applications."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Why Choose This Product"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Cost-effective solution for protective packaging needs.",
+              "Ensures safe transportation and minimizes product damage.",
+              "Suitable for a wide range of industries and applications.",
+              "Ready stock available for immediate supply.",
+              "Reliable quality with consistent performance."
+            ]
+          }
+        ],
+
+        "specs": [
+          { "label": "Thickness (GSM)", "value": "50 GSM" },
+          { "label": "Length", "value": "50 m" },
+          { "label": "Bubble Size", "value": "10 mm" },
+          { "label": "Sheet Length (per roll)", "value": "50 meter" },
+          { "label": "Color", "value": "White" },
+          { "label": "Usage/Application", "value": "Wooden Furniture" },
+          { "label": "Waterproof", "value": "Yes" },
+          { "label": "Availability", "value": "In Stock" }
+        ],
+
+        "image": [
+          {
+            "src": "/air bubble roll/42.png",
+            "alt": "Air Bubble Packaging Film Roll"
+          }
+        ],
+
+        "images360": [
+          "/360/air-bubble-packaging-film/1.png",
+          "/360/air-bubble-packaging-film/2.png",
+          "/360/air-bubble-packaging-film/3.png",
+          "/360/air-bubble-packaging-film/4.png",
+          "/360/air-bubble-packaging-film/5.png",
+          "/360/air-bubble-packaging-film/6.png",
+          "/360/air-bubble-packaging-film/7.png",
+          "/360/air-bubble-packaging-film/8.png",
+          "/360/air-bubble-packaging-film/9.png",
+          "/360/air-bubble-packaging-film/10.png"
+        ]
+      },
     ],
   },
 
@@ -2432,7 +2550,7 @@ export const categories = [
 
         image: [
           {
-            "src": "/air bubble roll/25.png",
+            "src": "/air bubble roll/01JWXG1FZDG202841G88YNW6TF.png",
             "alt": "Air Column Packaging Bag"
           },
           // {
@@ -2739,6 +2857,8 @@ export const categories = [
           },
 
         ],
+
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         images360: [
           '/360/Shoes Packing Air Cushion Bag/1.png',
           '/360/Shoes Packing Air Cushion Bag/2.png',
@@ -2827,7 +2947,7 @@ export const categories = [
           { "label": "Country of Origin", "value": "Made in India" },
           { "label": "Availability", "value": "In Stock" }
         ],
-
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         image: [
           {
             "src": "/air bubble roll/29.png",
@@ -2911,7 +3031,7 @@ export const categories = [
           }
 
         ],
-
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         specs: [
           { "label": "Color", "value": "Transparent" },
           { "label": "Usage/Application", "value": "Electronics and Glass" },
@@ -3007,7 +3127,7 @@ export const categories = [
           }
 
         ],
-
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         specs: [
           { "label": "Film Material", "value": "Nylon Barrier" },
           { "label": "Size", "value": "500x500 mm" },
@@ -3111,7 +3231,7 @@ export const categories = [
           }
 
         ],
-
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         specs: [
           { "label": "Size", "value": "500x500 mm" },
           { "label": "Usage/Application", "value": "PACKAGING" },
@@ -3214,7 +3334,7 @@ export const categories = [
           }
 
         ],
-
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         specs: [
           { "label": "Minimum Order Quantity", "value": "5000 Piece" },
           { "label": "Color", "value": "Transparent" },
@@ -3313,7 +3433,7 @@ export const categories = [
           }
 
         ],
-
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         specs: [
           { "label": "Size", "value": "400X450 mm" },
           { "label": "Brand", "value": "D pack" },
@@ -3407,7 +3527,7 @@ export const categories = [
           }
 
         ],
-
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
         specs: [],
 
         image: [
@@ -3433,6 +3553,111 @@ export const categories = [
           '/360/Trolley Packaging Air Bag/9.png',
         ],
       },
+
+      {
+        "id": "air-bag-packing-bag-in-bag",
+        "name": "Air Bag Packing Bag-in-Bag",
+        "metaTitle": "Air Bag Packing Bag-in-Bag | Air Pillow Cushion Packaging Solution",
+        "metaDescription": "Air Bag Packing Bag-in-Bag provides air pillow cushioning for shock absorption, void filling, and protection during shipping. Lightweight and customizable packaging solution.",
+        "overview": "Air Bag Packing (Bag-in-Bag) designed with air pillow technology to provide cushioning, shock absorption, and product protection during storage and transportation.",
+        productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
+        "description": [
+          {
+            "type": "h2",
+            "text": "Product Overview"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Air Bag Packing (Bag-in-Bag) is designed to provide advanced cushioning and protection for products during storage and transportation.",
+              "Utilizes air pillow technology to create a protective barrier that absorbs shocks, vibrations, and impact.",
+              "Ideal for wrapping, blocking, bracing, and void filling in various packaging applications.",
+              "Manufactured using high-quality plastic film to ensure durability, flexibility, and reliable performance.",
+              "Lightweight design helps reduce overall packaging weight and shipping costs.",
+              "Customizable structure allows adaptation to different product sizes and packaging requirements."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Key Features"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Provides excellent shock absorption and cushioning performance.",
+              "Flexible and adaptable for various packaging needs.",
+              "Lightweight material reduces logistics and shipping costs.",
+              "Customizable sizes and thickness for different applications.",
+              "Easy to use and efficient for high-volume packaging operations.",
+              "Supports branding with multi-color printing options."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Applications"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "E-commerce packaging and shipping.",
+              "Electronics and fragile item protection.",
+              "Industrial packaging and logistics.",
+              "Warehouse storage and handling.",
+              "Retail and branded packaging solutions."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Why Choose This Product"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Versatile packaging solution for multiple applications.",
+              "Cost-effective alternative to traditional packaging materials.",
+              "Ensures safe handling and transportation of goods.",
+              "Eco-friendly and recyclable packaging option.",
+              "Reliable quality with consistent performance."
+            ]
+          }
+        ],
+
+        "specs": [
+          { "label": "Film Material", "value": "Plastic" },
+          { "label": "Bubble Type", "value": "Air Pillow" },
+          { "label": "Pillow Size", "value": "As per requirement" },
+          { "label": "Film Thickness", "value": "As per requirement" },
+          { "label": "Roll Width", "value": "As per requirement" },
+          { "label": "Usage", "value": "Wrapping, Block and Brace, Void Fill, Cushioning" },
+          { "label": "Print Type", "value": "Multi Color" },
+          { "label": "Recyclable", "value": "Yes" },
+          { "label": "Availability", "value": "In Stock" },
+          { "label": "Category", "value": "Packaging Air Bag" }
+        ],
+
+        "image": [
+          {
+            "src": "/air bubble roll/47.webp",
+            "alt": "Air Bag Packing Bag-in-Bag"
+          }
+        ],
+
+        "images360": [
+          "/360/air-bag-packing-bag-in-bag/1.png",
+          "/360/air-bag-packing-bag-in-bag/2.png",
+          "/360/air-bag-packing-bag-in-bag/3.png",
+          "/360/air-bag-packing-bag-in-bag/4.png",
+          "/360/air-bag-packing-bag-in-bag/5.png",
+          "/360/air-bag-packing-bag-in-bag/6.png",
+          "/360/air-bag-packing-bag-in-bag/7.png",
+          "/360/air-bag-packing-bag-in-bag/8.png",
+          "/360/air-bag-packing-bag-in-bag/9.png",
+          "/360/air-bag-packing-bag-in-bag/10.png"
+        ]
+      }
     ],
   },
 
@@ -3827,6 +4052,213 @@ export const categories = [
           '/360/Gap Filler Pouch/12.png',
           '/360/Gap Filler Pouch/13.png',
         ],
+      },
+
+      {
+        "id": "inflatable-air-cushion-for-shoes",
+        "name": "Inflatable Air Cushion for Shoes",
+        "metaTitle": "Inflatable Air Cushion for Shoes | Gap Filler Packaging Solution",
+        "metaDescription": "Inflatable air cushion for shoes designed to protect footwear during storage and shipping. Prevents deformation, scratches, and damage with lightweight air-filled protection.",
+        "overview": "Inflatable air cushions designed as gap fillers to protect shoes from deformation, scratches, and damage during storage and transportation.",
+
+        "description": [
+          {
+            "type": "h2",
+            "text": "Product Overview"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Inflatable Air Cushions for shoes are designed to provide effective protection during storage, handling, and transportation.",
+              "Creates a secure air-filled barrier around footwear to prevent deformation, scratches, and damage.",
+              "Ideal for maintaining the original shape and structure of shoes during shipping.",
+              "Manufactured using high-quality transparent material for durability and flexibility.",
+              "Lightweight design helps reduce overall packaging weight and shipping costs.",
+              "Easy to inflate and use, ensuring quick and efficient packaging operations."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Key Features"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Provides excellent cushioning and shock absorption.",
+              "Prevents shoe deformation and maintains the original shape.",
+              "Protects against dust, scratches, and external damage.",
+              "Lightweight and space-efficient packaging solution.",
+              "Easy to inflate and handle during packing.",
+              "Suitable for different types and sizes of footwear."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Applications"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Shoe packaging for e-commerce shipments.",
+              "Retail and brand packaging for footwear.",
+              "Warehouse storage and handling.",
+              "Export packaging for shoes and footwear products."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Why Choose This Product"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Ensures safe and damage-free delivery of footwear.",
+              "Cost-effective alternative to traditional packaging materials.",
+              "Improves product presentation with a clean, transparent design.",
+              "Reliable quality and consistent performance.",
+              "Suitable for both domestic and export packaging needs."
+            ]
+          }
+        ],
+
+        "specs": [
+          { "label": "Color", "value": "Transparent" },
+          { "label": "Usage/Application", "value": "Shoes Packing" },
+          { "label": "Shape", "value": "Rectangle" },
+          { "label": "Brand", "value": "Airpack" },
+          { "label": "Country of Origin", "value": "Made in India" },
+          { "label": "Category", "value": "Gap Filler" },
+          { "label": "Availability", "value": "In Stock" }
+        ],
+
+        "image": [
+          {
+            "src": "/air bubble roll/48.webp",
+            "alt": "Inflatable Air Cushion for Shoes"
+          }
+        ],
+
+        "images360": [
+          "/360/inflatable-air-cushion-shoes/1.png",
+          "/360/inflatable-air-cushion-shoes/2.png",
+          "/360/inflatable-air-cushion-shoes/3.png",
+          "/360/inflatable-air-cushion-shoes/4.png",
+          "/360/inflatable-air-cushion-shoes/5.png",
+          "/360/inflatable-air-cushion-shoes/6.png",
+          "/360/inflatable-air-cushion-shoes/7.png",
+          "/360/inflatable-air-cushion-shoes/8.png",
+          "/360/inflatable-air-cushion-shoes/9.png",
+          "/360/inflatable-air-cushion-shoes/10.png"
+        ]
+      },
+
+      {
+        "id": "rf-gap-filler-pouch",
+        "name": "RF Gap Filler Pouch",
+        "metaTitle": "RF Gap Filler Pouch | Void Filling Air Cushion Packaging",
+        "metaDescription": "RF Gap Filler Pouch designed for void filling and product protection during shipping. Lightweight, durable, and ideal for e-commerce and industrial packaging.",
+        "overview": "RF Gap Filler Pouches designed to fill empty spaces between products, providing air cushioning and protection during storage and transportation.",
+
+        "description": [
+          {
+            "type": "h2",
+            "text": "Product Overview"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "RF Gap Filler Pouches are designed to fill empty spaces between products, ensuring stability and protection during storage and transportation.",
+              "These pouches create an air-filled cushioning barrier that prevents product movement, reducing the risk of damage caused by impact or vibration.",
+              "Manufactured using high-quality transparent material to provide durability, flexibility, and consistent performance.",
+              "Ideal for e-commerce packaging, logistics, and industrial shipments where void filling is essential.",
+              "Lightweight and space-saving design helps reduce packaging costs while maintaining effective protection.",
+              "Easy to inflate with a one-way valve system, ensuring quick and efficient packing operations."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Key Features"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Provides excellent void filling and cushioning protection.",
+              "One-way valve ensures easy inflation and prevents air leakage.",
+              "Durable sealing structure for long-lasting performance.",
+              "Lightweight and cost-effective packaging solution.",
+              "Flexible design adapts to different product shapes.",
+              "Easy to store, transport, and use."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Applications"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "E-commerce packaging and shipping.",
+              "Electronics and fragile item protection.",
+              "Industrial packaging and logistics.",
+              "Warehouse storage and handling."
+            ]
+          },
+
+          {
+            "type": "h2",
+            "text": "Why Choose This Product"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Reduces product damage during transit.",
+              "Improves packaging efficiency and speed.",
+              "Cost-effective alternative to traditional fillers.",
+              "Suitable for a wide range of industries.",
+              "Consistent quality and reliable performance."
+            ]
+          }
+        ],
+
+        "specs": [
+          { "label": "Pouch Type", "value": "Pillow Pouch" },
+          { "label": "Pouch Features", "value": "One way valve" },
+          { "label": "Pouch Features", "value": "Valve" },
+          { "label": "Pouch Finish", "value": "Matte" },
+          { "label": "Sealing Type", "value": "3-Side Seal" },
+          { "label": "Size/Capacity", "value": "100x200, 260 pcs per kg" },
+          { "label": "Capacity", "value": "Air fill" },
+          { "label": "Printing Type", "value": "Unprinted" },
+          { "label": "Material", "value": "Transparent" },
+          { "label": "Mode of Supply", "value": "Pouches" },
+          { "label": "Category", "value": "Gap Filler" },
+          { "label": "Availability", "value": "In Stock" }
+        ],
+
+        "image": [
+          {
+            "src": "/air bubble roll/48.webp",
+            "alt": "RF Gap Filler Pouch"
+          }
+        ],
+
+        "images360": [
+          "/360/rf-gap-filler-pouch/1.png",
+          "/360/rf-gap-filler-pouch/2.png",
+          "/360/rf-gap-filler-pouch/3.png",
+          "/360/rf-gap-filler-pouch/4.png",
+          "/360/rf-gap-filler-pouch/5.png",
+          "/360/rf-gap-filler-pouch/6.png",
+          "/360/rf-gap-filler-pouch/7.png",
+          "/360/rf-gap-filler-pouch/8.png",
+          "/360/rf-gap-filler-pouch/9.png",
+          "/360/rf-gap-filler-pouch/10.png"
+        ]
       },
     ],
   },

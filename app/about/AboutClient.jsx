@@ -82,15 +82,15 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-gray-600 mb-6 leading-relaxed">
-            At <span className="font-semibold text-gray-900">D Pack</span>, we appreciate your trust in choosing us as your packaging solutions partner. Supporting your business with dependable and innovative products is something we take great pride in.
+            From Dpack Solutions to Dpack, backed by 10+ years of experience, we deliver reliable, high-performance packaging solutions that protect, optimize, and add value to your business. We take pride in being a reliable partner for businesses seeking innovative and dependable packaging solutions.
           </p>
 
           <p className="text-gray-600 mb-6 leading-relaxed">
-            With over 10 years of experience, we specialize in manufacturing high-performance Packaging Air Bags, including Air Cushion Bags, Dunnage Air Bags, and Air Column Bags.
+            At Dpack, we specialize in manufacturing high-performance Packaging Air Bags, including Air Cushion Bags, Dunnage Air Bags, and Air Column Bags. Our products are designed to provide maximum protection during storage and transit, ensuring the safety of your goods at every stage.
           </p>
 
           <p className="text-gray-600 leading-relaxed">
-            Our goal is to deliver packaging solutions that ensure maximum protection, efficiency, and cost savings for your business.
+            With a strong focus on quality, efficiency, and cost-effectiveness, we are committed to delivering solutions that enhance your packaging process and support your business growth. At Dpack, your trust drives us to continuously innovate and improve.
           </p>
         </div>
 

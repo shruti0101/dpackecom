@@ -12,6 +12,7 @@ import {
   Twitter,
   ArrowUpRight,
   Rotate3d,
+  Download,
 } from "lucide-react";
 import { categories } from "@/Data";
 import { ShoppingCart, Eye } from "lucide-react";
@@ -50,6 +51,19 @@ export default function ProductPage({ productId }) {
   useEffect(() => {
     setActiveImage(images[index]);
   }, [index, images]);
+
+  const [position, setPosition] = useState({ x: 50, y: 50 });
+  const [hover, setHover] = useState(false);
+
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } =
+      e.currentTarget.getBoundingClientRect();
+
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+
+    setPosition({ x, y });
+  };
 
   return (
     <>
@@ -101,25 +115,68 @@ export default function ProductPage({ productId }) {
                 360 View
               </span>
             </button>
+
+            {product.productBrochure && (
+              <a
+                href={product.productBrochure}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  className="flex flex-col items-center justify-center gap-1 px-4 py-3 
+      border border-orange-500 rounded-xl text-orange-600 
+      hover:bg-orange-50 transition-all duration-200 cursor-pointer 
+      shadow-sm hover:shadow-lg"
+                >
+                  <Download size={28} />
+                  <span className="text-xs font-medium tracking-wide">
+                    Brochure
+                  </span>
+                </button>
+              </a>
+            )}
           </div>
 
           {/* MAIN IMAGE WITH ANIMATION */}
-          <div className="col-span-1 lg:col-span-5 bg-gray-100 rounded-xl flex items-center justify-center p-4 overflow-hidden">
+          <div className="lg:h-[520px] col-span-1 lg:col-span-5 bg-gray-100 rounded-xl flex items-center justify-center p-4 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeImage}
-                initial={{ y: 120, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -120, opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+                className="w-full h-full"
               >
-                <Image
-                  src={activeImage}
-                  width={600}
-                  height={600}
-                  alt={product.name || "no image"}
-                  className="object-cover"
-                />
+                <div
+                  className="w-full h-full overflow-hidden cursor-zoom-in"
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
+                >
+                  <motion.div
+                    animate={
+                      hover
+                        ? {
+                          scale: 2,
+                          x: `${50 - position.x}%`,
+                          y: `${50 - position.y}%`,
+                        }
+                        : { scale: 1, x: 0, y: 0 }
+                    }
+                    transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
+                    className="w-full h-full flex items-center justify-center"
+                  >
+                    <Image
+                      src={activeImage}
+                      width={600}
+                      height={600}
+                      alt={product.name || "no image"}
+                      className="object-cover"
+                    />
+                  </motion.div>
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -149,6 +206,27 @@ export default function ProductPage({ productId }) {
                 360 View
               </span>
             </button>
+
+            {product.productBrochure && (
+              <a
+                href={product.productBrochure}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  className="flex flex-col items-center justify-center gap-1 px-2 py-3 
+      border border-orange-500 rounded-xl text-orange-600 
+      hover:bg-orange-50 transition-all duration-200 cursor-pointer 
+      shadow-sm hover:shadow-lg"
+                >
+                  <Download size={28} />
+                  <span className="text-xs font-medium tracking-wide">
+                    Brochure
+                  </span>
+                </button>
+              </a>
+            )}
           </div>
 
           {/* PRODUCT DETAILS */}
