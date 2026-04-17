@@ -2157,10 +2157,10 @@ export const categories = [
             "src": "/air bubble roll/21.png",
             "alt": "Air Column Bag for Laptop"
           },
-          // {
-          //   "src": "/check/laptop-airbag2.png",
-          //   "alt": "Air Column Bag for Laptop"
-          // }
+          {
+            "src": "/airbag.png",
+            "alt": "Air Column Bag for Laptop"
+          }
         ],
 
         images360: [
@@ -2255,10 +2255,10 @@ export const categories = [
             "src": "/air bubble roll/22.png",
             "alt": "Air Column Bags for Electronics"
           },
-          // {
-          //   "src": "/check/electronics-airbag2.png",
-          //   "alt": "Air Column Bags for Electronics"
-          // }
+          {
+            "src": "/airbag.png",
+            "alt": "Air Column Bag for Laptop"
+          }
         ],
         images360: [
           '/360/Air Column Bags for Electronics/1.png',
@@ -2358,10 +2358,10 @@ export const categories = [
             "src": "/air bubble roll/23.png",
             "alt": "Air Column Cushion Bag for Wine"
           },
-          // {
-          //   "src": "/check/wine-airbag2.png",
-          //   "alt": "Air Column Cushion Bag for Wine"
-          // }
+          {
+            "src": "/bottle.png",
+            "alt": "Air Column Cushion Bag for Wine"
+          }
         ],
         images360: [
           '/360/Air Column Cushion Bag for Wine/1.png',
@@ -2460,10 +2460,10 @@ export const categories = [
             "src": "/air bubble roll/24.png",
             "alt": "Transparent Air Column Bag for Mac Book, For Safe Packaging"
           },
-          // {
-          //   "src": "/check/macbook-airbag2.png",
-          //   "alt": "Transparent Air Column Bag for Mac Book, For Safe Packaging"
-          // }
+          {
+            "src": "/airbag.png",
+            "alt": "Air Column Bag for Laptop"
+          }
         ],
         images360: [
           '/360/Air Column Bag for Laptop/1.png',
@@ -2553,10 +2553,10 @@ export const categories = [
             "src": "/air bubble roll/01JWXG1FZDG202841G88YNW6TF.png",
             "alt": "Air Column Packaging Bag"
           },
-          // {
-          //   "src": "/check/column-bag2.png",
-          //   "alt": "Air Column Packaging Bag"
-          // }
+          {
+            "src": "/airbag.png",
+            "alt": "Air Column Bag for Laptop"
+          }
         ],
         images360: [
           '/360/Air Column Packaging Bag/1.png',
@@ -2657,10 +2657,10 @@ export const categories = [
             "src": "/air bubble roll/26.png",
             "alt": "Ghee Jar Air Column BAG"
           },
-          // {
-          //   "src": "/check/ghee-jar2.png",
-          //   "alt": "Ghee Jar Air Column BAG"
-          // }
+          {
+            "src": "/ghee.png",
+            "alt": "Air Column Bag for Laptop"
+          }
         ],
         images360: [
           '/360/Ghee Jar Air Column Bag/1.png',
@@ -2953,10 +2953,10 @@ export const categories = [
             "src": "/air bubble roll/29.png",
             "alt": "Self-Inflated Packaging Air Bag"
           },
-          // {
-          //   "src": "/check/self-inflated2.png",
-          //   "alt": "Self-Inflated Packaging Air Bag"
-          // }
+           {
+            "src": "/bottle.png",
+            "alt": "Air Column Cushion Bag for Wine"
+          }
         ],
         images360: [
           '/360/Air Column Cushion Roll/1.png',
@@ -3151,10 +3151,10 @@ export const categories = [
             "src": "/air bubble roll/31.png",
             "alt": "Glass Bottle Airbag Packaging"
           },
-          // {
-          //   "src": "/check/glass-airbag-pack2.png",
-          //   "alt": "Glass Bottle Airbag Packaging"
-          // }
+           {
+            "src": "/bottle.png",
+            "alt": "Air Column Cushion Bag for Wine"
+          }
         ],
         images360: [
           '/360/Glass Bottle Air Column Roll/1.png',
@@ -3248,10 +3248,10 @@ export const categories = [
             "src": "/air bubble roll/32.png",
             "alt": "Inflatable Air Packaging Bags"
           },
-          // {
-          //   "src": "/check/inflatable-bag2.png",
-          //   "alt": "Inflatable Air Packaging Bags"
-          // }
+           {
+            "src": "/bottle.png",
+            "alt": "Air Column Cushion Bag for Wine"
+          }
         ],
         images360: [
           '/360/Air Column Packaging Bag/1.png',
@@ -3447,10 +3447,10 @@ export const categories = [
             "src": "/air bubble roll/34.png",
             "alt": "Air Tube Bag for Packaging"
           },
-          // {
-          //   "src": "/check/tube-bag2.png",
-          //   "alt": "Air Tube Bag for Packaging"
-          // }
+            {
+            "src": "/airbag.png",
+            "alt": "Air Column Bag for Laptop"
+          }
         ],
 
         images360: [
