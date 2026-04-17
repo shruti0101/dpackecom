@@ -116,7 +116,7 @@ export default function ProductPage({ productId }) {
               </span>
             </button>
 
-            {product.productBrochure && (
+            {/* {product.productBrochure && (
               <a
                 href={product.productBrochure}
                 download
@@ -135,7 +135,7 @@ export default function ProductPage({ productId }) {
                   </span>
                 </button>
               </a>
-            )}
+            )} */}
           </div>
 
           {/* MAIN IMAGE WITH ANIMATION */}
@@ -147,7 +147,7 @@ export default function ProductPage({ productId }) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="w-full h-full"
+                className="w-full h-full relative"
               >
                 <div
                   className="w-full h-full overflow-hidden cursor-zoom-in"
@@ -177,6 +177,19 @@ export default function ProductPage({ productId }) {
                     />
                   </motion.div>
                 </div>
+                {product.productBrochure && (
+                  <a
+                    href={product.productBrochure}
+                    download
+                    className='absolute bottom-0 right-2'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="p-2 border border-orange-500 rounded-full text-orange-600 hover:bg-orange-50 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-lg">
+                      <Download size={20} />
+                    </button>
+                  </a>
+                )}
               </motion.div>
             </AnimatePresence>
           </div>
@@ -207,7 +220,7 @@ export default function ProductPage({ productId }) {
               </span>
             </button>
 
-            {product.productBrochure && (
+            {/* {product.productBrochure && (
               <a
                 href={product.productBrochure}
                 download
@@ -226,7 +239,7 @@ export default function ProductPage({ productId }) {
                   </span>
                 </button>
               </a>
-            )}
+            )} */}
           </div>
 
           {/* PRODUCT DETAILS */}
@@ -269,6 +282,12 @@ export default function ProductPage({ productId }) {
 
             {/* META */}
             <div className="border-t pt-4 text-sm text-gray-600">
+              {product.id == 'air-bubble-packaging-film-roll' &&
+                <div className="flex gap-2 mb-2 text-orange-500">
+                  <span className='py-2 px-3 rounded-md border border-orange-400'>Self Inflated</span>
+                  <span className='py-2 px-3 rounded-md border border-orange-400'>Machine Inflated</span>
+                </div>}
+
               {product.specs.map((i, idx) => (
                 <p key={idx} className="flex ju"><span className="font-bold">{i.label}</span>: {i?.value}</p>
               ))}

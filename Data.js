@@ -967,10 +967,10 @@ export const categories = [
             "src": "/air bubble roll/10.png",
             "alt": "Perfume Packaging Air Column Roll"
           },
-          // {
-          //   "src": "/check/air-column-roll2.png",
-          //   "alt": "Perfume Packaging Air Column Roll"
-          // }
+          {
+            "src": "/columnroll.png.",
+            "alt": "Perfume Packaging Air Column Roll"
+          }
         ],
         images360: [
           '/360/Perfume Packaging Air Column Roll/1.png',
@@ -1061,10 +1061,10 @@ export const categories = [
             "src": "/air bubble roll/11.png",
             "alt": "Air Tubes Rolls"
           },
-          // {
-          //   "src": "/check/air-tubes2.png",
-          //   "alt": "Air Tubes Rolls"
-          // }
+          {
+            "src": "/columnroll.png.",
+            "alt": "Perfume Packaging Air Column Roll"
+          }
         ],
         images360: [
           '/360/Air Tubes Rolls/1.png',
@@ -1155,10 +1155,10 @@ export const categories = [
             "src": "/air bubble roll/12.png",
             "alt": "Air Column Cushion Roll"
           },
-          // {
-          //   "src": "/check/air-column-cushion2.png",
-          //   "alt": "Air Column Cushion Roll"
-          // }
+          {
+            "src": "/columnroll2.png",
+            "alt": "Air Column Cushion Roll"
+          }
         ],
         images360: [
           '/360/Air Column Cushion Roll/1.png',
@@ -1266,7 +1266,10 @@ export const categories = [
             "src": "/air bubble roll/13.png",
             "alt": "Air Cushion Film Roll"
           },
-
+          {
+            "src": "/columnroll.png.",
+            "alt": "Perfume Packaging Air Column Roll"
+          }
         ],
         images360: [
           '/360/Air Tubes Rolls/1.png',
@@ -1357,10 +1360,14 @@ export const categories = [
             "src": "/air bubble roll/14.png",
             "alt": "Inflatable Air Column Roll"
           },
-          // {
-          //   "src": "/check/inflatable-air-column2.png",
-          //   "alt": "Inflatable Air Column Roll"
-          // }
+          {
+            "src": "/columnroll.png.",
+            "alt": "Perfume Packaging Air Column Roll"
+          },
+          {
+            "src": "/columnroll2.png.",
+            "alt": "Perfume Packaging Air Column Roll"
+          }
         ],
         images360: [
           '/360/Inflatable Air Column Roll/1.png',
@@ -1447,10 +1454,10 @@ export const categories = [
             "src": "/air bubble roll/15.png",
             "alt": "Air Tube Column Roll"
           },
-          // {
-          //   "src": "/check/air-tube-column2.png",
-          //   "alt": "Air Tube Column Roll"
-          // }
+          {
+            "src": "/columnroll.png.",
+            "alt": "Perfume Packaging Air Column Roll"
+          }
         ],
         images360: [
           '/360/Air Tubes Rolls/1.png',
@@ -1546,10 +1553,10 @@ export const categories = [
             "src": "/air bubble roll/16.png",
             "alt": "Jam Bottle Air Column Roll"
           },
-          // {
-          //   "src": "/check/jam-bottle2.png",
-          //   "alt": "Jam Bottle Air Column Roll"
-          // }
+          {
+            "src": "/ghee.png",
+            "alt": "Jam Bottle Air Column Roll"
+          }
         ],
         images360: [
           '/360/Jam Bottle Air Column Roll/1.png',
@@ -1645,10 +1652,10 @@ export const categories = [
             "src": "/air bubble roll/17.png",
             "alt": "Glass Bottle Air Column Roll"
           },
-          // {
-          //   "src": "/check/glass-bottle2.png",
-          //   "alt": "Glass Bottle Air Column Roll"
-          // }
+          {
+            "src": "/columnroll2.png",
+            "alt": "Glass Bottle Air Column Roll"
+          }
         ],
         images360: [
           '/360/Glass Bottle Air Column Roll/1.png',
@@ -1741,10 +1748,10 @@ export const categories = [
             "src": "/air bubble roll/18.png",
             "alt": "Packaging Column Airbag Roll"
           },
-          // {
-          //   "src": "/check/column-airbag2.png",
-          //   "alt": "Packaging Column Airbag Roll"
-          // }
+          {
+            "src": "/allsizes.png",
+            "alt": "Packaging Column Airbag Roll"
+          }
         ],
         images360: [
           '/360/Packaging Column Airbag Roll/1.png',
@@ -1845,10 +1852,10 @@ export const categories = [
             "src": "/air bubble roll/19.png",
             "alt": "Inflatable Wrapping Column Plastic Film Air Bag Roll Packing"
           },
-          // {
-          //   "src": "/check/wrapping-column2.png",
-          //   "alt": "Inflatable Wrapping Column Plastic Film Air Bag Roll Packing"
-          // }
+          {
+            "src": "/bottle2.png",
+            "alt": "Inflatable Wrapping Column Plastic Film Air Bag Roll Packing"
+          }
         ],
         images360: [
           '/360/Glass Bottle Air Column Roll/1.png',
@@ -1944,10 +1951,10 @@ export const categories = [
             "src": "/air bubble roll/20.png",
             "alt": "Air Bubble Cushion film Roll"
           },
-          // {
-          //   "src": "/check/bubble-film2.png",
-          //   "alt": "Air Bubble Cushion film Roll"
-          // }
+          {
+            "src": "/allsizes.png",
+            "alt": "Air Bubble Cushion film Roll"
+          }
         ],
         images360: [
           '/360/Glass Bottle Air Column Roll/1.png',
@@ -2048,6 +2055,10 @@ export const categories = [
         "image": [
           {
             "src": "/air bubble roll/42.png",
+            "alt": "Air Bubble Packaging Film Roll"
+          },
+          {
+            "src": "/bubbleroll.png",
             "alt": "Air Bubble Packaging Film Roll"
           }
         ],
@@ -2953,7 +2964,7 @@ export const categories = [
             "src": "/air bubble roll/29.png",
             "alt": "Self-Inflated Packaging Air Bag"
           },
-           {
+          {
             "src": "/bottle.png",
             "alt": "Air Column Cushion Bag for Wine"
           }
@@ -3046,10 +3057,10 @@ export const categories = [
             "src": "/air bubble roll/30.png",
             "alt": "Protective Air Tube Bag Packaging for Jars & Containers"
           },
-          // {
-          //   "src": "/check/tube-jar2.png",
-          //   "alt": "Protective Air Tube Bag Packaging for Jars & Containers"
-          // }
+          {
+            "src": "/allsizes.png",
+            "alt": "Protective Air Tube Bag Packaging for Jars & Containers"
+          }
         ],
         images360: [
           '/360/Jam Bottle Air Column Roll/1.png',
@@ -3151,7 +3162,7 @@ export const categories = [
             "src": "/air bubble roll/31.png",
             "alt": "Glass Bottle Airbag Packaging"
           },
-           {
+          {
             "src": "/bottle.png",
             "alt": "Air Column Cushion Bag for Wine"
           }
@@ -3248,7 +3259,7 @@ export const categories = [
             "src": "/air bubble roll/32.png",
             "alt": "Inflatable Air Packaging Bags"
           },
-           {
+          {
             "src": "/bottle.png",
             "alt": "Air Column Cushion Bag for Wine"
           }
@@ -3349,10 +3360,10 @@ export const categories = [
             "src": "/air bubble roll/33.png",
             "alt": "Air Filled Cushioning Bag"
           },
-          // {
-          //   "src": "/check/air-filled2.png",
-          //   "alt": "Air Filled Cushioning Bag"
-          // }
+          {
+            "src": "/aircusion.png",
+            "alt": "Air Filled Cushioning Bag"
+          }
         ],
         images360: [
           '/360/Shoes Packing Air Cushion Bag/1.png',
@@ -3447,7 +3458,7 @@ export const categories = [
             "src": "/air bubble roll/34.png",
             "alt": "Air Tube Bag for Packaging"
           },
-            {
+          {
             "src": "/airbag.png",
             "alt": "Air Column Bag for Laptop"
           }
@@ -3535,10 +3546,10 @@ export const categories = [
             "src": "/air bubble roll/35.png",
             "alt": "Trolley Packaging Air Bag"
           },
-          // {
-          //   "src": "/check/trolley-airbag2.png",
-          //   "alt": "Trolley Packaging Air Bag"
-          // }
+          {
+            "src": "/bag.jpg",
+            "alt": "Trolley Packaging Air Bag"
+          }
         ],
 
         images360: [
@@ -3642,7 +3653,11 @@ export const categories = [
           {
             "src": "/air bubble roll/47.webp",
             "alt": "Air Bag Packing Bag-in-Bag"
-          }
+          },
+          {
+            "src": "/air bubble roll/49.webp",
+            "alt": "Air Bag Packing Bag-in-Bag"
+          },
         ],
 
         "images360": [
@@ -3830,10 +3845,10 @@ export const categories = [
             "src": "/air bubble roll/37.png",
             "alt": "White Air Cushion Void Filling Rolls Gap Filler"
           },
-          // {
-          //   "src": "/check/void-roll2.png",
-          //   "alt": "White Air Cushion Void Filling Rolls Gap Filler"
-          // }
+           {
+            "src": "/air bubble roll/49.png",
+            "alt": "White Air Cushion Void Filling Rolls Gap Filler"
+          },
         ],
         images360: [
           '/360/White Air Cushion Void Filling Rolls Gap Filler/1.png',
@@ -4138,6 +4153,10 @@ export const categories = [
           {
             "src": "/air bubble roll/48.webp",
             "alt": "Inflatable Air Cushion for Shoes"
+          },
+            {
+            "src": "/air bubble roll/49.webp",
+            "alt": "RF Gap Filler Pouch"
           }
         ],
 
