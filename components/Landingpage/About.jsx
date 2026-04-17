@@ -16,6 +16,7 @@ export default function FlashSale() {
   const products = [
     {
       img: "/air bubble roll/1.png",
+      img2: "/Dunnage2.jpg",
       hoverImg: '/360/Dunnage Air Bags/1.png',
       title: "Dunnage Air Bags",
       price: "Rs. 450.00",
@@ -24,6 +25,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/5.png",
+      img2: "/Dunnage2.jpg",
       hoverImg: '/360/PP Dunnage Bag/1.png',
       title: "PP Dunnage Bag",
       price: "Rs.575.00",
@@ -33,6 +35,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/8.png",
+      img2: "/Dunnage2.jpg",
       hoverImg: '/360/Square Dunnage Air Bags/1.png',
       title: "Square Dunnage Air Bags",
       price: "Rs. 349.00",
@@ -41,6 +44,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/10.png",
+      img2: "/columnroll.png",
       hoverImg: '/360/Perfume Packaging Air Column Roll/1.png',
       title: "Perfume Packaging Air Column Roll",
       price: "Rs. 341.00",
@@ -49,6 +53,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/16.png",
+      img2: "/360/Jam Bottle Air Column Roll/9.png",
       hoverImg: '/360/Jam Bottle Air Column Roll/1.png',
       title: "Jam Bottle Air Column Roll",
       price: "Rs. 340.00",
@@ -59,6 +64,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/21.png",
+      img2: "/airbag.png",
       hoverImg: '/360/Air Column Bag for Laptop/1.png',
       title: "Air Column Bag for Laptop",
       price: "Rs. 341.00",
@@ -68,6 +74,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/23.png",
+      img2: "/bottle.png",
       hoverImg: '/360/Air Column Cushion Bag for Wine/1.png',
       title: "Air Column Cushion Bag for Wine",
       price: "Rs. 741.00",
@@ -77,6 +84,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/28.png",
+      img2: "/air bubble roll/48.png",
       hoverImg: '/360/Shoes Packing Air Cushion Bag/1.png',
       title: "Shoes Packing Air Cushion Bag",
       price: "Rs. 541.00",
@@ -86,6 +94,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/34.png",
+      img2: '/360/Air Tube Bag for Packaging/5.png',
       hoverImg: '/360/Air Tube Bag for Packaging/1.png',
       title: "Air Tube Bag for Packaging",
       price: "Rs. 241.00",
@@ -95,6 +104,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/31.png",
+      img2: '/bottle2.png',
       hoverImg: '/360/Glass Bottle Air Column Roll/1.png',
       title: "Glass Bottle Airbag Packaging",
       price: "Rs. 241.00",
@@ -104,6 +114,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/38.png",
+      img2: '/360/Void or Gap Filling Air Cushion Bags/6.png',
       hoverImg: '/360/Void or Gap Filling Air Cushion Bags/1.png',
       title: "Void or Gap Filling Air Cushion Bags",
       price: "Rs. 241.00",
@@ -113,6 +124,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/39.png",
+      img2: '/360/Gap Filler Pouch/5.png',
       hoverImg: '/360/Gap Filler Pouch/1.png',
       title: "Gap Filler Pouch",
       price: "Rs. 241.00",
@@ -246,7 +258,7 @@ export default function FlashSale() {
                   {/* 🔥 THUMBNAILS */}
                   <div className="flex gap-3 mt-4">
 
-                    {[selected.img, selected.hoverImg].map((img, i) => (
+                    {[selected.img, selected.hoverImg, selected.img2,].map((img, i) => (
                       <div
                         key={i}
                         onClick={() => setActiveImg(img)}

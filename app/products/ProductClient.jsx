@@ -29,7 +29,7 @@ export default function Page() {
                 <Link key={index} href={`/products/${product.id}`}
                   className="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group"
                 >
-                  <div className="relative w-full h-[250px] bg-gray-100 overflow-hidden">
+                  <div className="relative w-full h-[280px] bg-gray-100 overflow-hidden">
                     <Image
                       src={product.image?.[0]?.src || "/placeholder.png"}
                       alt={product.name} fill
