@@ -201,7 +201,7 @@ export default function ProductPage({ productId }) {
                     ) : (
                       <iframe
                         src={activeMedia.src}
-                        className="w-full h-full rounded-xl"
+                        className="w-full lg:h-full h-[350px] rounded-xl"
                         allow="autoplay; encrypted-media"
                         allowFullScreen
                       />
@@ -225,23 +225,30 @@ export default function ProductPage({ productId }) {
             </AnimatePresence>
           </div>
 
-          <div className="col-span-1 lg:hidden flex gap-4">
+          <div className="col-span-1 lg:hidden flex gap-3 w-full overflow-x-auto no-scrollbar py-2">
+
+            {/* Images */}
             {images.map((img, i) => (
               <div
                 key={i}
                 onClick={() => {
-                  setActiveMedia({
-                    type: "image",
-                    src: img,
-                  });
+                  setActiveMedia({ type: "image", src: img });
                   setIndex(i);
                 }}
-                className={`p-2 rounded-lg border cursor-pointer transition
-            ${activeMedia.src === img ? "border-orange-500" : "border-gray-200"}`}
+                className={`min-w-[72px] h-[72px] flex-shrink-0 p-1 rounded-lg border cursor-pointer transition flex items-center justify-center
+        ${activeMedia.src === img ? "border-orange-500" : "border-gray-200"}`}
               >
-                <Image src={img} alt="no image" width={70} height={70} />
+                <Image
+                  src={img}
+                  alt="product"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                />
               </div>
             ))}
+
+            {/* Video */}
             {product.videoUrl && (
               <div
                 onClick={() =>
@@ -250,45 +257,28 @@ export default function ProductPage({ productId }) {
                     src: product.videoUrl,
                   })
                 }
-                className={`p-2 rounded-lg border cursor-pointer transition
-                     ${activeMedia.type === "video" ? "border-orange-500" : "border-gray-200"}`}
+                className={`min-w-[72px] h-[72px] flex-shrink-0 p-1 rounded-lg border cursor-pointer transition flex items-center justify-center
+        ${activeMedia.type === "video" ? "border-orange-500" : "border-gray-200"}`}
               >
-                <div className="w-[62px] h-[60px] bg-gray-200 rounded-md flex items-center justify-center relative">
-                  <div className="text-xl">▶</div>
+                <div className="w-full h-full bg-gray-200 rounded-md flex items-center justify-center">
+                  <span className="text-lg">▶</span>
                 </div>
               </div>
             )}
-            <button onClick={() => setOpen(true)}
-              className="flex flex-col items-center justify-center gap-1 px-2 py-3 
-  border border-orange-500 rounded-xl   text-orange-600 hover:bg-orange-50   transition-all duration-200   cursor-pointer shadow-sm hover:shadow-lg"
-            >
-              <Rotate3d size={28} />
 
-              <span className="text-xs font-medium tracking-wide">
+            {/* 360 View Button */}
+            <button
+              onClick={() => setOpen(true)}
+              className="min-w-[80px] h-[72px] flex-shrink-0 flex flex-col items-center justify-center gap-1 
+    border border-orange-500 rounded-lg text-orange-600 hover:bg-orange-50 
+    transition-all duration-200 cursor-pointer"
+            >
+              <Rotate3d size={22} />
+              <span className="text-[10px] font-medium leading-tight">
                 360 View
               </span>
             </button>
 
-            {/* {product.productBrochure && (
-              <a
-                href={product.productBrochure}
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  className="flex flex-col items-center justify-center gap-1 px-2 py-3 
-      border border-orange-500 rounded-xl text-orange-600 
-      hover:bg-orange-50 transition-all duration-200 cursor-pointer 
-      shadow-sm hover:shadow-lg"
-                >
-                  <Download size={28} />
-                  <span className="text-xs font-medium tracking-wide">
-                    Brochure
-                  </span>
-                </button>
-              </a>
-            )} */}
           </div>
 
           {/* PRODUCT DETAILS */}

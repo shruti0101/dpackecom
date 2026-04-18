@@ -283,7 +283,7 @@ export default function FlashSale() {
                   <h2 className="text-2xl font-semibold mb-3">
                     {selected.title}
                   </h2>
-                  <ul className="space-y-2 text-gray-600 text-sm mb-4">
+                  <ul className="space-y-2 text-gray-600 text-sm mb-4 md:block hidden">
                     {features.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-orange-500 mt-1">•</span>

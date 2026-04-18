@@ -38,8 +38,9 @@ export default function Navbar() {
 
         {/* LOGO + MOBILE MENU */}
         <div className="flex items-center justify-between w-full lg:w-auto">
-          <Link href={`/`}>
+          <Link href={`/`} className="flex items-center gap-1">
             <Image width={120} height={80} src="/logo-new.png" alt="logo" />
+            <p className='flex text-xs md:text-sm text-orange-600 bg-orange-50 px-3 py-1 rounded-full'>GSTIN: 07AFXPJ4168A2Z9</p>
           </Link>
 
           {/* MOBILE MENU BUTTON */}
@@ -94,7 +95,7 @@ export default function Navbar() {
               {categories.map((item, i) => (
                 <div key={i} onMouseEnter={() => sethover(i)} onMouseLeave={() => sethover(null)}
                   className="relative">
-                  <Link href={`/categories/${item.id}`}
+                  <Link href={`/categories/${item.id}`} onClick={() => { setOpen(false); setCategoryOpen(false) }}
                     className="px-4 py-4 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600 hover:bg-gray-50 transition"
                   >
                     {item.name}
@@ -110,7 +111,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, x: 0, scale: 1 }}
                         exit={{ opacity: 0, x: 40, scale: 0.95 }}
                         transition={{ duration: 0.25, ease: "easeOut" }}
-                        className="absolute left-full top-1 w-64 bg-white shadow-xl rounded-lg z-50 border"
+                        className="absolute left-full top-1 w-64 bg-white shadow-xl rounded-lg z-50 border md:block hidden"
                       >
                         <div className="flex flex-col gap-2">
                           {item.products.map((prod, idx) => (
