@@ -15,7 +15,7 @@ export const categories = [
         metaTitle: "Dunnage Air Bags Manufacturer | High Strength Cargo Securing Air Bags",
         metaDescription: "High-performance Dunnage Air Bags designed for cargo securing, load stabilization, and transportation safety. Reusable, durable, and ideal for containers, trucks, and rail wagons.",
         overview: "High-strength inflatable bags designed to fill gaps and securely stabilize cargo during transportation.",
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
 
           {
@@ -116,7 +116,7 @@ export const categories = [
         metaTitle: "Paper Dunnage Air Bag Manufacturer | Eco-Friendly Kraft Air Bags for Cargo Safety",
         metaDescription: "Eco-friendly Paper Dunnage Air Bags made with kraft paper for reliable load stability and cushioning. Waterproof, durable, and ideal for coil transport and industrial applications.",
         overview: "Eco-friendly kraft paper air bags that provide reliable cushioning and load stability in transit.",
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
 
           {
@@ -194,7 +194,7 @@ export const categories = [
         metaTitle: "Paper Dunnage Bag for Container Shipping | Cargo Securing Air Bags Manufacturer",
         metaDescription: "High-performance Paper Dunnage Bags for container shipping with airtight design, high puncture resistance, and durable polyethylene inner layer for safe cargo transportation.",
         overview: "High-performance Paper Dunnage Bags for Container Shipping designed to secure cargo and prevent movement during transit, ensuring safe and damage-free delivery.",
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
 
           {
@@ -290,7 +290,7 @@ export const categories = [
         metaTitle: "Dunnage Bag for Shipping Containers | Heavy Duty Cargo Securing Air Bags",
         metaDescription: "Heavy-duty Dunnage Bags for shipping containers designed to prevent cargo shifting and damage. Durable, lightweight, and ideal for logistics, warehousing, and export packaging.",
         overview: "Heavy-duty air bags used to prevent cargo shifting and damage in container shipments.",
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
 
           {
@@ -383,7 +383,7 @@ export const categories = [
         metaTitle: "PP Dunnage Bag Manufacturer | Polypropylene Air Bags for Cargo Securing",
         metaDescription: "High-performance PP Dunnage Bags made from durable polypropylene material for cargo securing. Waterproof, reusable, and ideal for containers, trucks, and logistics applications.",
         overview: "Efficient inflation tools designed for quick, safe, and easy filling of dunnage air bags.",
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
 
           {
@@ -485,7 +485,7 @@ export const categories = [
         metaTitle: "Dunnage Bag Manufacturer in India | High Quality Cargo Securing Air Bags",
         metaDescription: "Trusted Dunnage Bag Manufacturer offering high-quality, customizable air bags for cargo securing. Durable, cost-effective, and ideal for containers, trucks, and industrial logistics.",
         overview: "Trusted manufacturer offering high-quality, customizable dunnage bags for industrial packaging needs.",
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
 
           {
@@ -635,7 +635,7 @@ export const categories = [
           }
 
         ],
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         specs: [
           { "label": "Size/Dimension", "value": "600x600 mm" },
           { "label": "Color", "value": "Brown" },
@@ -733,7 +733,7 @@ export const categories = [
           }
 
         ],
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         specs: [
           { "label": "Minimum Order Quantity", "value": "50 Piece" },
           { "label": "Material", "value": "PP" },
@@ -834,7 +834,7 @@ export const categories = [
           }
 
         ],
-
+        videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         specs: [
           { "label": "Size/Dimension", "value": "900 x 1200 mm" },
           { "label": "Material", "value": "Paper" },
@@ -886,7 +886,7 @@ export const categories = [
         metaTitle: "Perfume Packaging Air Column Roll | Protective Air Column Film for Fragile Products",
         metaDescription: "High-quality Perfume Packaging Air Column Roll designed to protect fragile items like perfume bottles. Durable, waterproof, and ideal for safe transport and packaging.",
         overview: "Protective air column rolls designed to safeguard delicate perfume bottles from breakage.",
-
+        videoUrl: "https://www.instagram.com/reels/DTu_Ny4EohV/embed",
         description: [
 
           {
@@ -968,7 +968,7 @@ export const categories = [
             "alt": "Perfume Packaging Air Column Roll"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -990,7 +990,7 @@ export const categories = [
         metaTitle: "Air Tubes Rolls | Inflatable Cushioning Rolls for Fragile Goods Protection",
         metaDescription: "High-performance Air Tubes Rolls designed for cushioning and shock absorption. Ideal for wooden furniture and fragile goods packaging with durable and waterproof design.",
         overview: "Flexible inflatable tube rolls providing excellent cushioning and shock absorption for fragile goods.",
-
+        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1084,7 +1084,7 @@ export const categories = [
         metaTitle: "Air Column Cushion Roll | Protective Air Packaging Roll for Fragile Goods",
         metaDescription: "High-quality Air Column Cushion Roll for cushioning and shock absorption. Ideal for electronics, glassware, and fragile goods with durable, waterproof, and transparent design.",
         overview: "Flexible inflatable tube rolls providing excellent cushioning and shock absorption for fragile goods.",
-
+        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1178,7 +1178,7 @@ export const categories = [
         metaTitle: "Air Cushion Film Roll | Void Fill & Protective Packaging Film Manufacturer",
         metaDescription: "High-quality Air Cushion Film Roll for void filling, wrapping, and cushioning. Durable, waterproof, recyclable, and ideal for e-commerce and fragile goods packaging.",
         overview: "Lightweight air cushion film rolls ideal for void filling and protective packaging solutions.",
-
+        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1289,7 +1289,7 @@ export const categories = [
         metaTitle: "Inflatable Air Column Roll | Protective Air Packaging for Fragile Products",
         metaDescription: "Durable Inflatable Air Column Roll designed for cushioning and protection of fragile items. Lightweight, waterproof, and ideal for electronics, glassware, and packaging.",
         overview: "Durable inflatable rolls designed for wrapping and protecting delicate and valuable items.",
-
+        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1385,7 +1385,7 @@ export const categories = [
         metaTitle: "Air Tube Column Roll | Multi Column Air Packaging for Shock Protection",
         metaDescription: "High-performance Air Tube Column Roll designed for cushioning and shock absorption. Ideal for electronics, glassware, and fragile goods packaging with durable and flexible design.",
         overview: "Multi-column air tube rolls ensuring enhanced protection against shocks during transit.",
-
+        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1477,6 +1477,7 @@ export const categories = [
         metaTitle: "Jam Bottle Air Column Roll | Protective Air Packaging for Glass Bottles",
         metaDescription: "High-quality Jam Bottle Air Column Roll designed for protecting glass bottles. Durable LDPE + Nylon material with 360° cushioning, ideal for e-commerce shipping.",
         overview: "Specially designed air column rolls to securely protect jam bottles during shipping.",
+        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
 
         description: [
 
@@ -1579,7 +1580,7 @@ export const categories = [
         metaTitle: "Glass Bottle Air Column Roll | Protective Packaging for Fragile Glass Bottles",
         metaDescription: "High-performance Glass Bottle Air Column Roll designed to prevent breakage during transit. Durable LDPE + Nylon material with 360° cushioning for safe packaging.",
         overview: "High-performance air rolls that prevent breakage of glass bottles in transit.",
-
+        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -1677,6 +1678,7 @@ export const categories = [
         metaTitle: "Packaging Column Airbag Roll | Air Column Cushioning Roll for Product Protection",
         metaDescription: "High-quality Packaging Column Airbag Roll for cushioning and stabilizing products. Durable, waterproof, and ideal for fragile goods, electronics, and industrial packaging.",
         overview: "Inflatable airbag rolls used for cushioning and stabilizing packaged products.",
+        videoUrl: "https://www.instagram.com/reels/DTX30Hgkne8/embed",
 
         description: [
 
@@ -1781,7 +1783,7 @@ export const categories = [
         metaTitle: "Inflatable Wrapping Column Air Bag Roll | Protective Plastic Film Packaging Roll",
         metaDescription: "High-performance inflatable wrapping column air bag roll for cushioning and protection. Durable, waterproof, and ideal for electronics, glassware, and industrial packaging.",
         overview: "Multi-layer inflatable film rolls offering secure wrapping and impact protection.",
-
+        videoUrl: "https://www.instagram.com/reels/DTX30Hgkne8/embed",
         description: [
 
           {
@@ -1877,7 +1879,7 @@ export const categories = [
         metaTitle: "Air Bubble Cushion Film Roll | Protective Bubble Packaging Roll",
         metaDescription: "High-quality Air Bubble Cushion Film Roll for lightweight cushioning and void filling. Waterproof, recyclable, and ideal for fragile goods packaging.",
         overview: "Bubble-style air film rolls providing lightweight cushioning and efficient void filling.",
-
+        videoUrl: "https://www.instagram.com/reels/DTX30Hgkne8/embed",
         description: [
 
           {
@@ -1976,6 +1978,7 @@ export const categories = [
         "metaTitle": "Air Bubble Packaging Film Roll | Protective Bubble Packaging Roll",
         "metaDescription": "High-quality Air Bubble Packaging Film Roll for cushioning and protection of fragile goods. Waterproof, durable, and ideal for furniture and industrial packaging.",
         "overview": "Air Bubble Packaging Film Rolls designed for effective cushioning, shock absorption, and surface protection during storage and transportation.",
+        videoUrl: " https://www.instagram.com/reels/DUKmK4oDMOr/embed",
 
         "description": [
           {
@@ -2094,7 +2097,7 @@ export const categories = [
         metaTitle: "Air Column Bag for Laptop | Shockproof Packaging for Laptops & Electronics",
         metaDescription: "High-quality Air Column Bag for Laptop designed for shockproof protection. Durable LDPE + Nylon material with 360° cushioning for safe e-commerce shipping.",
         overview: "Shockproof air column bags designed to protect laptops from impact and vibration during shipping.",
-
+        videoUrl: 'https://www.instagram.com/reels/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -2194,7 +2197,7 @@ export const categories = [
         metaTitle: "Air Column Bags for Electronics | Shockproof Packaging for Fragile Devices",
         metaDescription: "Premium Air Column Bags for Electronics designed for shockproof protection of fragile devices. Durable LDPE + Nylon material with 360° cushioning for safe e-commerce shipping.",
         overview: "Shockproof air column bags designed to protect laptops from impact and vibration during shipping.",
-
+        videoUrl: 'https://www.instagram.com/reels/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -2295,7 +2298,7 @@ export const categories = [
         metaTitle: "Air Column Cushion Bag for Wine | Protective Packaging for Wine Bottles",
         metaDescription: "High-quality Air Column Cushion Bag for Wine designed for protecting glass bottles. Durable LDPE + Nylon material with 360° cushioning for safe e-commerce shipping.",
         overview: "Protective air bags that secure electronic devices and prevent damage during transport.",
-
+        videoUrl: 'https://www.instagram.com/reels/DQtBb4lkh0_/embed',
         description: [
 
           {
@@ -2398,7 +2401,7 @@ export const categories = [
         metaTitle: "Transparent Air Column Bag for MacBook | Shockproof Laptop Packaging",
         metaDescription: "High-quality Transparent Air Column Bag for MacBook designed for safe packaging. Shockproof, durable, and ideal for protecting laptops during shipping and handling.",
         overview: "Specialized air bags designed to protect wine bottles from breakage and leakage.",
-
+        videoUrl: 'https://www.instagram.com/reels/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -2496,6 +2499,7 @@ export const categories = [
         metaTitle: "Air Column Packaging Bag | Protective Air Cushion Packaging for Fragile Goods",
         metaDescription: "High-quality Air Column Packaging Bag designed for cushioning and protection. Lightweight, durable, and ideal for electronics, glassware, and industrial packaging.",
         overview: "Inflatable packaging bags offering superior cushioning and protection for various products.",
+        videoUrl: 'https://www.instagram.com/reels/DO0nmQzknyF/embed',
 
         description: [
 
@@ -2595,7 +2599,7 @@ export const categories = [
         metaTitle: "Ghee Jar Air Column Bag | Protective Packaging for Ghee Jars",
         metaDescription: "High-quality Ghee Jar Air Column Bag designed for safe transport. Leak-proof, durable PE material with 360° cushioning for secure packaging.",
         overview: "Air column bags designed to safely transport ghee jars without leakage or damage.",
-
+        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -2791,7 +2795,7 @@ export const categories = [
         metaTitle: "Shoes Packing Air Cushion Bag | Protective Packaging for Footwear",
         metaDescription: "High-quality Shoes Packing Air Cushion Bag designed to protect footwear from damage. Durable, waterproof, and ideal for safe e-commerce and logistics packaging.",
         overview: "Air cushion bags designed to protect shoes from dust, pressure, and damage during shipping.",
-
+        // videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -2894,7 +2898,7 @@ export const categories = [
         metaTitle: "Self-Inflated Packaging Air Bag | Automatic Air Cushion Packaging Solution",
         metaDescription: "Innovative Self-Inflated Packaging Air Bag designed for instant cushioning. Durable, lightweight, and ideal for fast, efficient packaging of fragile goods.",
         overview: "Innovative air bags that automatically inflate for fast and convenient packaging solutions.",
-
+        videoUrl: 'https://www.instagram.com/reels/DQtBb4lkh0_/embed',
         description: [
 
           {
@@ -2987,7 +2991,7 @@ export const categories = [
         metaTitle: "Protective Air Tube Bag Packaging for Jars & Containers | Cushioning Packaging Solution",
         metaDescription: "High-quality Protective Air Tube Bag Packaging designed for jars, containers, and fragile goods. Durable PVC material with 360° cushioning for safe transport.",
         overview: "Air tube bags offering secure cushioning for jars and container packaging.",
-
+        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -3083,7 +3087,7 @@ export const categories = [
         metaTitle: "Glass Bottle Airbag Packaging | Protective Air Column Packaging for Bottles",
         metaDescription: "High-performance Glass Bottle Airbag Packaging designed for safe transport. Nylon barrier film with air column cushioning for maximum bottle protection.",
         overview: "Inflatable air bags designed to prevent breakage and ensure safe delivery of glass bottles.",
-
+        videoUrl: 'https://www.instagram.com/reels/DQtBb4lkh0_/embed',
         description: [
 
           {

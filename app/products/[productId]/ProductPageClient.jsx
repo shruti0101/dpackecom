@@ -37,6 +37,10 @@ export default function ProductPage({ productId }) {
   const [index, setIndex] = useState(0);
   const images = product.image?.map((img) => img.src) || [];
   const [activeImage, setActiveImage] = useState(images[0]);
+  const [activeMedia, setActiveMedia] = useState({
+    type: "image", // "image" | "video"
+    src: images[0],
+  });
 
   useEffect(() => {
     if (!images.length) return;
@@ -64,7 +68,7 @@ export default function ProductPage({ productId }) {
 
     setPosition({ x, y });
   };
-
+  const isVideo = activeMedia.type === "video";
   return (
     <>
       {/* SHOP BANNER */}
@@ -95,16 +99,34 @@ export default function ProductPage({ productId }) {
               <div
                 key={i}
                 onClick={() => {
-                  setActiveImage(img);
+                  setActiveMedia({
+                    type: "image",
+                    src: img,
+                  });
                   setIndex(i);
                 }}
                 className={`p-2 rounded-lg border cursor-pointer transition
-              ${activeImage === img ? "border-orange-500" : "border-gray-200"}`}
+            ${activeMedia.src === img ? "border-orange-500" : "border-gray-200"}`}
               >
                 <Image src={img} alt="no image" width={70} height={70} />
               </div>
             ))}
-
+            {product.videoUrl && (
+              <div
+                onClick={() =>
+                  setActiveMedia({
+                    type: "video",
+                    src: product.videoUrl,
+                  })
+                }
+                className={`p-2 rounded-lg border cursor-pointer transition
+                     ${activeMedia.type === "video" ? "border-orange-500" : "border-gray-200"}`}
+              >
+                <div className="w-[62px] h-[60px] bg-gray-200 rounded-md flex items-center justify-center relative">
+                  <div className="text-xl">▶</div>
+                </div>
+              </div>
+            )}
             <button onClick={() => setOpen(true)}
               className="flex flex-col items-center justify-center gap-1 px-2 py-3 
   border border-orange-500 rounded-xl   text-orange-600 hover:bg-orange-50   transition-all duration-200   cursor-pointer shadow-sm hover:shadow-lg"
@@ -142,7 +164,7 @@ export default function ProductPage({ productId }) {
           <div className="lg:h-[520px] col-span-1 lg:col-span-5 bg-gray-100 rounded-xl flex items-center justify-center p-4 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeImage}
+                key={activeMedia.src}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
@@ -150,10 +172,10 @@ export default function ProductPage({ productId }) {
                 className="w-full h-full relative"
               >
                 <div
-                  className="w-full h-full overflow-hidden cursor-zoom-in"
-                  onMouseMove={handleMouseMove}
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
+                  className={`w-full h-full overflow-hidden ${!isVideo && "cursor-zoom-in"}`}
+                  onMouseMove={!isVideo ? handleMouseMove : undefined}
+                  onMouseEnter={!isVideo ? () => setHover(true) : undefined}
+                  onMouseLeave={!isVideo ? () => setHover(false) : undefined}
                 >
                   <motion.div
                     animate={
@@ -168,13 +190,22 @@ export default function ProductPage({ productId }) {
                     transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
                     className="w-full h-full flex items-center justify-center"
                   >
-                    <Image
-                      src={activeImage}
-                      width={600}
-                      height={600}
-                      alt={product.name || "no image"}
-                      className="object-cover"
-                    />
+                    {activeMedia.type === "image" ? (
+                      <Image
+                        src={activeMedia.src}
+                        width={600}
+                        height={600}
+                        alt={product.name || "no image"}
+                        className="object-cover"
+                      />
+                    ) : (
+                      <iframe
+                        src={activeMedia.src}
+                        className="w-full h-full rounded-xl"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                      />
+                    )}
                   </motion.div>
                 </div>
                 {product.productBrochure && (
@@ -199,16 +230,34 @@ export default function ProductPage({ productId }) {
               <div
                 key={i}
                 onClick={() => {
-                  setActiveImage(img);
+                  setActiveMedia({
+                    type: "image",
+                    src: img,
+                  });
                   setIndex(i);
                 }}
                 className={`p-2 rounded-lg border cursor-pointer transition
-              ${activeImage === img ? "border-orange-500" : "border-gray-200"}`}
+            ${activeMedia.src === img ? "border-orange-500" : "border-gray-200"}`}
               >
                 <Image src={img} alt="no image" width={70} height={70} />
               </div>
             ))}
-
+            {product.videoUrl && (
+              <div
+                onClick={() =>
+                  setActiveMedia({
+                    type: "video",
+                    src: product.videoUrl,
+                  })
+                }
+                className={`p-2 rounded-lg border cursor-pointer transition
+                     ${activeMedia.type === "video" ? "border-orange-500" : "border-gray-200"}`}
+              >
+                <div className="w-[62px] h-[60px] bg-gray-200 rounded-md flex items-center justify-center relative">
+                  <div className="text-xl">▶</div>
+                </div>
+              </div>
+            )}
             <button onClick={() => setOpen(true)}
               className="flex flex-col items-center justify-center gap-1 px-2 py-3 
   border border-orange-500 rounded-xl   text-orange-600 hover:bg-orange-50   transition-all duration-200   cursor-pointer shadow-sm hover:shadow-lg"

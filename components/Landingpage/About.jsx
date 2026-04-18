@@ -84,7 +84,7 @@ export default function FlashSale() {
     },
     {
       img: "/air bubble roll/28.png",
-      img2: "/air bubble roll/48.png",
+      img2: "/air bubble roll/48.webp",
       hoverImg: '/360/Shoes Packing Air Cushion Bag/1.png',
       title: "Shoes Packing Air Cushion Bag",
       price: "Rs. 541.00",
