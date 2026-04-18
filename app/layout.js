@@ -20,11 +20,11 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "DPACK",
+  title: "Packaging Air Bag Manufacturer & Supplier | Air Column & Dunnage Bags | Dpack",
   description:
-    "Dpack",
+    "Leading packaging air bag supplier & wholesaler of air cushion bags, air column packaging, dunnage bags & laptop air bags. Durable, cost-effective solutions by Dpack.",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo-new.png",
   },
 };
 
@@ -35,22 +35,22 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
 
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-</head>
+      </head>
 
 
-  
+
 
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
-     
-    <Whatsapp/>
 
- 
+        <Whatsapp />
+
+
         <LayoutWrapper>
-        
-      
+
+
           {children}
         </LayoutWrapper>
       </body>

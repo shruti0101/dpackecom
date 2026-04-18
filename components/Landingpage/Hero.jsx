@@ -12,11 +12,11 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 export default function HeroPixelPerfect() {
   const slides = [
-    { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/homeBanner (1).jpeg" },
-    { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/homeBanner (2).jpeg" },
+    { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/dunnage bag.webp" },
+    { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/dpack banner (3).webp" },
     { title: "Discover Your Best Fitting Clothes", subtitle: "Best Selling Of 2025", img: "/bg1.jpeg" },
     { title: "Upgrade Your Style Today", subtitle: "Trending Now", img: "/bg2.jpeg" },
-    { title: "New Arrivals Just Landed", subtitle: "Limited Offer", img: "/bg3.jpeg" },
+    { title: "New Arrivals Just Landed", subtitle: "Limited Offer", img: "/dpack banner (5).webp" },
   ];
 
   const features = [
@@ -134,7 +134,7 @@ export default function HeroPixelPerfect() {
           {/* BOTTOM CARD */}
           <div className="relative w-full h-[235px] sm:h-[250px] lg:h-[270px] rounded-2xl overflow-hidden group">
             <Image
-              src="/dpack banner (2).webp"
+              src="/dpack banner (6).webp"
               alt=""
               fill
               className="object-cover group-hover:scale-105 transition duration-700 h-full w-full"

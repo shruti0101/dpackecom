@@ -4,16 +4,16 @@ export const categories = [
   {
     id: "dunnage-bag",
     name: "Dunnage Bag",
-    metaTitle: "Dunnage Bag Manufacturer in India | Packaging Solutions | D Pack",
+    metaTitle: "Dunnage Air Bags Manufacturer & Supplier | Packaging Air Bags – Dpack",
     metaDescription:
-      "High-performance Dunnage Air Bags designed to secure cargo efficiently during transportation, ensuring stability and minimizing the risk of product damage caused by movement or impact.",
+      "Explore high-quality dunnage bags & dunnage air bags by Dpack. Ideal for cargo protection, our durable packaging air bags ensure safe and secure transportation.",
 
     products: [
       {
         id: "dunnage-air-bags",
         name: "Dunnage Air Bags",
-        metaTitle: "Dunnage Air Bags Manufacturer | High Strength Cargo Securing Air Bags",
-        metaDescription: "High-performance Dunnage Air Bags designed for cargo securing, load stabilization, and transportation safety. Reusable, durable, and ideal for containers, trucks, and rail wagons.",
+        metaTitle: "Dunnage Air Bags Manufacturer & Supplier | Cargo Safety Solutions | Dpack",
+        metaDescription: "Dpack offers high-quality dunnage air bags for cargo protection. Prevent load shifting during transit with durable, reliable and cost-effective packaging solutions.",
         overview: "High-strength inflatable bags designed to fill gaps and securely stabilize cargo during transportation.",
         videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
@@ -113,8 +113,8 @@ export const categories = [
       {
         id: "paper-dunnage-air-bag",
         name: "Paper Dunnage Air Bag",
-        metaTitle: "Paper Dunnage Air Bag Manufacturer | Eco-Friendly Kraft Air Bags for Cargo Safety",
-        metaDescription: "Eco-friendly Paper Dunnage Air Bags made with kraft paper for reliable load stability and cushioning. Waterproof, durable, and ideal for coil transport and industrial applications.",
+        metaTitle: "Paper Dunnage Air Bags Manufacturer | Eco-Friendly Cargo Protection | Dpack",
+        metaDescription: "Leading paper dunnage air bag manufacturer offering kraft dunnage bags for container and truck cargo protection. Strong, recyclable and cost-effective.",
         overview: "Eco-friendly kraft paper air bags that provide reliable cushioning and load stability in transit.",
         videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
@@ -191,8 +191,8 @@ export const categories = [
       {
         id: "paper-dunnage-bag-container-shipping",
         name: "Paper Dunnage Bag for Container Shipping",
-        metaTitle: "Paper Dunnage Bag for Container Shipping | Cargo Securing Air Bags Manufacturer",
-        metaDescription: "High-performance Paper Dunnage Bags for container shipping with airtight design, high puncture resistance, and durable polyethylene inner layer for safe cargo transportation.",
+        metaTitle: "Paper Dunnage Bags for Container Shipping | Cargo Protection | Dpack",
+        metaDescription: "Dpack offers paper dunnage bags for container shipping to prevent cargo shifting. Strong, eco-friendly and reliable solution for safe transport and load stability.",
         overview: "High-performance Paper Dunnage Bags for Container Shipping designed to secure cargo and prevent movement during transit, ensuring safe and damage-free delivery.",
         videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
@@ -287,8 +287,8 @@ export const categories = [
       {
         id: "dunnage-bag-shipping-containers",
         name: "Dunnage Bag for Shipping Containers",
-        metaTitle: "Dunnage Bag for Shipping Containers | Heavy Duty Cargo Securing Air Bags",
-        metaDescription: "Heavy-duty Dunnage Bags for shipping containers designed to prevent cargo shifting and damage. Durable, lightweight, and ideal for logistics, warehousing, and export packaging.",
+        metaTitle: "Dunnage Bags for Shipping Containers | Cargo Protection | Dpack",
+        metaDescription: "Dpack offers high-quality dunnage bags for shipping containers to prevent cargo shifting. Durable, inflatable and reliable solutions for safe transport.",
         overview: "Heavy-duty air bags used to prevent cargo shifting and damage in container shipments.",
         videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
@@ -380,8 +380,8 @@ export const categories = [
       {
         id: "pp-dunnage-bag",
         name: "PP Dunnage Bag",
-        metaTitle: "PP Dunnage Bag Manufacturer | Polypropylene Air Bags for Cargo Securing",
-        metaDescription: "High-performance PP Dunnage Bags made from durable polypropylene material for cargo securing. Waterproof, reusable, and ideal for containers, trucks, and logistics applications.",
+        metaTitle: "PP Dunnage Bag Manufacturer & Supplier | Cargo Protection | Dpack",
+        metaDescription: "Dpack offers durable PP dunnage bags for cargo safety. Made from high-strength polypropylene, ideal for preventing load shifting during shipping and transport.",
         overview: "Efficient inflation tools designed for quick, safe, and easy filling of dunnage air bags.",
         videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
@@ -482,8 +482,8 @@ export const categories = [
       {
         id: "dunnage-bag-manufacturer",
         name: "Dunnage Bag Manufacturer",
-        metaTitle: "Dunnage Bag Manufacturer in India | High Quality Cargo Securing Air Bags",
-        metaDescription: "Trusted Dunnage Bag Manufacturer offering high-quality, customizable air bags for cargo securing. Durable, cost-effective, and ideal for containers, trucks, and industrial logistics.",
+        metaTitle: "Dunnage Bag Manufacturer & Supplier | Air Bags for Cargo | Dpack",
+        metaDescription: "Dpack is a leading dunnage bag manufacturer & supplier offering high-quality dunnage air bags for cargo protection, safe transport and load stability.",
         overview: "Trusted manufacturer offering high-quality, customizable dunnage bags for industrial packaging needs.",
         videoUrl: "https://www.instagram.com/reel/DUnnZpWksPt/embed",
         description: [
@@ -577,8 +577,8 @@ export const categories = [
       {
         id: "polypropylene-dunnage-air-bag",
         name: "Polypropylene Dunnage Air Bag",
-        metaTitle: "Polypropylene Dunnage Air Bag | PP Inflatable Bags for Cargo Stabilization",
-        metaDescription: "High-performance Polypropylene Dunnage Air Bags for cargo stabilization. Waterproof, durable, and ideal for wooden furniture protection and logistics applications.",
+        metaTitle: "Polypropylene Dunnage Air Bag Manufacturer | PP Cargo Air Bags | Dpack",
+        metaDescription: "Dpack offers high-strength polypropylene dunnage air bags for cargo protection. Durable, reusable and ideal for container, truck and shipping safety.",
         overview: "Strong PP-based inflatable bags ideal for stabilizing heavy loads during long-distance transport.",
         productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         description: [
@@ -675,8 +675,8 @@ export const categories = [
       {
         id: "square-dunnage-air-bags",
         name: "Square Dunnage Air Bags",
-        metaTitle: "Square Dunnage Air Bags | Heavy Duty PP Air Bags for Cargo Stabilization",
-        metaDescription: "High-strength Square Dunnage Air Bags made from PP material for effective gap filling and load distribution. Ideal for heavy cargo with 5 Ton capacity and 90 PSI working pressure.",
+        metaTitle: "Square Dunnage Air Bags Manufacturer | Cargo Protection Bags | Dpack",
+        metaDescription: "Dpack offers square dunnage air bags designed for tight spaces and cargo stability. Durable, inflatable and ideal for container and truck shipping protection.",
         overview: "Uniform square-shaped air bags designed for effective gap filling and load distribution.",
         productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         description: [
@@ -776,8 +776,8 @@ export const categories = [
       {
         id: "dunnage-bags-air-bags",
         name: "Dunnage Bags Air Bags",
-        metaTitle: "Dunnage Bags Air Bags | Paper Air Bags for Cargo Securing and Load Stabilization",
-        metaDescription: "High-quality Dunnage Bags Air Bags for cargo securing and transport safety. Durable, airtight, and ideal for containers, trucks, and industrial logistics applications.",
+        metaTitle: "Dunnage Bags Air Bags Manufacturer & Supplier | Cargo Protection | Dpack",
+        metaDescription: "Dpack offers high-quality dunnage bags air bags for cargo safety. Prevent load shifting with durable, inflatable packaging solutions for transport and logistics.",
         overview: "Versatile inflatable air bags suitable for securing and protecting various types of cargo.",
         productBrochure: '/01JXHR999DKBFBR68P3K60S3KM.pdf',
         description: [
@@ -875,18 +875,18 @@ export const categories = [
   {
     id: "air-column-roll",
     name: "Air Column Roll",
-    metaTitle: "Air Column Roll Bag Manufacturer in India | Packaging Solutions | D Pack",
+    metaTitle: "Air Column Packaging Roll Manufacturer | Inflatable Air Rolls | Dpack",
     metaDescription:
-      "High-performance Air Column Roll designed to secure cargo efficiently during transportation, ensuring stability and minimizing the risk of product damage caused by movement or impact.",
+      "Explore Dpack’s air column packaging rolls & inflatable air column rolls for safe product protection. Durable, lightweight and cost-effective packaging solutions.",
 
     products: [
       {
         id: "perfume-packaging-air-column-roll",
         name: "Perfume Packaging Air Column Roll",
-        metaTitle: "Perfume Packaging Air Column Roll | Protective Air Column Film for Fragile Products",
-        metaDescription: "High-quality Perfume Packaging Air Column Roll designed to protect fragile items like perfume bottles. Durable, waterproof, and ideal for safe transport and packaging.",
+        metaTitle: "Perfume Packaging Air Column Roll | Protective Air Packaging | Dpack",
+        metaDescription: "Dpack offers air column rolls for perfume packaging to protect fragile glass bottles. Lightweight, shock-absorbing and ideal for safe shipping and storage.",
         overview: "Protective air column rolls designed to safeguard delicate perfume bottles from breakage.",
-        videoUrl: "https://www.instagram.com/reels/DTu_Ny4EohV/embed",
+        videoUrl: "https://www.instagram.com/reel/DTu_Ny4EohV/embed",
         description: [
 
           {
@@ -987,10 +987,10 @@ export const categories = [
       {
         id: "air-tubes-rolls",
         name: "Air Tubes Rolls",
-        metaTitle: "Air Tubes Rolls | Inflatable Cushioning Rolls for Fragile Goods Protection",
-        metaDescription: "High-performance Air Tubes Rolls designed for cushioning and shock absorption. Ideal for wooden furniture and fragile goods packaging with durable and waterproof design.",
+        metaTitle: "Air Tube Rolls for Packaging | Inflatable Air Cushion Rolls | Dpack",
+        metaDescription: "Dpack offers air tube rolls for packaging to protect fragile items. Lightweight, shock-absorbing and ideal for safe shipping and product protection.",
         overview: "Flexible inflatable tube rolls providing excellent cushioning and shock absorption for fragile goods.",
-        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
+        videoUrl: "https://www.instagram.com/reel/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1081,10 +1081,10 @@ export const categories = [
       {
         id: "air-column-cushion-roll",
         name: "Air Column Cushion Roll",
-        metaTitle: "Air Column Cushion Roll | Protective Air Packaging Roll for Fragile Goods",
-        metaDescription: "High-quality Air Column Cushion Roll for cushioning and shock absorption. Ideal for electronics, glassware, and fragile goods with durable, waterproof, and transparent design.",
+        metaTitle: "Air Column Cushion Roll Manufacturer | Protective Air Packaging | Dpack",
+        metaDescription: "Dpack offers air column cushion rolls for safe packaging of fragile items. Lightweight, shock-absorbing and ideal for electronics, glass and product protection.",
         overview: "Flexible inflatable tube rolls providing excellent cushioning and shock absorption for fragile goods.",
-        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
+        videoUrl: "https://www.instagram.com/reel/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1175,10 +1175,10 @@ export const categories = [
       {
         id: "air-cushion-film-roll",
         name: "Air Cushion Film Roll",
-        metaTitle: "Air Cushion Film Roll | Void Fill & Protective Packaging Film Manufacturer",
-        metaDescription: "High-quality Air Cushion Film Roll for void filling, wrapping, and cushioning. Durable, waterproof, recyclable, and ideal for e-commerce and fragile goods packaging.",
+        metaTitle: "Air Cushion Film Roll Manufacturer | Protective Packaging Film | Dpack",
+        metaDescription: "Dpack offers air cushion film rolls for protective packaging. Lightweight, shock-absorbing and ideal for safeguarding fragile items during shipping and storage.",
         overview: "Lightweight air cushion film rolls ideal for void filling and protective packaging solutions.",
-        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
+        videoUrl: "https://www.instagram.com/reel/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1286,10 +1286,10 @@ export const categories = [
       {
         id: "inflatable-air-column-roll",
         name: "Inflatable Air Column Roll",
-        metaTitle: "Inflatable Air Column Roll | Protective Air Packaging for Fragile Products",
-        metaDescription: "Durable Inflatable Air Column Roll designed for cushioning and protection of fragile items. Lightweight, waterproof, and ideal for electronics, glassware, and packaging.",
+        metaTitle: "Inflatable Air Column Roll Manufacturer | Protective Packaging | Dpack",
+        metaDescription: "Dpack offers inflatable air column rolls for safe packaging of fragile items. Shock-absorbing, lightweight and ideal for electronics, glass and product protection.",
         overview: "Durable inflatable rolls designed for wrapping and protecting delicate and valuable items.",
-        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
+        videoUrl: "https://www.instagram.com/reel/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1382,10 +1382,10 @@ export const categories = [
       {
         id: "air-tube-column-roll",
         name: "Air Tube Column Roll",
-        metaTitle: "Air Tube Column Roll | Multi Column Air Packaging for Shock Protection",
-        metaDescription: "High-performance Air Tube Column Roll designed for cushioning and shock absorption. Ideal for electronics, glassware, and fragile goods packaging with durable and flexible design.",
+        metaTitle: "Air Tube Column Roll Manufacturer | Protective Air Packaging | Dpack",
+        metaDescription: "Dpack offers air tube column rolls for safe packaging of fragile items. Lightweight, shock-absorbing and ideal for electronics, glass and product protection.",
         overview: "Multi-column air tube rolls ensuring enhanced protection against shocks during transit.",
-        videoUrl: "https://www.instagram.com/reels/DTNcoNkEkbt/embed",
+        videoUrl: "https://www.instagram.com/reel/DTNcoNkEkbt/embed",
         description: [
 
           {
@@ -1474,10 +1474,10 @@ export const categories = [
       {
         id: "jam-bottle-air-column-roll",
         name: "Jam Bottle Air Column Roll",
-        metaTitle: "Jam Bottle Air Column Roll | Protective Air Packaging for Glass Bottles",
-        metaDescription: "High-quality Jam Bottle Air Column Roll designed for protecting glass bottles. Durable LDPE + Nylon material with 360° cushioning, ideal for e-commerce shipping.",
+        metaTitle: "Jam Bottle Air Column Roll | Protective Packaging for Glass Jars | Dpack",
+        metaDescription: "Dpack offers air column rolls for jam bottle packaging. Protect glass jars from breakage with shock-absorbing, lightweight and reliable air packaging.",
         overview: "Specially designed air column rolls to securely protect jam bottles during shipping.",
-        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
+        videoUrl: "https://www.instagram.com/reel/DVYwzx5Eofs/embed",
 
         description: [
 
@@ -1577,10 +1577,10 @@ export const categories = [
       {
         id: "glass-bottle-air-column-roll",
         name: "Glass Bottle Air Column Roll",
-        metaTitle: "Glass Bottle Air Column Roll | Protective Packaging for Fragile Glass Bottles",
-        metaDescription: "High-performance Glass Bottle Air Column Roll designed to prevent breakage during transit. Durable LDPE + Nylon material with 360° cushioning for safe packaging.",
+        metaTitle: "Air Column Roll for Glass Bottle Packaging | Inflatable Air Packaging – Dpack",
+        metaDescription: "High-quality air column rolls for glass bottle protection. Prevent damage with durable, shockproof and cost-effective inflatable air packaging solutions.",
         overview: "High-performance air rolls that prevent breakage of glass bottles in transit.",
-        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
+        videoUrl: "https://www.instagram.com/reel/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -1675,10 +1675,10 @@ export const categories = [
       {
         id: "packaging-column-airbag-roll",
         name: "Packaging Column Airbag Roll",
-        metaTitle: "Packaging Column Airbag Roll | Air Column Cushioning Roll for Product Protection",
-        metaDescription: "High-quality Packaging Column Airbag Roll for cushioning and stabilizing products. Durable, waterproof, and ideal for fragile goods, electronics, and industrial packaging.",
+        metaTitle: "Packaging Column Airbag Roll Manufacturer | Air Column Packaging | Dpack",
+        metaDescription: "Dpack offers packaging column airbag rolls for safe and secure product protection. Lightweight, shock-absorbing and ideal for fragile item packaging.",
         overview: "Inflatable airbag rolls used for cushioning and stabilizing packaged products.",
-        videoUrl: "https://www.instagram.com/reels/DTX30Hgkne8/embed",
+        videoUrl: "https://www.instagram.com/reel/DTX30Hgkne8/embed",
 
         description: [
 
@@ -1780,10 +1780,10 @@ export const categories = [
       {
         id: "inflatable-wrapping-column-plastic-film-air-bag-roll",
         name: "Inflatable Wrapping Column Plastic Film Air Bag Roll Packing",
-        metaTitle: "Inflatable Wrapping Column Air Bag Roll | Protective Plastic Film Packaging Roll",
-        metaDescription: "High-performance inflatable wrapping column air bag roll for cushioning and protection. Durable, waterproof, and ideal for electronics, glassware, and industrial packaging.",
+        metaTitle: "Inflatable Air Column Roll | Wrapping Plastic Film Packaging | Dpack",
+        metaDescription: "Dpack offers inflatable air column rolls made from plastic film for wrapping and protective packaging. Ideal for fragile items, shock absorption and safe shipping.",
         overview: "Multi-layer inflatable film rolls offering secure wrapping and impact protection.",
-        videoUrl: "https://www.instagram.com/reels/DTX30Hgkne8/embed",
+        videoUrl: "https://www.instagram.com/reel/DTX30Hgkne8/embed",
         description: [
 
           {
@@ -1876,10 +1876,10 @@ export const categories = [
       {
         id: "air-bubble-cushion-film-roll",
         name: "Air Bubble Cushion film Roll",
-        metaTitle: "Air Bubble Cushion Film Roll | Protective Bubble Packaging Roll",
-        metaDescription: "High-quality Air Bubble Cushion Film Roll for lightweight cushioning and void filling. Waterproof, recyclable, and ideal for fragile goods packaging.",
+        metaTitle: "Air Bubble Cushion Film Roll | Protective Packaging Film | Dpack",
+        metaDescription: "Dpack offers air bubble cushion film rolls for protective packaging. Lightweight, shock-absorbing and ideal for safeguarding fragile items during shipping.",
         overview: "Bubble-style air film rolls providing lightweight cushioning and efficient void filling.",
-        videoUrl: "https://www.instagram.com/reels/DTX30Hgkne8/embed",
+        videoUrl: "https://www.instagram.com/reel/DTX30Hgkne8/embed",
         description: [
 
           {
@@ -1975,10 +1975,10 @@ export const categories = [
       {
         "id": "air-bubble-packaging-film-roll",
         "name": "Air Bubble Packaging Film Roll",
-        "metaTitle": "Air Bubble Packaging Film Roll | Protective Bubble Packaging Roll",
-        "metaDescription": "High-quality Air Bubble Packaging Film Roll for cushioning and protection of fragile goods. Waterproof, durable, and ideal for furniture and industrial packaging.",
+        "metaTitle": "Air Bubble Packaging Film Roll | Bubble Wrap for Protection | Dpack",
+        "metaDescription": "Dpack offers air bubble packaging film rolls for safe and secure product protection. Lightweight, shock-absorbing and ideal for fragile item packaging.",
         "overview": "Air Bubble Packaging Film Rolls designed for effective cushioning, shock absorption, and surface protection during storage and transportation.",
-        videoUrl: " https://www.instagram.com/reels/DUKmK4oDMOr/embed",
+        videoUrl: " https://www.instagram.com/reel/DUKmK4oDMOr/embed",
 
         "description": [
           {
@@ -2086,18 +2086,18 @@ export const categories = [
   {
     id: "air-column-bag",
     name: "Air Column Bag",
-    metaTitle: "Dunnage Bag Manufacturer in India | Packaging Solutions | D Pack",
+    metaTitle: "Air Column Bag Manufacturer | Protective Air Column Packaging | Dpack",
     metaDescription:
-      "High-performance Dunnage Air Bags designed to secure cargo efficiently during transportation, ensuring stability and minimizing the risk of product damage caused by movement or impact.",
+      "Explore Dpack’s air column bags for safe packaging. Ideal for laptops, electronics & fragile items. Durable, lightweight and cost-effective protection solutions.",
 
     products: [
       {
         id: "air-column-bag-laptop",
         name: "Air Column Bag for Laptop",
-        metaTitle: "Air Column Bag for Laptop | Shockproof Packaging for Laptops & Electronics",
-        metaDescription: "High-quality Air Column Bag for Laptop designed for shockproof protection. Durable LDPE + Nylon material with 360° cushioning for safe e-commerce shipping.",
+        metaTitle: "Air Column Bag for Laptop | Protective Laptop Packaging | Dpack",
+        metaDescription: "Dpack offers air column bags for laptop packaging. Shock-absorbing, lightweight and designed to protect laptops from damage during shipping and handling.",
         overview: "Shockproof air column bags designed to protect laptops from impact and vibration during shipping.",
-        videoUrl: 'https://www.instagram.com/reels/DSM6LK_ErUn/embed',
+        videoUrl: 'https://www.instagram.com/reel/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -2194,10 +2194,10 @@ export const categories = [
       {
         id: "air-column-bags-electronics",
         name: "Air Column Bags for Electronics",
-        metaTitle: "Air Column Bags for Electronics | Shockproof Packaging for Fragile Devices",
-        metaDescription: "Premium Air Column Bags for Electronics designed for shockproof protection of fragile devices. Durable LDPE + Nylon material with 360° cushioning for safe e-commerce shipping.",
+        metaTitle: "Air Column Bags for Electronics | Protective Packaging | Dpack",
+        metaDescription: "Dpack offers air column bags for electronics packaging. Shock-absorbing, lightweight and ideal for protecting devices during shipping and handling.",
         overview: "Shockproof air column bags designed to protect laptops from impact and vibration during shipping.",
-        videoUrl: 'https://www.instagram.com/reels/DSM6LK_ErUn/embed',
+        videoUrl: 'https://www.instagram.com/reel/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -2295,10 +2295,10 @@ export const categories = [
       {
         id: "air-column-cushion-bag-wine",
         name: "Air Column Cushion Bag for Wine",
-        metaTitle: "Air Column Cushion Bag for Wine | Protective Packaging for Wine Bottles",
-        metaDescription: "High-quality Air Column Cushion Bag for Wine designed for protecting glass bottles. Durable LDPE + Nylon material with 360° cushioning for safe e-commerce shipping.",
+        metaTitle: "Air Column Cushion Bag for Wine | Bottle Protection Packaging | Dpack",
+        metaDescription: "Dpack offers air column cushion bags for wine bottles. Shock-absorbing, lightweight and designed to prevent breakage during shipping and handling.",
         overview: "Protective air bags that secure electronic devices and prevent damage during transport.",
-        videoUrl: 'https://www.instagram.com/reels/DQtBb4lkh0_/embed',
+        videoUrl: 'https://www.instagram.com/reel/DQtBb4lkh0_/embed',
         description: [
 
           {
@@ -2398,10 +2398,10 @@ export const categories = [
       {
         id: "transparent-air-column-bag-macbook",
         name: "Transparent Air Column Bag for Mac Book, For Safe Packaging",
-        metaTitle: "Transparent Air Column Bag for MacBook | Shockproof Laptop Packaging",
-        metaDescription: "High-quality Transparent Air Column Bag for MacBook designed for safe packaging. Shockproof, durable, and ideal for protecting laptops during shipping and handling.",
+        metaTitle: "Transparent Air Column Bag for MacBook | Safe Laptop Packaging | Dpack",
+        metaDescription: "Dpack offers transparent air column bags for MacBook packaging. Shock-absorbing, lightweight and designed for safe laptop shipping and protection.",
         overview: "Specialized air bags designed to protect wine bottles from breakage and leakage.",
-        videoUrl: 'https://www.instagram.com/reels/DSM6LK_ErUn/embed',
+        videoUrl: 'https://www.instagram.com/reel/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -2496,10 +2496,10 @@ export const categories = [
       {
         id: "air-column-packaging-bag",
         name: "Air Column Packaging Bag",
-        metaTitle: "Air Column Packaging Bag | Protective Air Cushion Packaging for Fragile Goods",
-        metaDescription: "High-quality Air Column Packaging Bag designed for cushioning and protection. Lightweight, durable, and ideal for electronics, glassware, and industrial packaging.",
+        metaTitle: "Air Column Packaging Bag Manufacturer | Protective Air Packaging | Dpack",
+        metaDescription: "Dpack offers air column packaging bags for safe product protection. Shock-absorbing, lightweight and ideal for electronics, glass and fragile item shipping.",
         overview: "Inflatable packaging bags offering superior cushioning and protection for various products.",
-        videoUrl: 'https://www.instagram.com/reels/DO0nmQzknyF/embed',
+        videoUrl: 'https://www.instagram.com/reel/DO0nmQzknyF/embed',
 
         description: [
 
@@ -2596,10 +2596,10 @@ export const categories = [
       {
         id: "ghee-jar-air-column-bag",
         name: "Ghee Jar Air Column Bag",
-        metaTitle: "Ghee Jar Air Column Bag | Protective Packaging for Ghee Jars",
-        metaDescription: "High-quality Ghee Jar Air Column Bag designed for safe transport. Leak-proof, durable PE material with 360° cushioning for secure packaging.",
+        metaTitle: "Buy Air Column Bags for Ghee Jars | Dpack",
+        metaDescription: "Order air column bags for ghee jar packaging. Ensure safe delivery of glass jars with reliable, protective and cost-effective air cushioning solutions.",
         overview: "Air column bags designed to safely transport ghee jars without leakage or damage.",
-        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
+        videoUrl: "https://www.instagram.com/reel/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -2698,8 +2698,8 @@ export const categories = [
       {
         id: "carton-box-packaging-air-column-bag",
         name: "Carton BOX Packaging Air Column Bag",
-        metaTitle: "Carton Box Packaging Air Column Bag | Protective Cushioning for Carton Packaging",
-        metaDescription: "High-quality Carton Box Packaging Air Column Bag for cushioning and product safety. Lightweight, recyclable, and ideal for carton packaging applications.",
+        metaTitle: "Carton Box Packaging Air Column Bag | Protective Packaging | Dpack",
+        metaDescription: "Dpack offers air column bags for carton box packaging. Shock-absorbing, lightweight protection to prevent damage during shipping and product delivery.",
         overview: "Air bags used inside cartons to provide additional cushioning and product safety.",
 
         description: [
@@ -2784,18 +2784,18 @@ export const categories = [
   {
     id: "packaging-air-bag",
     name: "Packaging Air Bag",
-    metaTitle: "Dunnage Bag Manufacturer in India | Packaging Solutions | D Pack",
+    metaTitle: "Packaging Air Bag Manufacturer & Supplier | Air Cushion Bags – Dpack",
     metaDescription:
-      "High-performance Dunnage Air Bags designed to secure cargo efficiently during transportation, ensuring stability and minimizing the risk of product damage caused by movement or impact.",
+      "Explore high-quality packaging air bags by Dpack including air cushion bags, air column bags & dunnage air bags for safe and reliable product protection.",
 
     products: [
       {
         id: "shoes-packing-air-cushion-bag",
         name: "Shoes Packing Air Cushion Bag",
-        metaTitle: "Shoes Packing Air Cushion Bag | Protective Packaging for Footwear",
-        metaDescription: "High-quality Shoes Packing Air Cushion Bag designed to protect footwear from damage. Durable, waterproof, and ideal for safe e-commerce and logistics packaging.",
+        metaTitle: "Buy Air Cushion Bags for Shoe Packaging | Dpack",
+        metaDescription: "Order air cushion bags for shoes packing. Ensure safe delivery and storage of footwear with reliable protective air packaging solutions.",
         overview: "Air cushion bags designed to protect shoes from dust, pressure, and damage during shipping.",
-        // videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
+        // videoUrl: "https://www.instagram.com/reel/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -2895,10 +2895,10 @@ export const categories = [
       {
         id: "self-inflated-packaging-air-bag",
         name: "Self-Inflated Packaging Air Bag",
-        metaTitle: "Self-Inflated Packaging Air Bag | Automatic Air Cushion Packaging Solution",
-        metaDescription: "Innovative Self-Inflated Packaging Air Bag designed for instant cushioning. Durable, lightweight, and ideal for fast, efficient packaging of fragile goods.",
+        metaTitle: "Self-Inflated Packaging Air Bag | Inflatable Protective Packaging | Dpack",
+        metaDescription: "Dpack offers self-inflated packaging air bags for safe product protection. Lightweight, shock-absorbing and ideal for fragile items during shipping and handling.",
         overview: "Innovative air bags that automatically inflate for fast and convenient packaging solutions.",
-        videoUrl: 'https://www.instagram.com/reels/DQtBb4lkh0_/embed',
+        videoUrl: 'https://www.instagram.com/reel/DQtBb4lkh0_/embed',
         description: [
 
           {
@@ -2988,10 +2988,10 @@ export const categories = [
       {
         id: "protective-air-tube-bag-jars-containers",
         name: "Protective Air Tube Bag Packaging for Jars & Containers",
-        metaTitle: "Protective Air Tube Bag Packaging for Jars & Containers | Cushioning Packaging Solution",
-        metaDescription: "High-quality Protective Air Tube Bag Packaging designed for jars, containers, and fragile goods. Durable PVC material with 360° cushioning for safe transport.",
+        metaTitle: "Protective Air Tube Bag Packaging for Jars & Containers | Dpack",
+        metaDescription: "Dpack offers protective air tube bag packaging for jars and containers. Shock-absorbing, inflatable cushioning to prevent breakage during shipping and transit.",
         overview: "Air tube bags offering secure cushioning for jars and container packaging.",
-        videoUrl: "https://www.instagram.com/reels/DVYwzx5Eofs/embed",
+        videoUrl: "https://www.instagram.com/reel/DVYwzx5Eofs/embed",
         description: [
 
           {
@@ -3084,10 +3084,10 @@ export const categories = [
       {
         id: "glass-bottle-airbag-packaging",
         name: "Glass Bottle Airbag Packaging",
-        metaTitle: "Glass Bottle Airbag Packaging | Protective Air Column Packaging for Bottles",
-        metaDescription: "High-performance Glass Bottle Airbag Packaging designed for safe transport. Nylon barrier film with air column cushioning for maximum bottle protection.",
+        metaTitle: "Glass Bottle Airbag Packaging | Protective Air Cushion Solutions | Dpack",
+        metaDescription: "Dpack offers glass bottle airbag packaging for safe shipping. Shock-absorbing inflatable protection to prevent breakage during transport and handling.",
         overview: "Inflatable air bags designed to prevent breakage and ensure safe delivery of glass bottles.",
-        videoUrl: 'https://www.instagram.com/reels/DQtBb4lkh0_/embed',
+        videoUrl: 'https://www.instagram.com/reel/DQtBb4lkh0_/embed',
         description: [
 
           {
@@ -3188,10 +3188,10 @@ export const categories = [
       {
         id: "inflatable-air-packaging-bags",
         name: "Inflatable Air Packaging Bags",
-        metaTitle: "Inflatable Air Packaging Bags | Lightweight Cushioning Packaging Solution",
-        metaDescription: "High-performance Inflatable Air Packaging Bags designed for cushioning and protection. Durable, waterproof, and ideal for fragile goods and industrial packaging.",
+        metaTitle: "Inflatable Air Packaging Bags | Protective Cushion Packaging | Dpack",
+        metaDescription: "Dpack offers inflatable air packaging bags for safe shipping. Lightweight, shock-absorbing protection for electronics, glass and fragile product transport.",
         overview: "Lightweight inflatable bags providing efficient cushioning and product protection during transit.",
-
+ videoUrl: 'https://www.instagram.com/reel/DQtBb4lkh0_/embed',
         description: [
 
           {
@@ -3291,9 +3291,10 @@ export const categories = [
       {
         id: "air-filled-cushioning-bag",
         name: "Air Filled Cushioning Bag",
-        metaTitle: "Air Filled Cushioning Bag | Void Fill Packaging for Product Protection",
-        metaDescription: "High-quality Air Filled Cushioning Bag designed for gap filling and shock absorption. Lightweight, cost-effective, and ideal for e-commerce and logistics packaging.",
+        metaTitle: "Air Filled Cushioning Bag Manufacturer | Protective Packaging | Dpack",
+        metaDescription: "Dpack offers air filled cushioning bags for safe packaging. Lightweight, shock-absorbing protection for fragile items during shipping and transport.",
         overview: "Soft air-filled bags that absorb shocks and protect goods from damage in shipping.",
+         videoUrl: 'https://www.instagram.com/reel/DWyoRepkoS7/embed',
 
         description: [
 
@@ -3390,10 +3391,10 @@ export const categories = [
       {
         id: "air-tube-bag-packaging",
         name: "Air Tube Bag for Packaging",
-        metaTitle: "Air Tube Bag for Packaging | Protective Cushioning Packaging Solution",
-        metaDescription: "High-quality Air Tube Bag for Packaging designed for cushioning and protection. Durable, recyclable, and ideal for fragile goods and industrial packaging.",
+        metaTitle: "Air Tube Bag for Packaging | Protective Air Cushion Bags | Dpack",
+        metaDescription: "Dpack offers air tube bags for packaging to protect fragile items. Lightweight, shock-absorbing and ideal for safe shipping and product protection.",
         overview: "Tube-style air bags designed for secure packaging and enhanced product safety.",
-
+ videoUrl: 'https://www.instagram.com/reel/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -3484,8 +3485,8 @@ export const categories = [
       {
         id: "trolley-packaging-air-bag",
         name: "Trolley Packaging Air Bag",
-        metaTitle: "Trolley Packaging Air Bag | Protective Cushioning for Luggage & Suitcases",
-        metaDescription: "High-quality Trolley Packaging Air Bag designed to protect luggage from scratches and impact. Lightweight, durable, and ideal for safe transport and e-commerce shipping.",
+        metaTitle: "Trolley Packaging Air Bag | Protective Travel & Shipping Cushion | Dpack",
+        metaDescription: "Dpack offers trolley packaging air bags for safe protection of luggage and products. Shock-absorbing, lightweight and ideal for secure travel and transport.",
         overview: "Protective air bags designed to safeguard trolley bags from scratches and impact.",
 
         description: [
@@ -3572,10 +3573,12 @@ export const categories = [
       {
         "id": "air-bag-packing-bag-in-bag",
         "name": "Air Bag Packing Bag-in-Bag",
-        "metaTitle": "Air Bag Packing Bag-in-Bag | Air Pillow Cushion Packaging Solution",
-        "metaDescription": "Air Bag Packing Bag-in-Bag provides air pillow cushioning for shock absorption, void filling, and protection during shipping. Lightweight and customizable packaging solution.",
+        "metaTitle": "Air Bag Packing Bag-in-Bag | Protective Inflatable Packaging | Dpack",
+        "metaDescription": "Dpack offers air bag packing bag-in-bag solutions for safe product protection. Lightweight, shock-absorbing inflatable packaging for secure shipping and handling.",
         "overview": "Air Bag Packing (Bag-in-Bag) designed with air pillow technology to provide cushioning, shock absorption, and product protection during storage and transportation.",
         productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
+         videoUrl: 'https://www.instagram.com/reel/DW_m1riEhoG/embed',
+       
         "description": [
           {
             "type": "h2",
@@ -3684,16 +3687,16 @@ export const categories = [
   {
     id: "gap-filler",
     name: "Gap Filler",
-    metaTitle: "Dunnage Bag Manufacturer in India | Packaging Solutions | D Pack",
+    metaTitle: "Gap Filler Air Bags & Air Cushion Void Fill Packaging | Dpack",
     metaDescription:
-      "High-performance Dunnage Air Bags designed to secure cargo efficiently during transportation, ensuring stability and minimizing the risk of product damage caused by movement or impact.",
+      "Explore Dpack gap filler air bags and void fill packaging solutions. Ideal for filling empty spaces, preventing damage and ensuring safe product transit.",
 
     products: [
       {
         id: "purse-gap-filler-pouch",
         name: "Purse Gap Filler Pouch",
-        metaTitle: "Purse Gap Filler Pouch | Air Pillow Packaging for Handbag Protection",
-        metaDescription: "High-quality Purse Gap Filler Pouch designed for void filling and shape protection. Air pillow cushioning with nylon barrier film for safe packaging.",
+        metaTitle: "Purse Gap Filler Pouch | Protective Air Cushion Packaging | Dpack",
+        metaDescription: "Dpack offers purse gap filler pouches for safe packaging and product protection. Lightweight air cushioning to prevent damage during shipping and storage.",
         overview: "Air-filled pouches used to fill empty spaces and protect purses from deformation during transit.",
 
         description: [
@@ -3776,8 +3779,8 @@ export const categories = [
       {
         id: "white-air-cushion-void-filling-rolls",
         name: "White Air Cushion Void Filling Rolls Gap Filler",
-        metaTitle: "White Air Cushion Void Filling Rolls | Gap Filler Packaging Rolls",
-        metaDescription: "High-quality White Air Cushion Void Filling Rolls designed for gap filling and cushioning. Lightweight, durable, and ideal for e-commerce and industrial packaging.",
+        metaTitle: "White Air Cushion Void Filling Rolls | Gap Filler Packaging | Dpack",
+        metaDescription: "Dpack offers white air cushion void filling rolls for gap filling packaging. Lightweight, shock-absorbing protection for safe shipping and product security.",
         overview: "White air cushion rolls ideal for filling voids and preventing product movement in packages.",
 
         description: [
@@ -3874,8 +3877,8 @@ export const categories = [
       {
         id: "void-gap-filling-air-cushion-bags",
         name: "Void or Gap Filling Air Cushion Bags",
-        metaTitle: "Void or Gap Filling Air Cushion Bags | Protective Void Fill Packaging",
-        metaDescription: "High-quality Void or Gap Filling Air Cushion Bags designed for cushioning and gap filling. Lightweight, durable, and ideal for e-commerce and logistics packaging.",
+        metaTitle: "Void Filling Air Cushion Bags | Gap Fill Packaging Solution | Dpack",
+        metaDescription: "Dpack offers void and gap filling air cushion bags for safe packaging. Lightweight, shock-absorbing protection to prevent product movement and damage during shipping.",
         overview: "Durable air bags designed to fill gaps and stabilize goods during transportation.",
 
         description: [
@@ -3976,8 +3979,8 @@ export const categories = [
       {
         id: "gap-filler-pouch",
         name: "Gap Filler Pouch",
-        metaTitle: "Gap Filler Pouch | Air Cushion Void Fill Packaging Solution",
-        metaDescription: "High-quality Gap Filler Pouch designed for void filling and cushioning. Lightweight, durable, and ideal for e-commerce and fragile product packaging.",
+        metaTitle: "Buy Gap Filler Pouches for Packaging | Dpack",
+        metaDescription: "Order gap filler pouches for secure shipping. Cost-effective, lightweight air cushioning solution for protecting products during transport.",
         overview: "Inflatable pouches that effectively fill empty spaces and protect products from shifting and damage.",
 
         description: [
@@ -4076,8 +4079,8 @@ export const categories = [
       {
         "id": "inflatable-air-cushion-for-shoes",
         "name": "Inflatable Air Cushion for Shoes",
-        "metaTitle": "Inflatable Air Cushion for Shoes | Gap Filler Packaging Solution",
-        "metaDescription": "Inflatable air cushion for shoes designed to protect footwear during storage and shipping. Prevents deformation, scratches, and damage with lightweight air-filled protection.",
+        "metaTitle": "Inflatable Air Cushion for Shoes | Protective Packaging | Dpack",
+        "metaDescription": "Dpack offers inflatable air cushions for shoe packaging. Lightweight, shock-absorbing protection to keep footwear safe during shipping and storage.",
         "overview": "Inflatable air cushions designed as gap fillers to protect shoes from deformation, scratches, and damage during storage and transportation.",
 
         "description": [
@@ -4181,8 +4184,8 @@ export const categories = [
       {
         "id": "rf-gap-filler-pouch",
         "name": "RF Gap Filler Pouch",
-        "metaTitle": "RF Gap Filler Pouch | Void Filling Air Cushion Packaging",
-        "metaDescription": "RF Gap Filler Pouch designed for void filling and product protection during shipping. Lightweight, durable, and ideal for e-commerce and industrial packaging.",
+        "metaTitle": "RF Gap Filler Pouch | Air Cushion Void Fill Packaging | Dpack",
+        "metaDescription": "Dpack offers RF gap filler pouches for secure void fill packaging. Lightweight air cushioning to protect products and prevent movement during shipping.",
         "overview": "RF Gap Filler Pouches designed to fill empty spaces between products, providing air cushioning and protection during storage and transportation.",
 
         "description": [
