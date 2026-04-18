@@ -1062,7 +1062,7 @@ export const categories = [
             "alt": "Air Tubes Rolls"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -3191,7 +3191,7 @@ export const categories = [
         metaTitle: "Inflatable Air Packaging Bags | Protective Cushion Packaging | Dpack",
         metaDescription: "Dpack offers inflatable air packaging bags for safe shipping. Lightweight, shock-absorbing protection for electronics, glass and fragile product transport.",
         overview: "Lightweight inflatable bags providing efficient cushioning and product protection during transit.",
- videoUrl: 'https://www.instagram.com/reel/DQtBb4lkh0_/embed',
+        videoUrl: 'https://www.instagram.com/reel/DQtBb4lkh0_/embed',
         description: [
 
           {
@@ -3294,7 +3294,7 @@ export const categories = [
         metaTitle: "Air Filled Cushioning Bag Manufacturer | Protective Packaging | Dpack",
         metaDescription: "Dpack offers air filled cushioning bags for safe packaging. Lightweight, shock-absorbing protection for fragile items during shipping and transport.",
         overview: "Soft air-filled bags that absorb shocks and protect goods from damage in shipping.",
-         videoUrl: 'https://www.instagram.com/reel/DWyoRepkoS7/embed',
+        videoUrl: 'https://www.instagram.com/reel/DWyoRepkoS7/embed',
 
         description: [
 
@@ -3394,7 +3394,7 @@ export const categories = [
         metaTitle: "Air Tube Bag for Packaging | Protective Air Cushion Bags | Dpack",
         metaDescription: "Dpack offers air tube bags for packaging to protect fragile items. Lightweight, shock-absorbing and ideal for safe shipping and product protection.",
         overview: "Tube-style air bags designed for secure packaging and enhanced product safety.",
- videoUrl: 'https://www.instagram.com/reel/DSM6LK_ErUn/embed',
+        videoUrl: 'https://www.instagram.com/reel/DSM6LK_ErUn/embed',
         description: [
 
           {
@@ -3577,8 +3577,8 @@ export const categories = [
         "metaDescription": "Dpack offers air bag packing bag-in-bag solutions for safe product protection. Lightweight, shock-absorbing inflatable packaging for secure shipping and handling.",
         "overview": "Air Bag Packing (Bag-in-Bag) designed with air pillow technology to provide cushioning, shock absorption, and product protection during storage and transportation.",
         productBrochure: '/01JXHR9AWV4FDDS9G1WARN8Q9B (1).pdf',
-         videoUrl: 'https://www.instagram.com/reel/DW_m1riEhoG/embed',
-       
+        videoUrl: 'https://www.instagram.com/reel/DW_m1riEhoG/embed',
+
         "description": [
           {
             "type": "h2",

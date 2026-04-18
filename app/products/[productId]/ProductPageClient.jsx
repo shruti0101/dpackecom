@@ -318,15 +318,16 @@ export default function ProductPage({ productId }) {
 
             {/* WISHLIST */}
             <div className="mb-4 flex flex-col sm:flex-row gap-4">
-              <button className="flex curspor-pointer bg-orange-600 items-center justify-center rounded-lg text-white px-2 py-3 text-lg gap-2 ">
+              <a href="tel:917669988825" className="flex curspor-pointer bg-orange-600 items-center justify-center rounded-lg text-white px-2 py-3 text-lg gap-2 ">
                 <ArrowUpRight size={18} />
                 Enquire About Product
-              </button>
+              </a>
 
-              <button className="flex bg-green-700 curspor-pointer items-center justify-center rounded-lg text-white px-2 py-3 text-lg gap-2 ">
+              <a href={`https://wa.me/+917669988825?text=Hi, I have seen your product on https://dpack.com and I am interested in ${product.name}`}
+                target="_blank" className="flex bg-green-700 curspor-pointer items-center justify-center rounded-lg text-white px-2 py-3 text-lg gap-2 ">
                 <ArrowUpRight size={18} />
                 Whatsapp Us
-              </button>
+              </a>
             </div>
 
             {/* META */}
