@@ -3765,7 +3765,7 @@ export const categories = [
 
         image: [
           {
-            "src": "/purseGapfiller.jpeg",
+            "src": "/air bubble roll/50.webp",
             "alt": "Purse Gap Filler Pouch"
           },
           // {
