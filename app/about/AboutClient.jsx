@@ -74,8 +74,8 @@ export default function AboutSection() {
       </div>
     </section>
 
-    <section className="bg-white py-10 px-4 md:px-15">
-      <div className="flex flex-col md:flex-row items-center gap-10">
+    <section className="bg-white py-10 px-4 lg:px-15">
+      <div className="flex flex-col lg:flex-row items-center gap-10">
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             10+ Years of Industry Experience
@@ -106,8 +106,8 @@ export default function AboutSection() {
     </section>
 
     {/* Grid Sections */}
-    <div className="bg-gray-50 py-10 px-4 md:px-15">
-      <div className="grid md:grid-cols-3 gap-8">
+    <div className="bg-gray-50 py-10 px-4 lg:px-15">
+      <div className="grid lg:grid-cols-3 gap-8">
 
         {/* Journey */}
         <div className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
@@ -143,7 +143,7 @@ export default function AboutSection() {
     </div>
 
     <About />
-    <section className="bg-gray-100 py-16 px-6 md:px-20">
+    <section className="bg-gray-100 py-16 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Heading */}
@@ -175,7 +175,7 @@ export default function AboutSection() {
       </div>
     </section>
 
-    <section className="bg-white py-14 px-6 md:px-20">
+    <section className="bg-white py-14 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}

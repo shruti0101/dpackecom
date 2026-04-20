@@ -484,12 +484,12 @@ export default function ProductPage({ productId }) {
             modules={[Navigation, Autoplay]}
             navigation
             autoplay={{ delay: 3000 }}
-            spaceBetween={24}
+            // spaceBetween={20}
             slidesPerView={5}
             breakpoints={{
-              320: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
+              320: { slidesPerView: 1, spaceBetween: 10 },
+              640: { slidesPerView: 2, spaceBetween: 10 },
+              768: { slidesPerView: 3, spaceBetween: 20 },
             }}
           >
             {relatedProducts.map((item, i) => (
