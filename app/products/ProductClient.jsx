@@ -19,12 +19,12 @@ export default function Page() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12">
         {categories.map((category) => (
           <div key={category.id} className="mb-12">
             <h2 className="text-2xl font-bold mb-6">{category.name}</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {category.products.map((product, index) => (
                 <Link key={index} href={`/products/${product.id}`}
                   className="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group"

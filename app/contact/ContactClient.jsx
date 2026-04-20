@@ -65,7 +65,7 @@ export default function ContactPage() {
       </section>
 
       {/* CONTACT INFO */}
-      <section className="bg-white py-16 px-6 md:px-20">
+      <section className="bg-white py-16 px-6 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 
           {/* Phone */}
