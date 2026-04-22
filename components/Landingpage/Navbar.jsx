@@ -39,8 +39,8 @@ export default function Navbar() {
         {/* LOGO + MOBILE MENU */}
         <div className="flex items-center justify-between w-full lg:w-auto">
           <Link href={`/`} className="flex items-center gap-1">
-            <Image width={120} height={80} src="/logo-new.png" alt="logo" />
-            <p className='flex text-xs md:text-sm text-orange-600 bg-orange-50 px-3 py-1 rounded-full'>GSTIN: 07AFXPJ4168A2Z9</p>
+            <Image width={120} height={50} src="/logo.png" className="h-18 w-auto" alt="logo" />
+            <p className='border border-white flex text-xs md:text-sm text-orange-600 bg-orange-50 px-3 py-1 rounded-full'>GSTIN: 07AFXPJ4168A2Z9</p>
           </Link>
 
           {/* MOBILE MENU BUTTON */}

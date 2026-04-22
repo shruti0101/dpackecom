@@ -27,7 +27,7 @@ const category = [
   },
   {
     id: 4,
-    name: "Courier Bags",
+    name: "Dunnage Bags",
     image: "/banner/4.jpeg",
     link: "/categories/dunnage-bag",
     subtext: "Durable and tamper-proof packaging for safe deliveries",
