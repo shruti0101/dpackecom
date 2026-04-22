@@ -34,13 +34,13 @@ export default function Navbar() {
   const [hover, sethover] = useState(null);
   return (<>
     <section>
-      <div className="bg-white px-4 md:px-10 lg:px-20 lg:py-1 flex flex-col lg:flex-row items-center justify-between gap-4 shadow-sm">
+      <div className="bg-white px-2 md:px-10 lg:px-20 py-1 flex flex-col lg:flex-row items-center justify-between gap-4 shadow-sm">
 
         {/* LOGO + MOBILE MENU */}
         <div className="flex items-center justify-between w-full lg:w-auto">
           <Link href={`/`} className="flex items-center sm:gap-1">
             <Image width={120} height={50} src="/logo.png" className="h-18 w-auto" alt="logo" />
-            <p className='border border-white flex text-xs sm:text-sm text-orange-600 bg-orange-50 px-3 py-1 rounded-full'>GSTIN: 07AFXPJ4168A2Z9</p>
+            <p className='border border-white flex text-sm text-orange-600 bg-orange-50 px-2 sm:px-3 py-1 rounded-full'>GSTIN: 07AFXPJ4168A2Z9</p>
           </Link>
 
           {/* MOBILE MENU BUTTON */}
