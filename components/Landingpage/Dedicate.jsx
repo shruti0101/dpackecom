@@ -61,7 +61,7 @@ export default function PackagingSection() {
         <div className="relative w-full h-[350px] md:h-[620px]">
 
           <Image
-            src="/sidebanner.png" // 👈 replace with your image
+            src="/sidebanner.webp" // 👈 replace with your image
             alt="Packaging Air Bags"
             fill
             className="object-contain md:object-cover rounded-xl"

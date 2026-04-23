@@ -15,6 +15,7 @@ import Dedicate from "@/components/Landingpage/Dedicate";
 import Otherproduct from "@/components/Landingpage/Otherpro";
 import Faq from "@/components/Landingpage/Faq";
 import Loactions from "@/components/Locations";
+import ContactForm from "@/components/Popup";
 
 
 
@@ -48,6 +49,7 @@ export default function Home() {
       <TestimonialSlider></TestimonialSlider>
       <Blogdesign></Blogdesign>
       <Faq></Faq>
+      <ContactForm />
     </>
   );
 }

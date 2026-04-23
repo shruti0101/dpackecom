@@ -13,6 +13,8 @@ import {
   ArrowUpRight,
   Rotate3d,
   Download,
+  Youtube,
+  Linkedin,
 } from "lucide-react";
 import { categories } from "@/Data";
 import { ShoppingCart, Eye } from "lucide-react";
@@ -334,9 +336,18 @@ export default function ProductPage({ productId }) {
 
               <div className="flex items-center gap-3 mt-2">
                 <span className="font-bold">Visit Us:</span>
-                <Facebook className="text-orange-600" size={18} />
-                <Instagram className="text-orange-600" size={18} />
-                <Twitter className="text-orange-600" size={18} />
+                <Link href={"https://www.facebook.com/Dpacksolutions/"}>
+                  <Facebook className="text-orange-600" size={18} />
+                </Link>
+                <Link href={"https://www.youtube.com/@Dpacksolutions"}>
+                  <Youtube className="text-orange-600" size={18} />
+                </Link>
+                <Link href={"https://www.instagram.com/dpacksolutionsindia/"}>
+                  <Instagram className="text-orange-600" size={18} />
+                </Link>
+                <Link href={"https://www.linkedin.com/company/dpacksolutions/"}>
+                  <Linkedin className="text-orange-600" size={18} />
+                </Link>
               </div>
             </div>
           </div>

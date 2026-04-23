@@ -152,7 +152,7 @@ export default function HeroPixelPerfect() {
           </div>
 
           {/* TOP CARD */}
-          <div className="relative w-full h-[235px] sm:h-[250px] lg:h-[250px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[220px] sm:h-[250px] lg:h-[230px] rounded-2xl overflow-hidden group">
 
             <Image
               src="/newBanner.jpeg"

@@ -8,6 +8,7 @@ import {
   Phone,
   Mail,
   X,
+  Youtube,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +17,24 @@ import { useState } from "react";
 
 export default function Footer() {
   const [open, setOpen] = useState(false);
-
+  const socialLinks = [
+    {
+      Icon: Facebook,
+      href: "https://www.facebook.com/Dpacksolutions/",
+    },
+    {
+      Icon: Youtube,
+      href: "https://www.youtube.com/@Dpacksolutions",
+    },
+    {
+      Icon: Instagram,
+      href: "https://www.instagram.com/dpacksolutionsindia/",
+    },
+    {
+      Icon: Linkedin,
+      href: "https://www.linkedin.com/company/dpacksolutions/",
+    },
+  ];
   return (
     <footer style={{ backgroundImage: "url(/footerbg.jpg)" }} className="relative bg-cover  text-white pt-16 pb-10 px-6 md:px-12 overflow-hidden">
       <div className="absolute inset-0 opacity-10 bg-[url('/wave.png')] bg-cover bg-center"></div>
@@ -37,13 +55,12 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <span className="text-sm">Follow :</span>
 
-            {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-400 hover:text-black transition cursor-pointer"
-              >
-                <Icon size={16} />
-              </div>
+            {socialLinks.map(({ Icon, href }, i) => (
+              <Link key={i} href={href}>
+                <div className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-400 hover:text-black transition cursor-pointer">
+                  <Icon size={16} />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -98,7 +115,7 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-3">Trust Elite</h3>
           <p className="text-base">
-          We are proud to present the TrustElite Certificate of Excellence to D Pack, recognizing their commitment to exceptional customer service, outstanding business practices, and a dedication to building trust with their customers.
+            We are proud to present the TrustElite Certificate of Excellence to D Pack, recognizing their commitment to exceptional customer service, outstanding business practices, and a dedication to building trust with their customers.
           </p>
 
           <div className="mt-4 flex justify-center md:justify-start">
@@ -156,8 +173,9 @@ export default function Footer() {
       </AnimatePresence>
 
       {/* BOTTOM */}
-      <div className="border-t border-white/10 mt-12 pt-6 text-center text-sm text-white/60">
-        © 2025 DunnagePro. All rights reserved.
+      <div className="flex flex-wrap justify-between border-t border-white/10 mt-12 pt-6 text-sm text-white/60">
+        <p>© 2025 DunnagePro. All rights reserved.</p>
+        <p>Website Designed By <Link href={"https://promozionebranding.com/"} className="hover:underline">Promozione Branding Pvt Ltd.</Link></p>
       </div>
     </footer>
   );

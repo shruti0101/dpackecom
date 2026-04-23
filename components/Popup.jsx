@@ -29,8 +29,8 @@ export default function ContactForm() {
 
     try {
       const formData = {
-        platform: "Sangam Garbage Bag popup Form",
-        platformEmail: "info@polywell.co.in",
+        platform: "DPACK Popup Form",
+        platformEmail: "dpacksolutionindia@gmail.com",
         name,
         phone,
         email,
@@ -55,7 +55,7 @@ Contact: ${phone}`;
 
         setTimeout(() => {
           window.open(
-            `https://wa.me/919810057441?text=${encodeURIComponent(
+            `https://wa.me/917669988825?text=${encodeURIComponent(
               whatsappText
             )}`,
             "_blank"
@@ -82,13 +82,8 @@ Contact: ${phone}`;
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
-      <div
-        className="relative rounded-3xl shadow-2xl p-10 max-w-sm md:max-w-2xl text-white bg-cover bg-center"
-        style={{ backgroundImage: "url(/bag/try2.webp)" }}
+      <div className="relative rounded-3xl shadow-2xl p-10 max-w-sm md:max-w-2xl bg-white text-black bg-cover bg-center"
       >
-
-
-
         {/* Close button */}
         <button
           className="absolute cursor-pointer top-4 right-4 text-white hover:text-red-500 text-xl"
@@ -98,10 +93,10 @@ Contact: ${phone}`;
         </button>
 
         {/* Title */}
-        <h2 className="text-center text-white text-xl md:text-3xl font-semibold tracking-wide">
+        <h2 className="text-center text-xl md:text-3xl font-semibold tracking-wide">
           Get In Touch With Us
         </h2>
-        <div className="w-28 h-[4px] bg-blue-600 mx-auto mt-3 mb-8 rounded-full"></div>
+        <div className="w-28 h-[4px] bg-orange-600 mx-auto mt-2 mb-8 rounded-full"></div>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="flex gap-3">
@@ -115,22 +110,25 @@ Contact: ${phone}`;
               onChange={(e) => setName(e.target.value)}
               disabled={loading}
             />
-     <select
-                  name="products"
-                  required
-                  disabled={loading}
-                  defaultValue=""
-                  className="w-1/2 p-3 rounded-md text-black text-sm border-2 focus:outline-none bg-blue-50"
-                >
-                  <option value="">Select Product</option>
-              <option value="Black Garbage Bags">Biodegradable Garbage Bags</option>
-                  <option value="Green Garbage Bags">Disposable Garbage Bags</option>
-                  <option value="Biomedical Waste Bags">Biomedical garbage bags</option>
-                </select>
+            <select
+              name="products"
+              required
+              disabled={loading}
+              onChange={(e) => setProduct(e.target.value)}
+              defaultValue=""
+              className="w-1/2 p-3 rounded-md text-black text-sm border-2 focus:outline-none bg-blue-50"
+            >
+              <option value="">Select Product</option>
+              <option value="Dunnage Bag">Dunnage Bag</option>
+              <option value="Air Column Roll">Air Column Roll</option>
+              <option value="Air Column Bag">Air Column Bag</option>
+              <option value="Packaging Air Bag">Packaging Air Bag</option>
+              <option value="Gap Filler">Gap Filler</option>
+            </select>
           </div>
 
           <div className="flex items-center bg-white rounded-md border border-black border-2 overflow-hidden">
-            
+
             <span className="text-lg">🇮🇳</span>
             <input
               type="tel"
@@ -168,7 +166,7 @@ Contact: ${phone}`;
 
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-[#0077e6] to-[#005bb5] hover:opacity-90 transition rounded-md font-semibold text-white text-sm shadow-md"
+            className="w-full py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:opacity-90 transition rounded-md font-semibold text-white text-sm shadow-md"
             disabled={loading}
           >
             {loading ? "Sending..." : "Send Message"}
@@ -176,9 +174,8 @@ Contact: ${phone}`;
 
           {status && (
             <p
-              className={`text-center text-sm mt-2 font-medium ${
-                status.startsWith("✅") ? "text-green-600" : "text-red-600"
-              }`}
+              className={`text-center text-sm mt-2 font-medium ${status.startsWith("✅") ? "text-green-600" : "text-red-600"
+                }`}
             >
               {status}
             </p>
