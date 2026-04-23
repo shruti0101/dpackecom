@@ -37,7 +37,7 @@ export default function Footer() {
   ];
   return (
     <footer style={{ backgroundImage: "url(/footerbg.jpg)" }} className="relative bg-cover  text-white pt-16 pb-10 px-6 md:px-12 overflow-hidden">
-      <div className="absolute inset-0 opacity-10 bg-[url('/wave.png')] bg-cover bg-center"></div>
+      <div className="absolute inset-0 opacity-10 bg-[url('/wave.png')] bg-cover bg-center pointer-events-none"></div>
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         <div>
           {/* LOGO */}
@@ -174,8 +174,8 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="flex flex-wrap justify-between border-t border-white/10 mt-12 pt-6 text-sm text-white/60">
-        <p>© 2025 DunnagePro. All rights reserved.</p>
-        <p>Website Designed By <Link href={"https://promozionebranding.com/"} className="hover:underline">Promozione Branding Pvt Ltd.</Link></p>
+        <p>© 2026 D pack Solutions Pvt. Ltd. All rights reserved.</p>
+        <p>Website Designed By Promozione Branding Pvt. Ltd. <a href="https://promozionebranding.com/" className="hover:underline text-orange-600">Website Designing Company</a></p>
       </div>
     </footer>
   );

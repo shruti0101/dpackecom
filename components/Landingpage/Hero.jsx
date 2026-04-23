@@ -152,14 +152,14 @@ export default function HeroPixelPerfect() {
           </div>
 
           {/* TOP CARD */}
-          <div className="relative w-full h-[220px] sm:h-[250px] lg:h-[230px] rounded-2xl overflow-hidden group">
+          <div className="relative w-full h-[220px] sm:h-[250px] lg:h-[250px] rounded-2xl overflow-hidden group">
 
             <Image
               src="/newBanner.jpeg"
               alt=""
               fill
               // style={{objectPosition:"50% 35%"}}
-              className="object-cover group-hover:scale-105 transition duration-700"
+              className="object-contain group-hover:scale-105 transition duration-700"
             />
 
             <div className="absolute bottom-4 left-4 right-4 z-10 flex justify-start items-center gap-2">
