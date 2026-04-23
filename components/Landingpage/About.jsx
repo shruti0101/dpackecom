@@ -15,7 +15,7 @@ export default function FlashSale() {
 
   const products = [
     {
-      img: "/air bubble roll/1.png",
+      img: "/air bubble roll/1.webp",
       img2: "/Dunnage2.jpg",
       hoverImg: '/360/Dunnage Air Bags/1.png',
       title: "Dunnage Air Bags",
@@ -24,7 +24,7 @@ export default function FlashSale() {
       reviews: 22,
     },
     {
-      img: "/air bubble roll/5.png",
+      img: "/air bubble roll/5.webp",
       img2: "/Dunnage2.jpg",
       hoverImg: '/360/PP Dunnage Bag/1.png',
       title: "PP Dunnage Bag",
@@ -34,7 +34,7 @@ export default function FlashSale() {
       tag: "New",
     },
     {
-      img: "/air bubble roll/8.png",
+      img: "/air bubble roll/8.webp",
       img2: "/Dunnage2.jpg",
       hoverImg: '/360/Square Dunnage Air Bags/1.png',
       title: "Square Dunnage Air Bags",
@@ -43,7 +43,7 @@ export default function FlashSale() {
       reviews: 44,
     },
     {
-      img: "/air bubble roll/10.png",
+      img: "/air bubble roll/10.webp",
       img2: "/columnroll.png",
       hoverImg: '/360/Perfume Packaging Air Column Roll/1.png',
       title: "Perfume Packaging Air Column Roll",
@@ -52,7 +52,7 @@ export default function FlashSale() {
       reviews: 98,
     },
     {
-      img: "/air bubble roll/16.png",
+      img: "/air bubble roll/16.webp",
       img2: "/360/Jam Bottle Air Column Roll/9.png",
       hoverImg: '/360/Jam Bottle Air Column Roll/1.png',
       title: "Jam Bottle Air Column Roll",
@@ -63,7 +63,7 @@ export default function FlashSale() {
       tag: "New",
     },
     {
-      img: "/air bubble roll/21.png",
+      img: "/air bubble roll/21.webp",
       img2: "/airbag.png",
       hoverImg: '/360/Air Column Bag for Laptop/1.png',
       title: "Air Column Bag for Laptop",
@@ -73,7 +73,7 @@ export default function FlashSale() {
       reviews: 98,
     },
     {
-      img: "/air bubble roll/23.png",
+      img: "/air bubble roll/23.webp",
       img2: "/bottle.png",
       hoverImg: '/360/Air Column Cushion Bag for Wine/1.png',
       title: "Air Column Cushion Bag for Wine",
@@ -83,7 +83,7 @@ export default function FlashSale() {
       reviews: 98,
     },
     {
-      img: "/air bubble roll/28.png",
+      img: "/air bubble roll/28.webp",
       img2: "/air bubble roll/48.webp",
       hoverImg: '/360/Shoes Packing Air Cushion Bag/1.png',
       title: "Shoes Packing Air Cushion Bag",
@@ -93,7 +93,7 @@ export default function FlashSale() {
       reviews: 98,
     },
     {
-      img: "/air bubble roll/34.png",
+      img: "/air bubble roll/34.webp",
       img2: '/360/Air Tube Bag for Packaging/5.png',
       hoverImg: '/360/Air Tube Bag for Packaging/1.png',
       title: "Air Tube Bag for Packaging",
@@ -103,7 +103,7 @@ export default function FlashSale() {
       reviews: 98,
     },
     {
-      img: "/air bubble roll/31.png",
+      img: "/air bubble roll/31.webp",
       img2: '/bottle2.png',
       hoverImg: '/360/Glass Bottle Air Column Roll/1.png',
       title: "Glass Bottle Airbag Packaging",
@@ -113,7 +113,7 @@ export default function FlashSale() {
       reviews: 98,
     },
     {
-      img: "/air bubble roll/38.png",
+      img: "/air bubble roll/38.webp",
       img2: '/360/Void or Gap Filling Air Cushion Bags/6.png',
       hoverImg: '/360/Void or Gap Filling Air Cushion Bags/1.png',
       title: "Void or Gap Filling Air Cushion Bags",
@@ -123,7 +123,7 @@ export default function FlashSale() {
       reviews: 98,
     },
     {
-      img: "/air bubble roll/39.png",
+      img: "/air bubble roll/39.webp",
       img2: '/360/Gap Filler Pouch/5.png',
       hoverImg: '/360/Gap Filler Pouch/1.png',
       title: "Gap Filler Pouch",

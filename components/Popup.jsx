@@ -86,7 +86,7 @@ Contact: ${phone}`;
       >
         {/* Close button */}
         <button
-          className="absolute cursor-pointer top-4 right-4 text-white hover:text-red-500 text-xl"
+          className="absolute cursor-pointer top-4 right-4 hover:text-orange-500 text-xl"
           onClick={handleClose}
         >
           ✕
