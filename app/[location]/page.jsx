@@ -1,39 +1,34 @@
-// import Location from "./Location";
-// import { notFound } from "next/navigation";
+import { serviceLocations } from "@/Data";
+import { notFound } from "next/navigation";
+import Location from "./Location";
 
-// export async function generateMetadata({ params }) {
-//     const { location } = await params;
+export async function generateMetadata({ params }) {
+    const { location } = await params;
 
-//     const rawCity = location.split("in-").pop();
+    const rawCity = location.split("in-").pop();
 
-//     const city = rawCity
-//         .split("-")
-//         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-//         .join(" ");
+    const cityName = rawCity
+        .split("-")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" ");
 
-//     return {
-//         title: `Garbage Bag Manufacturer in ${city} | Sangam Plastic Industries`,
-//         description: `Sangam Plastic Industries is a trusted garbage bag manufacturer in ${city} offering durable, leak-proof garbage bags for homes, hospitals, offices & waste management.`,
-//     };
-// }
+    return {
+        title: `${cityName}`,
+        description: `${cityName}`,
+    };
+}
 
-// const Page = async ({ params }) => {
-//     const { location } = await params;
+const Page = async ({ params }) => {
+    const { location } = await params;
+    const validCity = serviceLocations.find(
+        (c) => c.href.replace("/", "") === location
+    );
 
-//     // 🔥 Must contain "-in-"
-//     if (!location.includes("in-")) {
-//         notFound();
-//     }
+    if (!validCity) {
+        notFound();
+    }
 
-//     // 🔥 Extract city part after "in-"
-//     const city = location.split("in-")[1];
+    return <Location location={location} />;
+};
 
-//     // 🔥 If city is empty or invalid → redirect to Home
-//     if (!city || city.trim().length === 0) {
-//         notFound();
-//     }
-
-//     return <Location city={location} />;
-// };
-
-// export default Page;
+export default Page;

@@ -4289,3 +4289,7 @@ export const categories = [
     ],
   },
 ];
+
+export const serviceLocations = [
+  { href: "/packing-air-bag-manufacturer-in-delhi", label: "Delhi", id: 1 },
+]
