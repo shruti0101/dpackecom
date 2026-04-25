@@ -1267,7 +1267,7 @@ export const categories = [
             "alt": "Air Cushion Film Roll"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -1361,11 +1361,11 @@ export const categories = [
             "alt": "Inflatable Air Column Roll"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           },
           {
-            "src": "/columnroll2.png.",
+            "src": "/columnroll2.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -1455,7 +1455,7 @@ export const categories = [
             "alt": "Air Tube Column Roll"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -2697,7 +2697,7 @@ export const categories = [
 
       {
         id: "carton-box-packaging-air-column-bag",
-        name: "Carton BOX Packaging Air Column Bag",
+        name: "Carton Box Packaging Air Column Bag",
         metaTitle: "Carton Box Packaging Air Column Bag | Protective Packaging | Dpack",
         metaDescription: "Dpack offers air column bags for carton box packaging. Shock-absorbing, lightweight protection to prevent damage during shipping and product delivery.",
         overview: "Air bags used inside cartons to provide additional cushioning and product safety.",
