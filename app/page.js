@@ -51,7 +51,7 @@ export default function Home() {
       <Blogdesign></Blogdesign>
       <Faq></Faq>
       <ContactForm />
-      <CityPage />
+      {/* <CityPage /> */}
     </>
   );
 }
