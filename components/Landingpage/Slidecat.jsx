@@ -10,15 +10,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 const categories = [
-  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.png" },
-  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.png" },
-  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.png" },
-  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.png" },
+  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
   { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
-  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.png" },
-  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.png" },
-  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.png" },
-  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.png" },
+  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
   { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
 ];
 

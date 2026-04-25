@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { Calendar, MessageCircle, User } from "lucide-react";
+import Link from "next/link";
 
 const articles = [
   {
     id: 1,
     title: "How To Plop Hair For Bouncy, Beautiful Curls",
-    img: "/cat/2.png",
+    img: "/cat/2.webp",
     author: "Adnan Alvi",
     date: "12 Mar 2025",
     comments: 15,
@@ -16,7 +17,7 @@ const articles = [
   {
     id: 2,
     title: "Fast Fashion: How Clothes Are Linked To Climate Change",
-    img: "/cat/1.png",
+    img: "/cat/1.webp",
     author: "Hasib Sing",
     date: "20 Apr 2025",
     comments: 42,
@@ -25,7 +26,7 @@ const articles = [
   {
     id: 3,
     title: "Which Foundation Formula Is Right For Your Skin?",
-    img: "/cat/3.png",
+    img: "/cat/3.webp",
     author: "Smith Jhon",
     date: "07 Mar 2025",
     comments: 36,
@@ -46,9 +47,9 @@ export default function ArticlesSection() {
         </h2>
 
 
-        <div className="text-md text-black cursor-pointer">
+        <Link href={"/our-blogs"} className="text-md text-black cursor-pointer">
           View All →
-        </div>
+        </Link>
       </div>
 
       {/* GRID */}
@@ -93,9 +94,9 @@ export default function ArticlesSection() {
               {/* FOOTER */}
               <div className="flex justify-between items-center">
 
-                <button className="text-sm text-gray-700 hover:text-black flex items-center gap-1">
+                <Link href={"/our-blogs"} className="text-sm text-gray-700 hover:text-black flex items-center gap-1">
                   Read More →
-                </button>
+                </Link>
 
 
 
