@@ -69,16 +69,16 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 
           {/* Phone */}
-          <div className="bg-gradient-to-br from-red-600 to-red-800 text-white p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
+          <div className="bg-[#D95026] text-white p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
             <Phone size={38} className="mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Call Us</h3>
             <p className="text-lg">+91 7669988825</p>
           </div>
 
           {/* Email */}
-          <div className="bg-white border-2 border-red-600 p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
-            <Mail size={38} className="mx-auto mb-4 text-red-600" />
-            <h3 className="text-xl font-semibold text-red-600 mb-2">
+          <div className="bg-white border-2 border-[#D95026] p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
+            <Mail size={38} className="mx-auto mb-4 text-[#D95026]" />
+            <h3 className="text-xl font-semibold text-[#D95026] mb-2">
               Email Address
             </h3>
             <p className="text-gray-800 text-lg">
@@ -87,7 +87,7 @@ export default function ContactPage() {
           </div>
 
           {/* Address */}
-          <div className="bg-gradient-to-br from-red-600 to-red-800 text-white p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
+          <div className="bg-[#D95026] text-white p-8 rounded-3xl shadow-xl text-center hover:scale-105 transition">
             <MapPin size={38} className="mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Address</h3>
             <p className="text-sm leading-relaxed">
@@ -171,9 +171,9 @@ export default function ContactPage() {
               loading="lazy"
             ></iframe> */}
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d448464.0016371671!2d77.186946!3d28.581021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0514d5bc617f%3A0x956288c4b1ee3c64!2sDpack!5e0!3m2!1sen!2sus!4v1775736735172!5m2!1sen!2sus"
-              className="w-full h-[500px]" allowfullscreen=""
+              className="w-full h-[500px]" allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>

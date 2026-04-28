@@ -27,7 +27,7 @@ export default function BestSelling() {
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-3xl lg:text-4xl font-semibold relative">
           <span className="relative z-10">Our Best Selling Products</span>
-          <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image>
+          <Image height={100} alt="product" width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image>
         </h2>
         <Link href={"/products"} className="text-md text-black cursor-pointer hover:underline text-nowrap">
           View All →

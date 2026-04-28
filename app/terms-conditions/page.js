@@ -77,7 +77,7 @@ function Section({ title, children }) {
       <h2 className="text-xl font-semibold text-red-500 mb-2">
         {title}
       </h2>
-      <p className="text-gray-700">{children}</p>
+      <div className="text-gray-700">{children}</div>
     </div>
   );
 }
