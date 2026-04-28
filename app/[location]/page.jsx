@@ -13,8 +13,8 @@ export async function generateMetadata({ params }) {
         .join(" ");
 
     return {
-        title: `${cityName}`,
-        description: `${cityName}`,
+        title: `Packing Air Bag Manufacturer in ${cityName} | Dunnage Bag Supplier - Dpack `,
+        description: `Dpack is a trusted packing air bag manufacturer in ${cityName} offering dunnage bags, air cushion bags, and air column bags. Bulk supply, wholesale pricing, and fast delivery available.`,
     };
 }
 
