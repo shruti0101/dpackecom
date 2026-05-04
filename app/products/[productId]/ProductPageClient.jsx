@@ -481,6 +481,7 @@ export default function ProductPage({ productId }) {
           <h2 className="text-3xl font-semibold relative">
             <span className="relative z-10">Related Products</span>
             <Image
+            alt=""
               height={100}
               width={100}
               src="/heading_shapes.png"

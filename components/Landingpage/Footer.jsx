@@ -42,7 +42,7 @@ export default function Footer() {
         <div>
           {/* LOGO */}
           <div className="flex items-center gap-3 mb-3">
-            <Image className="bg-white p-2" width={150} height={100} src="/logo-new.png"></Image>
+            <Image alt="logo" className="bg-white p-2" width={150} height={100} src="/logo-new.png"></Image>
           </div>
 
           <p className="text-white text-sm leading-relaxed mb-6">
@@ -73,6 +73,7 @@ export default function Footer() {
             <li className="hover:text-white cursor-pointer"><Link href={"/about"}>About Us</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/contact"}>Contact Us</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/our-blogs"}>Our Articles</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/sitemap"}>Sitemap</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
           </ul>

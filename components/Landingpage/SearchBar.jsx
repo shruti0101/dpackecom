@@ -11,8 +11,12 @@ const allProducts = categories.flatMap((cat) =>
         link: `/product/${product.id}`,
     }))
 );
+console.log(allProducts)
 
 export default function SearchBar() {
+
+    
+
     const [query, setQuery] = useState("");
     const [filtered, setFiltered] = useState([]);
     const [show, setShow] = useState(false);
@@ -20,6 +24,11 @@ export default function SearchBar() {
 
     const router = useRouter();
     const wrapperRef = useRef(null);
+
+
+    
+
+    
 
     // ✅ Close dropdown when clicking outside
     useEffect(() => {
@@ -32,6 +41,8 @@ export default function SearchBar() {
                 setActiveIndex(-1);
             }
         };
+
+       
 
         document.addEventListener("mousedown", handleClickOutside);
         return () => {

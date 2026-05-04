@@ -10,15 +10,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 const categories = [
-  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.png" },
-  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.png" },
-  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.png" },
-  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.png" },
+  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
   { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
-  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.png" },
-  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.png" },
-  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.png" },
-  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.png" },
+  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
   { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
 ];
 
@@ -45,7 +45,7 @@ export default function CategorySlider() {
           spaceBetween={10}
           slidesPerView={6}
           breakpoints={{
-            0: { slidesPerView: 2 },
+            0: { slidesPerView: 1 },
             640: { slidesPerView: 3 },
             1024: { slidesPerView: 5 },
           }}
@@ -88,7 +88,7 @@ export default function CategorySlider() {
                   </div>
 
                   {/* TEXT */}
-                  <p className="mt-4 text-[19px] font-medium text-black transition-all duration-300 group-hover:text-orange-600 group-hover:tracking-wide group-hover:font-semibold">
+                  <p className="mt-4 text-[25px] font-medium text-black transition-all duration-300 group-hover:text-orange-600 group-hover:tracking-wide group-hover:font-semibold">
                     {item.name}
                   </p>
 

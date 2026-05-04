@@ -16,6 +16,7 @@ import Otherproduct from "@/components/Landingpage/Otherpro";
 import Faq from "@/components/Landingpage/Faq";
 import Loactions from "@/components/Locations";
 import ContactForm from "@/components/Popup";
+import CityPage from "@/components/City";
 
 
 
@@ -50,6 +51,7 @@ export default function Home() {
       <Blogdesign></Blogdesign>
       <Faq></Faq>
       <ContactForm />
+      <CityPage />
     </>
   );
 }

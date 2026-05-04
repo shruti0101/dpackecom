@@ -9,15 +9,15 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const products = [
-  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.png" },
-  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.png" },
-  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.png" },
-  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.png" },
+  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
   { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
-  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.png" },
-  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.png" },
-  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.png" },
-  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.png" },
+  { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+  { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+  { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+  { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
   { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
 ];
 
@@ -27,7 +27,7 @@ export default function BestSelling() {
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-3xl lg:text-4xl font-semibold relative">
           <span className="relative z-10">Our Best Selling Products</span>
-          <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image>
+          <Image height={100} alt="product" width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image>
         </h2>
         <Link href={"/products"} className="text-md text-black cursor-pointer hover:underline text-nowrap">
           View All →

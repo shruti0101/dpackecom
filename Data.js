@@ -1,4 +1,8 @@
 // data.js
+
+
+
+
 export const categories = [
   // cat 1
   {
@@ -1267,7 +1271,7 @@ export const categories = [
             "alt": "Air Cushion Film Roll"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -1361,11 +1365,11 @@ export const categories = [
             "alt": "Inflatable Air Column Roll"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           },
           {
-            "src": "/columnroll2.png.",
+            "src": "/columnroll2.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -1455,7 +1459,7 @@ export const categories = [
             "alt": "Air Tube Column Roll"
           },
           {
-            "src": "/columnroll.png.",
+            "src": "/columnroll.png",
             "alt": "Perfume Packaging Air Column Roll"
           }
         ],
@@ -2697,7 +2701,7 @@ export const categories = [
 
       {
         id: "carton-box-packaging-air-column-bag",
-        name: "Carton BOX Packaging Air Column Bag",
+        name: "Carton Box Packaging Air Column Bag",
         metaTitle: "Carton Box Packaging Air Column Bag | Protective Packaging | Dpack",
         metaDescription: "Dpack offers air column bags for carton box packaging. Shock-absorbing, lightweight protection to prevent damage during shipping and product delivery.",
         overview: "Air bags used inside cartons to provide additional cushioning and product safety.",
@@ -4289,3 +4293,116 @@ export const categories = [
     ],
   },
 ];
+
+export const serviceLocations = [
+  { id: 1, label: "Delhi", href: "/packing-air-bag-manufacturer-in-delhi" },
+  { id: 2, label: "Mumbai", href: "/packing-air-bag-manufacturer-in-mumbai" },
+  { id: 3, label: "Bengaluru", href: "/packing-air-bag-manufacturer-in-bengaluru" },
+  { id: 4, label: "Chennai", href: "/packing-air-bag-manufacturer-in-chennai" },
+  { id: 5, label: "Hyderabad", href: "/packing-air-bag-manufacturer-in-hyderabad" },
+  { id: 6, label: "Pune", href: "/packing-air-bag-manufacturer-in-pune" },
+  { id: 7, label: "Ahmedabad", href: "/packing-air-bag-manufacturer-in-ahmedabad" },
+  { id: 8, label: "Kolkata", href: "/packing-air-bag-manufacturer-in-kolkata" },
+  { id: 9, label: "Surat", href: "/packing-air-bag-manufacturer-in-surat" },
+  { id: 10, label: "Jaipur", href: "/packing-air-bag-manufacturer-in-jaipur" },
+  { id: 11, label: "Lucknow", href: "/packing-air-bag-manufacturer-in-lucknow" },
+  { id: 12, label: "Kanpur", href: "/packing-air-bag-manufacturer-in-kanpur" },
+  { id: 13, label: "Nagpur", href: "/packing-air-bag-manufacturer-in-nagpur" },
+  { id: 14, label: "Indore", href: "/packing-air-bag-manufacturer-in-indore" },
+  { id: 15, label: "Bhopal", href: "/packing-air-bag-manufacturer-in-bhopal" },
+  { id: 16, label: "Patna", href: "/packing-air-bag-manufacturer-in-patna" },
+  { id: 17, label: "Chandigarh", href: "/packing-air-bag-manufacturer-in-chandigarh" },
+  { id: 18, label: "Ludhiana", href: "/packing-air-bag-manufacturer-in-ludhiana" },
+  { id: 19, label: "Amritsar", href: "/packing-air-bag-manufacturer-in-amritsar" },
+  { id: 20, label: "Jalandhar", href: "/packing-air-bag-manufacturer-in-jalandhar" },
+  { id: 21, label: "Gurugram", href: "/packing-air-bag-manufacturer-in-gurugram" },
+  { id: 22, label: "Noida", href: "/packing-air-bag-manufacturer-in-noida" },
+  { id: 23, label: "Faridabad", href: "/packing-air-bag-manufacturer-in-faridabad" },
+  { id: 24, label: "Ghaziabad", href: "/packing-air-bag-manufacturer-in-ghaziabad" },
+  { id: 25, label: "Sonipat", href: "/packing-air-bag-manufacturer-in-sonipat" },
+  { id: 26, label: "Panipat", href: "/packing-air-bag-manufacturer-in-panipat" },
+  { id: 27, label: "Karnal", href: "/packing-air-bag-manufacturer-in-karnal" },
+  { id: 28, label: "Bahadurgarh", href: "/packing-air-bag-manufacturer-in-bahadurgarh" },
+  { id: 29, label: "Manesar", href: "/packing-air-bag-manufacturer-in-manesar" },
+  { id: 30, label: "Bhiwadi", href: "/packing-air-bag-manufacturer-in-bhiwadi" },
+  { id: 31, label: "Neemrana", href: "/packing-air-bag-manufacturer-in-neemrana" },
+  { id: 32, label: "Alwar", href: "/packing-air-bag-manufacturer-in-alwar" },
+  { id: 33, label: "Vadodara", href: "/packing-air-bag-manufacturer-in-vadodara" },
+  { id: 34, label: "Rajkot", href: "/packing-air-bag-manufacturer-in-rajkot" },
+  { id: 35, label: "Vapi", href: "/packing-air-bag-manufacturer-in-vapi" },
+  { id: 36, label: "Ankleshwar", href: "/packing-air-bag-manufacturer-in-ankleshwar" },
+  { id: 37, label: "Bharuch", href: "/packing-air-bag-manufacturer-in-bharuch" },
+  { id: 38, label: "Gandhinagar", href: "/packing-air-bag-manufacturer-in-gandhinagar" },
+  { id: 39, label: "Jamnagar", href: "/packing-air-bag-manufacturer-in-jamnagar" },
+  { id: 40, label: "Nashik", href: "/packing-air-bag-manufacturer-in-nashik" },
+  { id: 41, label: "Aurangabad", href: "/packing-air-bag-manufacturer-in-aurangabad" },
+  { id: 42, label: "Thane", href: "/packing-air-bag-manufacturer-in-thane" },
+  { id: 43, label: "Navi Mumbai", href: "/packing-air-bag-manufacturer-in-navi-mumbai" },
+  { id: 44, label: "Kolhapur", href: "/packing-air-bag-manufacturer-in-kolhapur" },
+  { id: 45, label: "Solapur", href: "/packing-air-bag-manufacturer-in-solapur" },
+  { id: 46, label: "Coimbatore", href: "/packing-air-bag-manufacturer-in-coimbatore" },
+  { id: 47, label: "Tiruppur", href: "/packing-air-bag-manufacturer-in-tiruppur" },
+  { id: 48, label: "Hosur", href: "/packing-air-bag-manufacturer-in-hosur" },
+  { id: 49, label: "Salem", href: "/packing-air-bag-manufacturer-in-salem" },
+  { id: 50, label: "Madurai", href: "/packing-air-bag-manufacturer-in-madurai" },
+  { id: 51, label: "Trichy", href: "/packing-air-bag-manufacturer-in-trichy" },
+  { id: 52, label: "Erode", href: "/packing-air-bag-manufacturer-in-erode" },
+  { id: 53, label: "Visakhapatnam", href: "/packing-air-bag-manufacturer-in-visakhapatnam" },
+  { id: 54, label: "Vijayawada", href: "/packing-air-bag-manufacturer-in-vijayawada" },
+  { id: 55, label: "Guntur", href: "/packing-air-bag-manufacturer-in-guntur" },
+  { id: 56, label: "Nellore", href: "/packing-air-bag-manufacturer-in-nellore" },
+  { id: 57, label: "Tirupati", href: "/packing-air-bag-manufacturer-in-tirupati" },
+  { id: 58, label: "Kochi", href: "/packing-air-bag-manufacturer-in-kochi" },
+  { id: 59, label: "Thiruvananthapuram", href: "/packing-air-bag-manufacturer-in-thiruvananthapuram" },
+  { id: 60, label: "Kozhikode", href: "/packing-air-bag-manufacturer-in-kozhikode" },
+  { id: 61, label: "Mysuru", href: "/packing-air-bag-manufacturer-in-mysuru" },
+  { id: 62, label: "Mangaluru", href: "/packing-air-bag-manufacturer-in-mangaluru" },
+  { id: 63, label: "Hubballi", href: "/packing-air-bag-manufacturer-in-hubballi" },
+  { id: 64, label: "Belagavi", href: "/packing-air-bag-manufacturer-in-belagavi" },
+  { id: 65, label: "Dharwad", href: "/packing-air-bag-manufacturer-in-dharwad" },
+  { id: 66, label: "Goa", href: "/packing-air-bag-manufacturer-in-goa" },
+  { id: 67, label: "Raipur", href: "/packing-air-bag-manufacturer-in-raipur" },
+  { id: 68, label: "Bhilai", href: "/packing-air-bag-manufacturer-in-bhilai" },
+  { id: 69, label: "Ranchi", href: "/packing-air-bag-manufacturer-in-ranchi" },
+  { id: 70, label: "Jamshedpur", href: "/packing-air-bag-manufacturer-in-jamshedpur" },
+  { id: 71, label: "Dhanbad", href: "/packing-air-bag-manufacturer-in-dhanbad" },
+  { id: 72, label: "Bhubaneswar", href: "/packing-air-bag-manufacturer-in-bhubaneswar" },
+  { id: 73, label: "Cuttack", href: "/packing-air-bag-manufacturer-in-cuttack" },
+  { id: 74, label: "Rourkela", href: "/packing-air-bag-manufacturer-in-rourkela" },
+  { id: 75, label: "Guwahati", href: "/packing-air-bag-manufacturer-in-guwahati" },
+  { id: 76, label: "Siliguri", href: "/packing-air-bag-manufacturer-in-siliguri" },
+  { id: 77, label: "Dehradun", href: "/packing-air-bag-manufacturer-in-dehradun" },
+  { id: 78, label: "Haridwar", href: "/packing-air-bag-manufacturer-in-haridwar" },
+  { id: 79, label: "Roorkee", href: "/packing-air-bag-manufacturer-in-roorkee" },
+  { id: 80, label: "Jammu", href: "/packing-air-bag-manufacturer-in-jammu" },
+  { id: 81, label: "Srinagar", href: "/packing-air-bag-manufacturer-in-srinagar" },
+  { id: 82, label: "Udaipur", href: "/packing-air-bag-manufacturer-in-udaipur" },
+  { id: 83, label: "Jodhpur", href: "/packing-air-bag-manufacturer-in-jodhpur" },
+  { id: 84, label: "Kota", href: "/packing-air-bag-manufacturer-in-kota" },
+  { id: 85, label: "Ajmer", href: "/packing-air-bag-manufacturer-in-ajmer" },
+  { id: 86, label: "Bareilly", href: "/packing-air-bag-manufacturer-in-bareilly" },
+  { id: 87, label: "Meerut", href: "/packing-air-bag-manufacturer-in-meerut" },
+  { id: 88, label: "Agra", href: "/packing-air-bag-manufacturer-in-agra" },
+  { id: 89, label: "Varanasi", href: "/packing-air-bag-manufacturer-in-varanasi" },
+  { id: 90, label: "Prayagraj", href: "/packing-air-bag-manufacturer-in-prayagraj" },
+  { id: 91, label: "Moradabad", href: "/packing-air-bag-manufacturer-in-moradabad" },
+  { id: 92, label: "Aligarh", href: "/packing-air-bag-manufacturer-in-aligarh" },
+  { id: 93, label: "Gorakhpur", href: "/packing-air-bag-manufacturer-in-gorakhpur" },
+  { id: 94, label: "Muzaffarpur", href: "/packing-air-bag-manufacturer-in-muzaffarpur" },
+  { id: 95, label: "Gaya", href: "/packing-air-bag-manufacturer-in-gaya" },
+  { id: 96, label: "Vijay Nagar", href: "/packing-air-bag-manufacturer-in-vijay-nagar" },
+  { id: 97, label: "Kandla", href: "/packing-air-bag-manufacturer-in-kandla" },
+  { id: 98, label: "Mundra", href: "/packing-air-bag-manufacturer-in-mundra" },
+  { id: 99, label: "Paradeep", href: "/packing-air-bag-manufacturer-in-paradeep" },
+  { id: 100, label: "Haldia", href: "/packing-air-bag-manufacturer-in-haldia" },
+  { id: 101, label: "Maharashtra", href: "/packing-air-bag-manufacturer-in-maharashtra" },
+  { id: 102, label: "Gujarat", href: "/packing-air-bag-manufacturer-in-gujarat" },
+  { id: 103, label: "Tamil Nadu", href: "/packing-air-bag-manufacturer-in-tamil-nadu" },
+  { id: 104, label: "Karnataka", href: "/packing-air-bag-manufacturer-in-karnataka" },
+  { id: 105, label: "Uttar Pradesh", href: "/packing-air-bag-manufacturer-in-uttar-pradesh" },
+  { id: 106, label: "Haryana", href: "/packing-air-bag-manufacturer-in-haryana" },
+  { id: 107, label: "Rajasthan", href: "/packing-air-bag-manufacturer-in-rajasthan" },
+  { id: 108, label: "Telangana", href: "/packing-air-bag-manufacturer-in-telangana" },
+  { id: 109, label: "West Bengal", href: "/packing-air-bag-manufacturer-in-west-bengal" },
+  { id: 110, label: "Andhra Pradesh", href: "/packing-air-bag-manufacturer-in-andhra-pradesh" }
+]

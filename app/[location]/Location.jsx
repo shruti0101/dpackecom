@@ -1,605 +1,823 @@
-// "use client";
-// import { BadgeCheck, ChevronDown, Hospital } from "lucide-react";
-// import Image from "next/image";
-// import { useParams } from "next/navigation";
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import Link from "next/link";
-// import { Factory, Store, Hotel, Home, Leaf, Warehouse, Truck, Tags, Handshake } from "lucide-react";
+"use client";
+import { useParams } from 'next/navigation';
+import React from 'react'
+import Image from "next/image";
+import Otherproduct from "@/components/Landingpage/Otherpro";
+import Slidecat from "@/components/Landingpage/Slidecat";
+import Categories from "@/components/Landingpage/Categories";
+import { MdEmojiTransportation } from "react-icons/md";
+import { FaCartShopping } from "react-icons/fa6";
+import { FaLaptop } from "react-icons/fa6";
+import { IoSettings } from "react-icons/io5";
+import { GiMedicines } from "react-icons/gi";
+import { FaWarehouse } from "react-icons/fa";
+import { MdPrecisionManufacturing } from "react-icons/md";
+import { FaTruck } from "react-icons/fa";
+import { Star, Heart, ShoppingCart, Eye, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import Link from "next/link";
+import { FaCheckDouble } from "react-icons/fa6";
+import { categories } from '@/Data';
+import Form from "./Form"
+import axios from 'axios';
 
-// const Location = () => {
-//     const params = useParams();
+export default function Location() {
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
 
-//     const city = params?.location?.includes("-in-")
-//         ? params.location.split("-in-")[1].split("-")
-//             .map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-//         : "India";
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    product: "",
+  });
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-//     const data = [
-//         {
-//             title: "High-Quality Waste Disposal Bags",
-//             desc: "Our garbage bags are manufactured using premium-grade plastic materials that offer high strength, durability, and resistance to leakage and tearing.",
-//             icon: Warehouse,
-//             img: "/bag/product/10L Biohazard Garbage Bag.webp",
-//         },
-//         {
-//             title: "Multiple Size Options",
-//             desc: "We provide garbage bags in a variety of sizes, thicknesses, and colors to meet the needs of households, offices, hospitals, hotels, and industrial facilities.",
-//             icon: Leaf,
-//             img: "/bag/product/20 x 24 inch Disposable Garbage Bags.webp",
-//         },
-//         {
-//             title: "Manufacturer Direct Supply",
-//             desc: `As a direct Garbage Bag Manufacturer in ${city}, Sangam Plastic Industries offers competitive pricing and consistent supply for bulk orders and distributors.`,
-//             icon: Truck,
-//             img: "/bag/pro1.png",
-//         },
-//         {
-//             title: "Strong & Leak-Proof Design",
-//             desc: "Our garbage bags are designed to handle wet and dry waste efficiently while preventing spills, leaks, and unpleasant odors.",
-//             icon: Tags,
-//             img: "/bag/pro2.png",
-//         },
-//         {
-//             title: "Trusted by Multiple Industries",
-//             desc: `Our garbage bags are widely used by municipal corporations, hospitals, offices, hotels, restaurants, and waste management companies across ${city}.`,
-//             icon: Handshake,
-//             img: "/bag/pro3.png",
-//         },
-//     ];
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("Sending...");
 
-//     return (
-//         <>
-//             {/* Hero */}
-//             <div className="mt-24">
-//                 <section
-//                     style={{
-//                         backgroundImage: "url('/bag/bg2.webp')",
-//                         backgroundSize: "cover",
-//                         objectPosition: "center",
-//                     }}
-//                     className="py-20 relative z-10"
-//                 >
-//                     <div className="absolute inset-0 bg-gray-900/60" />
+    try {
+      const formData = {
+        platform: "DPACK Popup Form",
+        platformEmail: "dpacksolutionindia@gmail.com",
+        ...form, // ✅ all fields from state
+        message: "N/A",
+        place: "N/A",
+      };
 
-//                     <h1 className="text-center font-serif leading-snug relative font-bold text-white text-2xl px-5 md:py-20 capitalize md:text-6xl">
-//                         Garbage Bag Manufacturer in {city}
-//                     </h1>
-//                 </section>
-//             </div>
+      if (!/^\d{10}$/.test(formData.phone)) {
+        return alert("Enter a valid 10-digit phone number");
+      }
 
-//             <section className="max-w-7xl mx-auto px-4 md:px-0  py-8">
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-//                     <div>
-//                         <h2 className="text-2xl md:text-[42px] font-bold mb-4">
-//                             Garbage Bag Manufacturer in {city}
-//                         </h2>
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        formData
+      );
 
-//                         <p className="text-black mb-4 text-lg">
-//                             <strong>Sangam Plastic Industries</strong> is a leading <Link href={"/"} className="font-bold text-green-600 hover:underline">Garbage Bag Manufacturer in {city}</Link>, offering high-quality waste management solutions for residential, commercial, medical, and industrial use across {city}.
-//                         </p>
+      if (data?.success) {
+        setStatus("✅ Your enquiry has been submitted successfully!");
 
-//                         <p className="text-black mb-4 text-lg">
-//                             We specialize in manufacturing <strong>durable, leak-proof, and heavy-duty garbage bags</strong> designed for hygienic waste collection and disposal. Our garbage bags are produced using high-grade plastic materials and advanced manufacturing technology to ensure strength, flexibility, and reliability.
-//                         </p>
+        const whatsappText = `Hi, I am ${form.name}.
+Email: ${form.email}
+Product: ${form.product}
+Message: ${form.message}
+Contact: ${form.phone}`;
 
-//                         <p className="text-black text-lg">
-//                             From homes and offices to hospitals, hotels, and municipal waste management systems, our garbage bags are engineered to support <strong>efficient waste segregation, safe handling, and eco-friendly disposal practices,</strong> making them an essential part of modern waste management.
-//                         </p>
-//                     </div>
+        setTimeout(() => {
+          window.open(
+            `https://wa.me/917669988825?text=${encodeURIComponent(
+              whatsappText
+            )}`,
+            "_blank"
+          );
+        }, 1000);
 
-//                     <motion.div
-//                         initial="hidden"
-//                         whileInView="show"
-//                         viewport={{ once: true }}
-//                         className="relative overflow-hidden"
-//                     >
-//                         <Image
-//                             src={"/bag/pro1.png"}
-//                             alt="loading"
-//                             width={500}
-//                             height={200}
-//                             className="object-contain"
-//                         />
-//                     </motion.div>
-//                 </div>
-//             </section>
+        // ✅ Reset form
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          product: "",
+          message: "",
+        });
 
-//             {/* why us */}
-//             <section className="mx-auto lg:px-16 px-5 py-8 bg-gradient-to-b from-gray-50 to-gray-100">
-//                 <h2 className="text-center text-2xl md:text-[42px] font-extrabold mb-6">
-//                     Why Choose <span className="text-green-600">Sangam Plastic Industries</span> Garbage Bags in {city}?
-//                 </h2>
+        setTimeout(() => setOpen(false), 3000); // or setOpen(false)
+      } else {
+        setStatus("❌ Failed to send. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("❌ Server error. Try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-//                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-//                     {data.map((item, i) => {
-//                         const Icon = item.icon;
-//                         return (
-//                             <div key={i}
-//                                 className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-5 relative overflow-hidden cursor-pointer hover:-translate-y-3"
-//                             >
-//                                 <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+  const products = [
+    {
+      img: "/air bubble roll/1.webp",
+      img2: "/Dunnage2.jpg",
+      hoverImg: '/360/Dunnage Air Bags/1.png',
+      title: "Dunnage Air Bags",
+      price: "Rs. 450.00",
+      old: "Rs. 540.00",
+      reviews: 22,
+    },
+    {
+      img: "/air bubble roll/5.webp",
+      img2: "/Dunnage2.jpg",
+      hoverImg: '/360/PP Dunnage Bag/1.png',
+      title: "PP Dunnage Bag",
+      price: "Rs.575.00",
+      old: "Rs. 669.00",
+      reviews: 58,
+      tag: "New",
+    },
+    {
+      img: "/air bubble roll/8.webp",
+      img2: "/Dunnage2.jpg",
+      hoverImg: '/360/Square Dunnage Air Bags/1.png',
+      title: "Square Dunnage Air Bags",
+      price: "Rs. 349.00",
+      old: "Rs. 439.00",
+      reviews: 44,
+    },
+    {
+      img: "/air bubble roll/10.webp",
+      img2: "/columnroll.png",
+      hoverImg: '/360/Perfume Packaging Air Column Roll/1.png',
+      title: "Perfume Packaging Air Column Roll",
+      price: "Rs. 341.00",
+      old: "Rs. 459.00",
+      reviews: 98,
+    },
+  ]
 
-//                                 <div className="relative z-10">
-//                                     <Icon
-//                                         size={36}
-//                                         className="text-amber-500 group-hover:scale-110 transition-transform duration-300"
-//                                     />
-//                                 </div>
+  const [openIndex, setOpenIndex] = useState(0);
 
-//                                 <div className="w-full h-32 flex items-center justify-center relative z-10">
-//                                     <img
-//                                         src={item.img}
-//                                         alt={item.title}
-//                                         className="h-full object-contain group-hover:scale-110 transition-transform duration-500"
-//                                     />
-//                                 </div>
+  const params = useParams();
+  const formatCityName = (slug) => {
+    if (!slug) return "India";
 
-//                                 <h3 className="font-semibold text-lg mb-2 relative z-10">
-//                                     {item.title}
-//                                 </h3>
-//                                 <p className="text-black text-sm relative z-10 leading-relaxed">
-//                                     {item.desc}
-//                                 </p>
+    return slug
+      .replace(/\((.*?)\)/g, " ($1)")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, char => char.toUpperCase());
+  };
 
-//                                 <span className="absolute bottom-0 left-0 h-1 w-0 bg-amber-500 group-hover:w-full transition-all duration-500"></span>
-//                             </div>
-//                         );
-//                     })}
-//                 </div>
-//             </section>
+  const citySlug = params?.location?.includes("-in-")
+    ? params.location.split("-in-")[1] : null;
 
-//             {/* Detail */}
-//             <section className="mx-auto lg:px-16 px-5 py-8 bg-white">
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-//                     <div>
-//                         <h2 className="text-2xl md:text-[42px] font-extrabold mb-6 leading-tight">
-//                             Garbage Bag Supplier in {city}, India
-//                         </h2>
+  const cityName = citySlug ? formatCityName(citySlug) : "India";
 
-//                         <p className="text-black mb-5 leading-relaxed text-lg">
-//                             Sangam Plastic Industries is a trusted {" "}
-//                             <Link href={"/"} className="font-bold text-green-600 hover:underline">
-//                                 Garbage Bag manufacturer {" "}
-//                             </Link>
-//                             and supplier in {city}, delivering reliable waste disposal products for residential, commercial, and industrial use.
-//                         </p>
+  const faq = [
+    {
+      q: "What is a packing air bag used for?",
+      a: "A packing air bag is used to protect products during storage, shipping, and transportation. It helps absorb shocks, reduce product movement, and minimize damage during transit. Businesses commonly use packing air bags for fragile, lightweight, and valuable goods."
+    },
+    {
+      q: `Do you supply dunnage bags in bulk in ${cityName}?`,
+      a: `Yes, Dpack is a trusted dunnage bag supplier in ${cityName} offering bulk quantities for logistics companies, exporters, manufacturers, and warehouses. As a reliable dunnage bag wholesaler, we provide quality products at competitive prices.`
+    },
+    {
+      q: `Why choose Dpack as a packing air bag manufacturer in ${cityName}?`,
+      a: `Dpack is a leading packing air bag manufacturer in ${cityName} known for premium quality products, affordable pricing, timely delivery, and custom packaging solutions. We help businesses reduce transit damage with durable packaging products.`
+    },
+    {
+      q: "Can I get packing air bags in wholesale quantity?",
+      a: `Yes, we are a dependable packing air bag wholesaler in ${cityName} supplying bulk orders to businesses of all sizes. Our wholesale packaging solutions are cost-effective and suitable for regular commercial use.`
+    },
+    {
+      q: "Are air cushion bags suitable for fragile products?",
+      a: `Yes, Dpack is a trusted air cushion bag manufacturer in ${cityName} offering protective packaging for delicate items such as electronics, glassware, cosmetics, and appliances. We are also a reliable air cushion bag supplier for bulk requirements.`
+    },
+    {
+      q: "What are air column bags used for?",
+      a: `Air column bags are used for 360-degree product protection during shipping. As an experienced air column bag manufacturer in ${cityName}, Dpack provides strong cushioning solutions for fragile and premium products.`
+    },
+    {
+      q: `Do you offer fast delivery in ${cityName}?`,
+      a: `Yes, as a professional packing air bag supplier in ${cityName}, we ensure fast and reliable delivery across ${cityName} and nearby regions for all bulk and custom packaging orders.`
+    },
+    {
+      q: "How can I place an order with Dpack?",
+      a: `You can contact Dpack directly for pricing, custom sizes, and bulk requirements. Whether you need a packing air bag manufacturer, dunnage bag supplier, or air column bag supplier in ${cityName}, our team is ready to assist you.`
+    }
+  ];
+  // console.log(open)
 
-//                         <p className="text-black mb-6 leading-relaxed text-lg">
-//                             Our garbage bags are manufactured using {" "}
-//                             <strong>high-density plastic materials and modern extrusion technology</strong>{" "}
-//                             to ensure superior strength and durability.
-//                         </p>
+  const products1 = [
+    { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+    { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+    { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+    { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
+    { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
+    { name: "Dunnage Bag", link: "/categories/dunnage-bag", img: "/cat/1.webp" },
+    { name: "Air Column Roll", link: "/categories/air-column-roll", img: "/cat/2.webp" },
+    { name: "Air Column Bag", link: "/categories/air-column-bag", img: "/cat/5.webp" },
+    { name: "Packaging Air Bag", link: "/categories/packaging-air-bag", img: "/cat/3.webp" },
+    { name: "Gap Filler", link: "/categories/gap-filler", img: "/sideimg.png" },
+  ];
 
-//                         <div className="flex flex-wrap gap-4 mt-6">
-//                             <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-//                                 High tear resistance
-//                             </span>
-//                             <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-//                                 Leak-proof construction
-//                             </span>
-//                             <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-//                                 Strong load-bearing capacity
-//                             </span>
-//                             <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-//                                 Flexible and easy to use
-//                             </span>
-//                             <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-//                                 Suitable for wet and dry waste
-//                             </span>
-//                         </div>
-//                     </div>
+  return (<>
+    {open && <Form setOpen={setOpen} />}
 
-//                     <div>
-//                         <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-xl p-6 border border-gray-100 relative overflow-hidden">
-//                             <div className="absolute -top-24 -right-24 w-72 h-72 bg-amber-100 rounded-full blur-3xl opacity-20"></div>
-//                             <h3 className="text-2xl font-bold mb-4 text-black relative z-10">
-//                                 Our garbage bags are ideal for:
-//                             </h3>
+    <section style={{ backgroundImage: "url('/banner/2.jpeg')" }}
+      className="w-full h-[35vh] md:h-[75vh] bg-cover bg-center relative flex items-center justify-center"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
 
-//                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-black relative z-10">
-//                                 <li className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 group">
-//                                     <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 group-hover:scale-110 transition">
-//                                         <Store className="w-6 h-6 text-green-600" />
-//                                     </div>
-//                                     <span className="font-semibold text-lg">Homes and residential complexes</span>
-//                                 </li>
-//                                 <li className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 group">
-//                                     <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 group-hover:scale-110 transition">
-//                                         <Hospital className="w-6 h-6 text-blue-600" />
-//                                     </div>
-//                                     <span className="font-semibold text-lg">Hospitals and healthcare facilities</span>
-//                                 </li>
-//                                 <li className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 group">
-//                                     <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-100 group-hover:scale-110 transition">
-//                                         <Factory className="w-6 h-6 text-orange-600" />
-//                                     </div>
-//                                     <span className="font-semibold text-lg">Offices and commercial buildings</span>
-//                                 </li>
-//                                 <li className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 group">
-//                                     <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-100 group-hover:scale-110 transition">
-//                                         <Hotel className="w-6 h-6 text-purple-600" />
-//                                     </div>
-//                                     <span className="font-semibold text-lg">Restaurants and hotels</span>
-//                                 </li>
-//                                 <li className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 group sm:col-span-2">
-//                                     <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-pink-100 group-hover:scale-110 transition">
-//                                         <Home className="w-6 h-6 text-pink-600" />
-//                                     </div>
-//                                     <span className="font-semibold text-lg">Industrial waste management</span>
-//                                 </li>
-//                             </ul>
-//                             <p className="text-black leading-relaxed text-base mt-2 relative z-10">
-//                                 Each batch of garbage bags undergoes strict quality checks to ensure consistent thickness, durability, and safe waste containment.
-//                             </p>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </section>
+      <div className="relative text-center text-white px-6">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          Packing Air Bag Manufacturer in <span className='text-[#D95026]'> {cityName} </span>
+        </h1>
+      </div>
+    </section>
 
-//             {/* Workstation  */}
-//             <section className="mx-auto lg:px-15 px-5 py-8 bg-gray-100">
-//                 <h2 className="text-center text-2xl md:text-[42px] font-bold mb-2">
-//                     Garbage Bag Types We Offer
-//                 </h2>
-//                 <p className="text-center text-black mb-4 text-lg">
-//                     Garbage Bag Product Range
-//                 </p>
 
-//                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
-//                     <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition group">
-//                         <div className="w-full h-40 flex items-center justify-center mb-3 overflow-hidden rounded-lg">
-//                             <img
-//                                 src="/bag/product/20 x 24 inch Disposable Garbage Bags.webp"
-//                                 alt="loading"
-//                                 className="h-full object-contain group-hover:scale-105 transition-transform duration-500"
-//                             />
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2">Disposable Garbage Bags</h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Ideal for daily household and office waste disposal.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition group">
-//                         <div className="w-full h-40 flex items-center justify-center mb-3 overflow-hidden rounded-lg">
-//                             <img
-//                                 src="/bag/product/1.webp"
-//                                 alt="loading"
-//                                 className="h-full object-contain group-hover:scale-105 transition-transform duration-500"
-//                             />
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2">Heavy-Duty Garbage Bags</h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Designed for industrial and commercial waste with higher load capacity.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition group">
-//                         <div className="w-full h-40 flex items-center justify-center mb-3 overflow-hidden rounded-lg">
-//                             <img
-//                                 src="/bag/product/Garbage and Waste Bags.webp"
-//                                 alt="loading"
-//                                 className="h-full object-contain group-hover:scale-105 transition-transform duration-500"
-//                             />
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2">Color-Coded Garbage Bags</h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Used for waste segregation in hospitals, offices, and municipal waste systems.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition group">
-//                         <div className="w-full h-40 flex items-center justify-center mb-3 overflow-hidden rounded-lg">
-//                             <img
-//                                 src="/bag/product/Biodegradable Dustbin Cover.webp"
-//                                 alt="loading"
-//                                 className="h-full object-contain group-hover:scale-105 transition-transform duration-500"
-//                             />
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2">Biomedical Waste Garbage Bags</h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Specially designed bags used in hospitals and clinics for safe biomedical waste management.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition group">
-//                         <div className="w-full h-40 flex items-center justify-center mb-3 overflow-hidden rounded-lg">
-//                             <img
-//                                 src="/bag/product/10L Biohazard Garbage Bag.webp"
-//                                 alt="loading"
-//                                 className="h-full object-contain group-hover:scale-105 transition-transform duration-500"
-//                             />
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2">Large Capacity Garbage Bags</h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Suitable for hotels, large facilities, and municipal waste collection.
-//                         </p>
-//                     </div>
-//                 </div>
-//             </section>
 
-//             {/* Key features  */}
-//             <section className="mx-auto lg:px-15 px-5 py-8">
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-//                     <div className="w-full">
-//                         <img
-//                             src="/bag/try2.webp"
-//                             alt="Key Features"
-//                             className="w-full h-[28rem] object-cover transition-transform duration-700 group-hover:scale-105"
-//                             style={{ objectPosition: "50% 70%" }}
-//                         />
-//                     </div>
+    <section className="bg-gray-100 text-gray-800">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 py-8 md::py-12 gap-10">
 
-//                     <div>
-//                         <h3 className="text-2xl md:text-[42px] font-bold mb-6">
-//                             Key Features of <span className="text-green-600">Sangam Plastic Garbage Bags</span>
-//                         </h3>
+        {/* LEFT CONTENT */}
+        <div className="flex flex-col justify-center text-center lg:text-left max-w-2xl">
 
-//                         <ul className="space-y-4 text-black text-base">
-//                             <li className="flex items-start gap-3">
-//                                 <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
-//                                 <span>High-quality durable plastic material</span>
-//                             </li>
-//                             <li className="flex items-start gap-3">
-//                                 <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
-//                                 <span>Strong and tear-resistant structure</span>
-//                             </li>
-//                             <li className="flex items-start gap-3">
-//                                 <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
-//                                 <span>Leak-proof design</span>
-//                             </li>
-//                             <li className="flex items-start gap-3">
-//                                 <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
-//                                 <span>Flexible and easy to handle</span>
-//                             </li>
-//                             <li className="flex items-start gap-3">
-//                                 <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
-//                                 <span>Available in multiple sizes and thicknesses</span>
-//                             </li>
-//                             <li className="flex items-start gap-3">
-//                                 <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
-//                                 <span>Suitable for wet and dry waste</span>
-//                             </li>
-//                             <li className="flex items-start gap-3">
-//                                 <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
-//                                 <span>Hygienic and efficient waste disposal solution</span>
-//                             </li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </section>
+          <h1 className="text-[clamp(28px,4vw,48px)] font-bold leading-tight mb-4">
+            Packing <span className='text-[#d95026]'>Air Bag</span> Manufacturer in {cityName}
+          </h1>
 
-//             {/* Industries */}
-//             <section className="mx-auto lg:px-15 px-5 py-8 bg-gray-100">
-//                 <h2 className="text-center text-2xl md:text-[42px] font-bold mb-5">
-//                     Industries & Applications We Serve
-//                 </h2>
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed mb-4">
+            Dpack is a trusted name in protective packaging solutions, known as a leading packing air bag manufacturer in {cityName} and a reliable supplier of high-quality air packaging products. With a strong focus on innovation, quality, and customer satisfaction, we help businesses protect their goods during storage, handling, and transportation.
+          </p>
 
-//                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-//                     <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 text-center group">
-//                         <div className="flex justify-center mb-4">
-//                             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-600 transition">
-//                                 <Store className="w-7 h-7 text-blue-600 group-hover:text-white transition" />
-//                             </div>
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2 text-black">Residential Use</h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Daily waste collection for homes, apartments, and housing societies.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 text-center group">
-//                         <div className="flex justify-center mb-4">
-//                             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 group-hover:bg-green-600 transition">
-//                                 <Hotel className="w-7 h-7 text-green-600 group-hover:text-white transition" />
-//                             </div>
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2 text-black">Hotels & Restaurants</h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Efficient waste management for food waste and kitchen waste.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 text-center group">
-//                         <div className="flex justify-center mb-4">
-//                             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-600 transition">
-//                                 <Factory className="w-7 h-7 text-orange-600 group-hover:text-white transition" />
-//                             </div>
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2 text-black">
-//                             Offices & Commercial Buildings
-//                         </h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Routine waste collection in offices, malls, and commercial spaces.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 text-center group">
-//                         <div className="flex justify-center mb-4">
-//                             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-600 transition">
-//                                 <Hospital className="w-7 h-7 text-purple-600 group-hover:text-white transition" />
-//                             </div>
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2 text-black">
-//                             Hospitals & Healthcare Facilities
-//                         </h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Safe disposal of medical waste and general healthcare waste.
-//                         </p>
-//                     </div>
-//                     <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 text-center group">
-//                         <div className="flex justify-center mb-4">
-//                             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-indigo-100 group-hover:bg-indigo-600 transition">
-//                                 <Home className="w-7 h-7 text-indigo-600 group-hover:text-white transition" />
-//                             </div>
-//                         </div>
-//                         <h3 className="font-semibold text-lg mb-2 text-black">
-//                             Municipal Waste Management
-//                         </h3>
-//                         <p className="text-black text-sm leading-relaxed">
-//                             Reliable garbage bags for city sanitation and public waste collection systems.
-//                         </p>
-//                     </div>
-//                 </div>
-//             </section>
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed mb-6">
+            We specialize in manufacturing premium-grade dunnage bags, packing air bags, air cushion bags, and air column bags designed to minimize transit damage and improve packaging efficiency. As an experienced dunnage bag manufacturer in  {cityName}, we serve industries such as logistics, e-commerce, automotive, electronics, pharmaceuticals, and export businesses.
+          </p>
 
-//             {/* Case Study Card */}
-//             <section className="mx-auto lg:px-15 px-5 py-8">
-//                 <div className="text-center max-w-5xl mx-auto">
-//                     <h2 className="text-2xl md:text-[42px] font-bold">
-//                         Case Study: Garbage Bag Supply for Commercial Facility in {city}
-//                     </h2>
-//                 </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <button
+              onClick={() => setOpen(!open)}
+              className="px-8 py-3 text-lg font-semibold rounded bg-[#d95026] text-white hover:scale-105 transition"
+            >
+              Get Quote
+            </button>
 
-//                 <div className="bg-white rounded-2xl shadow-xl p-8">
-//                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-//                         <div className="space-y-3">
-//                             <div>
-//                                 <span className="text-sm uppercase tracking-wide text-gray-500">Client</span>
-//                                 <p className="text-lg font-semibold">Commercial Office Complex</p>
-//                             </div>
-//                             <div>
-//                                 <span className="text-sm uppercase tracking-wide text-gray-500">Location</span>
-//                                 <p className="text-lg font-semibold">{city}</p>
-//                             </div>
-//                             <div>
-//                                 <span className="text-sm uppercase tracking-wide text-gray-500">Project</span>
-//                                 <p className="text-lg font-semibold">Waste Management & Sanitation System</p>
-//                             </div>
-//                             <div className="">
-//                                 <p className="text-black leading-relaxed">
-//                                     This project highlights <strong>Sangam Plastic Industries’ reliability as a Garbage Bag Manufacturer in {city}.</strong>.
-//                                 </p>
-//                             </div>
-//                         </div>
+            <a
+              href="/contact"
+              className="px-8 py-3 text-lg font-semibold border border-gray-800 rounded hover:bg-gray-200 transition"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
 
-//                         <div className="space-y-3">
-//                             <div>
-//                                 <span className="text-sm uppercase tracking-wide text-gray-500">Scope</span>
-//                                 <ul className="list-disc list-inside text-black space-y-1">
-//                                     <li>Bulk supply of heavy-duty garbage bags</li>
-//                                     <li>Waste segregation support using color-coded bags</li>
-//                                     <li>Reliable daily waste disposal solution</li>
-//                                 </ul>
-//                             </div>
-//                             <div>
-//                                 <span className="text-sm uppercase tracking-wide text-gray-500">Results</span>
-//                                 <ul className="list-disc list-inside text-black space-y-1">
-//                                     <li>Improved hygiene and cleanliness across the facility</li>
-//                                     <li>Efficient waste collection and disposal system</li>
-//                                     <li>Reduced leakage and waste spillage</li>
-//                                     <li>Better compliance with sanitation standards</li>
-//                                 </ul>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </section>
 
-//             {/* CTA */}
-//             <section className="w-full bg-green-600 text-white py-5">
-//                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4">
-//                     <div className="md:text-left text-center">
-//                         <Link href={"/"} className="text-2xl font-semibold">
-//                             Garbage Bag Manufacturer in {city}
-//                         </Link>
-//                         <p className="text-2xl md:text-[42px] font-semibold">
-//                             +91 9810057441
-//                         </p>
-//                         <p className="text-lg text-white">
-//                             For More Details Contact Us Now!
-//                         </p>
-//                     </div>
 
-//                     <div>
-//                         <a href="tel:+919810057441" className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-//                             Connect Now
-//                         </a>
-//                     </div>
-//                 </div>
-//             </section>
 
-//             {/* FAQ */}
-//             <section className="mx-auto lg:px-15 px-5 py-8 bg-gray-100" >
-//                 <h2 className="text-center text-2xl md:text-[42px] font-bold mb-5">
-//                     Garbage Bags in {city} – FAQs
-//                 </h2>
+        {/* RIGHT IMAGE */}
+        <div className="relative w-full max-w-lg h-[300px] sm:h-[400px] lg:h-[500px]">
+          <Image
+            src="/cat/1.webp"
+            alt="Packing Air Bag Manufacturer"
+            fill
+            className="object-cover rounded-lg"
+            priority
+          />
+        </div>
 
-//                 <div className="space-y-4">
-//                     <details className="group bg-gray-50 rounded-xl p-5 cursor-pointer">
-//                         <summary className="flex justify-between items-center font-semibold text-lg">
-//                             What are garbage bags used for?
-//                             <span className="transition-transform group-open:rotate-180">⌄</span>
-//                         </summary>
-//                         <p className="mt-3 text-gray-600 leading-relaxed">
-//                             Garbage bags are used for the safe collection, storage, and disposal of waste in homes, offices, hospitals, and commercial facilities.
-//                         </p>
-//                     </details>
+      </div>
+    </section>
 
-//                     <details className="group bg-gray-50 rounded-xl p-5 cursor-pointer">
-//                         <summary className="flex justify-between items-center font-semibold text-lg">
-//                             Do you supply garbage bags in bulk?
-//                             <span className="transition-transform group-open:rotate-180">⌄</span>
-//                         </summary>
-//                         <p className="mt-3 text-gray-600 leading-relaxed">
-//                             Yes, Sangam Plastic Industries provides bulk supply for distributors, businesses, hospitals, and municipal waste management companies.
-//                         </p>
-//                     </details>
 
-//                     <details className="group bg-gray-50 rounded-xl p-5 cursor-pointer">
-//                         <summary className="flex justify-between items-center font-semibold text-lg">
-//                             Are your garbage bags leak-proof?
-//                             <span className="transition-transform group-open:rotate-180">⌄</span>
-//                         </summary>
-//                         <p className="mt-3 text-gray-600 leading-relaxed">
-//                             Yes, our garbage bags are designed with strong and leak-resistant materials to prevent spills.
-//                         </p>
-//                     </details>
+    <section className="bg-orange-200/60 md:py-6 px-4 text-center text-black">
 
-//                     <details className="group bg-gray-50 rounded-xl p-5 cursor-pointer">
-//                         <summary className="flex justify-between items-center font-semibold text-lg">
-//                             What sizes of garbage bags do you provide?
-//                             <span className="transition-transform group-open:rotate-180">⌄</span>
-//                         </summary>
-//                         <p className="mt-3 text-gray-600 leading-relaxed">
-//                             We offer garbage bags in multiple sizes, thickness levels, and colors depending on customer requirements.
-//                         </p>
-//                     </details>
+      {/* TOP TEXT */}
+      <p className="text-red-600 text-lg font-semibold leading-5 mb-4 md:mb-2">
+        Contact Dpack today and get the best protective packaging solutions for your business.
+      </p>
 
-//                     <details className="group bg-gray-50 rounded-xl p-5 cursor-pointer">
-//                         <summary className="flex justify-between items-center font-semibold text-lg">
-//                             Do you supply across Delhi NCR?
-//                             <span className="transition-transform group-open:rotate-180">⌄</span>
-//                         </summary>
-//                         <p className="mt-3 text-gray-600 leading-relaxed">
-//                             Yes, we supply garbage bags across Delhi, Noida, Gurgaon, Faridabad, and other NCR regions.
-//                         </p>
-//                     </details>
-//                 </div>
-//             </section>
+      {/* HEADING */}
+      <h1 className="text-[clamp(28px,5vw,35px)] leading-tight font-bold mb-2 md:mb-4">
+        High-Quality Packing Air Bags & Protective Packaging Solutions
+      </h1>
 
-//             {/* about */}
-//             <section className="mx-auto lg:px-15 px-5 py-8">
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-//                     <div className="w-full">
-//                         <img
-//                             src="/bag/bg-other.webp"
-//                             alt="Premium Dates Supplier in Delhi NCR"
-//                             className="w-full h-102 object-cover rounded-2xl shadow-xl"
-//                         />
-//                     </div>
+      {/* DESCRIPTION */}
+      <p className="max-w-3xl mx-auto text-black mb-8">
+        Whether you need secure packaging for shipping, storage, or transportation,
+        Dpack offers premium <b>packing air bags, dunnage bags, air cushion bags,</b>
+        and <b>air column bags</b>. Fill out the form below and our team will get in
+        touch within 24 hours with the right solution for your business.
+      </p>
 
-//                     <div>
-//                         <h2 className="text-2xl md:text-[42px] font-bold mb-5">
-//                             Looking for the Best Garbage Bag Manufacturer in {city}?
-//                         </h2>
+      {/* FORM */}
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-6xl mx-auto grid text-black grid-cols-1 md:grid-cols-5 gap-4"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          className="border border-black  placeholder:text-black  p-3 rounded-lg w-full"
+          onChange={handleChange}
+        />
 
-//                         <p className="text-black mb-6 leading-relaxed text-lg">
-//                             Contact <strong>Sangam Plastic Industries</strong> today for pricing, product details, or bulk supply inquiries. Our team will help you choose the right garbage bags for residential, commercial, and industrial waste management, ensuring reliable and hygienic waste disposal solutions across {city}.
-//                         </p>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          className="border border-black  placeholder:text-black  p-3 rounded-lg w-full"
+          onChange={handleChange}
+        />
 
-//                         <Link href={"/contact"} className="mx-auto px-4 py-3 text-lg text-white rounded-md bg-green-500 hover:bg-green-600">
-//                             Contact Us
-//                         </Link>
-//                     </div>
-//                 </div>
-//             </section>
-//         </>
-//     );
-// };
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          className="border border-black p-3 placeholder:text-black rounded-lg w-full"
+          onChange={handleChange}
+        />
 
-// export default Location;
+        {/* DROPDOWN */}
+        <select
+          name="product"
+          className="border border-black p-3 rounded-lg w-full text-black"
+          onChange={handleChange}
+        >
+          <option value="">Select Product</option>
+
+          {categories.map((item, i) => (
+            <option key={i} value={item.id}>
+              {item.name}
+            </option>
+          ))}
+        </select>
+
+        {/* BUTTON */}
+        <button
+          type="submit"
+          disabled={loading}
+          className="bg-[#D95026] text-white font-semibold rounded-lg px-6 py-3  transition"
+        >
+          {loading ? "Sending..." : "Send a Qoute"}
+        </button>
+      </form>
+    </section>
+
+
+    <div className="w-full bg-white py-10 px-4 lg:px-10">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-3xl lg:text-4xl font-semibold relative">
+          <span className="relative z-10">Our Best Selling Products</span>
+          <Image height={100} alt="product" width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image>
+        </h2>
+        <Link href={"/products"} className="text-md text-black cursor-pointer hover:underline text-nowrap">
+          View All →
+        </Link>
+      </div>
+
+      <div className="">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          autoplay={{ delay: 3000 }}
+          loop
+          spaceBetween={20}
+          slidesPerView={3}
+          breakpoints={{
+            0: { slidesPerView: 1.2 },
+            640: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+        >
+          {products1.map((item, i) => (
+            <SwiperSlide key={i}>
+              <div className="bg-white group rounded-2xl p-5 h-[400px] relative overflow-hidden group transition hover:shadow-lg border-1 border-gray-400">
+                {/* BG SHAPE */}
+                <div className="absolute top-0 right-0 w-[120px] h-[120px] z-20 bg-orange-200 rounded-full opacity-40"></div>
+
+                {/* IMAGE */}
+                <div className="relative h-[250px] mb-4">
+                  <Image
+                    src={item.img}
+                    alt=""
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
+                </div>
+
+                {/* TITLE */}
+                <h3 className="text-[21px] font-medium text-gray-800 mb-2">
+                  {item.name}
+                </h3>
+
+                {/* CTA */}
+                <Link href={`https://wa.me/+917669988825?text=Hi, I have seen your product on https://packingairbag.com and I am interested in ${item.name}`}
+                  target="_blank" className="text-md group-hover:text-orange-500 flex items-center gap-1 text-gray-700 hover:text-black">
+                  Whatsapp Now <ArrowUpRight size={14} />
+                </Link>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+      </div>
+    </div>
+
+    <section className="bg-white  pb-4  px-4">
+      <div className="max-w-5xl mx-auto text-center">
+
+        <h1 className="text-[clamp(34px,7vw,70px)] font-bold text-gray-900 mb-1 md:mb-3">
+          Our Mission
+        </h1>
+        <div className='text-start md:text-center'>
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed text-gray-600 mb-4">
+            At Dpack, our mission is to deliver reliable and eco-friendly packaging products that ensure product safety while reducing shipping losses. Whether you need a trusted air cushion bag supplier in  {cityName} or an expert air column bag manufacturer in  {cityName}, Dpack is committed to delivering excellence with every order.
+          </p>
+
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed text-gray-600">
+            Our modern production processes and strict quality standards make us a preferred packing air bag supplier and wholesaler in  {cityName}. We provide durable, lightweight, and cost-effective packaging solutions in bulk quantities to meet the growing needs of businesses of all sizes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section className='max-w-7xl mx-auto'>
+
+      <Slidecat></Slidecat>
+    </section>
+
+
+    <section className="bg-[#D95026] text-white py-6 md:py-8 px-4">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-3 md:gap-10">
+
+        <div className="relative w-full h-[280px] sm:h-[350px] lg:h-[420px]">
+          <Image
+            src="/newBanner.jpeg"
+            alt="Packaging Solutions"
+            fill
+            className="object-fit rounded-xl shadow-lg"
+            priority
+          />
+        </div>
+
+        {/* LEFT CONTENT */}
+        <div className="text-center lg:text-left">
+          <h2 className="text-[clamp(28px,4vw,40px)] font-bold mb-1 md:mb-3">
+            Get Premium Packaging Solutions in  {cityName}
+          </h2>
+
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed mb-4">
+            Looking for a trusted packing air bag manufacturer in  {cityName}? Dpack offers high-quality dunnage bags, air cushion bags, and air column bags at competitive prices.
+          </p>
+
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed mb-6">
+            Contact us today for bulk orders, custom packaging solutions, and reliable supply across  {cityName}.
+          </p>
+
+          {/* BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+            <button
+              onClick={() => setOpen(!open)}
+              className="bg-white text-[#0a1a3c] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+            >
+              Request a Quote
+            </button>
+
+            <a
+              href="tel:+7669988825"
+              className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#0a1a3c] transition"
+            >
+              Call Now
+            </a>
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+    </section>
+
+    <section className="text-gray-600 body-font bg-gray-50">
+      <div className="container px-5 py-6  mx-auto">
+
+        {/* HEADING */}
+        <div className="text-center mb-12">
+          <h2 className="text-[clamp(24px,4vw,40px)] font-bold text-gray-900 mb-4">
+            Why Businesses Trust Dpack as a Packing Air Bag Manufacturer in  {cityName}
+          </h2>
+
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed max-w-3xl mx-auto">
+            Dpack is a trusted name for businesses looking for reliable protective packaging solutions in  {cityName}
+            . As a leading packing air bag manufacturer in  {cityName}, we focus on delivering high-quality products that help keep goods safe during storage and transportation. Our commitment to quality, affordability, and timely service makes us the preferred choice for many industries.
+          </p>
+
+          <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed max-w-3xl mx-auto mt-4">
+            We understand that every business has different packaging needs, which is why we offer customized solutions along with bulk supply capabilities. Whether you need dunnage bags, air cushion bags, or air column bags, Dpack ensures durable products and dependable support.
+          </p>
+        </div>
+
+        {/* FEATURES GRID */}
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          {[
+            "Premium quality packaging products made from durable materials",
+            "Competitive wholesale pricing for bulk orders",
+            "Large-scale supply capabilities for all business sizes",
+            `Fast and reliable delivery across  ${cityName}`,
+            "Custom sizes and packaging options available",
+            "Strong quality control for consistent performance"
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white shadow-sm hover:shadow-md transition rounded-lg p-4 flex flex-col items-center text-center sm:flex-row sm:text-left sm:items-start"
+            >
+
+              {/* ICON */}
+              <FaCheckDouble
+                size={30} // ✅ 30px size
+                className="text-[#D95026] mb-2 sm:mb-0 sm:mr-4 flex-shrink-0"
+              />
+
+              <span className="text-gray-800 font-medium leading-relaxed">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <section className='max-w-7xl mx-auto'>
+      <Categories />
+    </section>
+
+
+
+    <section className="bg-gray-50 py-2 md:py-4  px-4">
+      <div className="max-w-6xl mx-auto text-center">
+
+
+
+        {/* HEADING */}
+        <h2 className="text-[clamp(24px,4vw,40px)] font-bold mt-4 md:mt-1 text-gray-900">
+          Industries We Serve in  {cityName}
+        </h2>
+
+        {/* DESCRIPTION */}
+        <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-[clamp(14px,1.5vw,18px)]">
+          Dpack provides reliable protective packaging solutions for a wide range of industries in  {cityName}. As a trusted packing air bag manufacturer in  {cityName}, we understand the packaging challenges faced by different businesses and deliver products that ensure safety during storage, handling, and transportation.
+        </p>
+
+        <p className="mt-3 text-gray-600 max-w-3xl mx-auto text-[clamp(14px,1.5vw,18px)]">
+          Our high-quality dunnage bags, air cushion bags, and air column bags are widely used by companies that require secure and efficient packaging solutions. We offer bulk supply, custom options, and timely delivery to meet industry-specific needs.
+        </p>
+
+        {/* MINI CARDS GRID */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-4  gap-2 md:gap-4 mt-6">
+
+          {[
+            {
+              title: "Logistics & Transportation",
+              desc: "Secure cargo during transit and reduce movement damage.",
+              icon: <MdEmojiTransportation size={30} />
+            },
+            {
+              title: "E-commerce & Retail",
+              desc: "Protect fragile and valuable products during delivery."
+              ,
+              icon: <FaCartShopping size={30} />
+            },
+            {
+              title: "Electronics & Appliances",
+              desc: "Cushion sensitive devices and prevent impact damage."
+              ,
+              icon: <FaLaptop size={30} />
+            },
+            {
+              title: "Automotive Parts",
+              desc: "Safe packaging for spare parts and components."
+              ,
+              icon: <IoSettings size={30} />
+            },
+            {
+              title: "Pharmaceuticals",
+              desc: "Reliable packaging for delicate and essential products."
+              ,
+              icon: <GiMedicines size={30} />
+            },
+            {
+              title: "Warehousing & Storage",
+              desc: "Added protection for stored inventory and goods."
+              ,
+              icon: <FaWarehouse size={30} />
+            },
+            {
+              title: "Manufacturing Units",
+              desc: "Secure finished products during shipment."
+              ,
+              icon: <MdPrecisionManufacturing size={30} />
+            },
+            {
+              title: "Export & Import",
+              desc: "Strong packaging solutions for domestic and international transport."
+              ,
+              icon: <FaTruck size={30} />
+            }
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white p-3 md:p-6 flex flex-col justify-center items-center rounded-xl shadow-sm hover:shadow-md transition text-center border"
+            >
+              {/* ICON */}
+              <div className="w-15 h-15 p-3 flex  items-center justify-center rounded-full bg-[#D95026]/10 text-[#D95026] mb-4">
+                {item.icon}
+              </div>
+
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 h-full items-center text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+
+        </div>
+
+        {/* FOOT NOTE */}
+        <p className="mt-5 md:mt-5 text-gray-600 max-w-3xl mx-auto text-[clamp(16px,1.5vw,18px)]">
+          With quality products and dependable service, Dpack is the preferred packaging partner for businesses across multiple industries in  {cityName}.
+        </p>
+
+      </div>
+    </section>
+
+    <section className='max-w-7xl mx-auto'>
+      <div className="bg-gray-50 py-10 lg:px-15 px-4">
+        <div className="flex items-center justify-between mx-auto mb-4">
+          <h2 className="text-3xl font-semibold relative">
+            <span className="relative z-10">Featured Products</span>
+            {/* <Image height={100} width={100} src="/heading_shapes.png" className="absolute -left-6 -top-4 w-54 h-14 border-2  rounded-full z-20"></Image> */}
+          </h2>
+
+          <Link href="/products" className="text-sm hover:text-blue-600 text-gray-800 cursor-pointer hover:underline">
+            View All →
+          </Link>
+        </div>
+
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {products.map((item, i) => (
+            <SwiperSlide key={i}>
+              <div onClick={() => { setSelected(item); setActiveImg(item.img); }}
+                className="group bg-white h-96 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
+                {/* IMAGE BOX */}
+                <div className="relative bg-[#F6F6F6] rounded-xl h-[300px] flex items-center justify-center overflow-hidden">
+                  {/* NEW TAG */}
+                  {item.tag && (
+                    <span className="absolute top-10 left-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full z-10 shadow">
+                      {item.tag}
+                    </span>
+                  )}
+
+                  {/* 🔥 IMAGE SWITCH */}
+                  <div className="relative w-full h-full">
+                    {/* MAIN IMAGE */}
+                    <Image
+                      src={item.img}
+                      alt="loading"
+                      width={500}
+                      height={500}
+                      className="object-cover transition-all duration-500 group-hover:opacity-0 group-hover:scale-110"
+                    />
+
+                    {/* HOVER IMAGE */}
+                    <Image
+                      src={item.hoverImg}
+                      alt="loading"
+                      width={900}
+                      height={500}
+                      className="object-contain absolute top-0 left-0 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-125"
+                    />
+
+                  </div>
+                  {/* HOVER OVERLAY */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center pb-6">
+                    <div className="flex gap-3 translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                      <button
+                        onClick={() => {
+                          setSelected(item);
+                          setActiveImg(item.img);
+                        }}
+                        className="w-10 h-10 bg-white cursor-pointer flex items-center justify-center rounded-full shadow-md hover:bg-black hover:text-white transition"
+                      >
+                        <Eye size={18} />
+                      </button>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* CONTENT */}
+                <div className="mt-4">
+                  <h3 className="text-[15px] font-semibold text-gray-800 leading-tight group-hover:text-orange-500 transition">
+                    {item.title}
+                  </h3>
+
+                  {/* RATING */}
+                  <div className="flex items-center gap-1 mt-2 text-orange-500">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={15} fill="orange" />
+                    ))}
+                    <span className="text-gray-500 text-sm ml-1">
+                      ({item.reviews} Reviews)
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+
+
+        </div>
+      </div>
+    </section>
+
+    <section className='max-w-7xl mx-auto py-2 mt-5'>
+      <div className="max-w-5xl  md:py-12 md:w-full max-md:text-center mx-2 md:mx-auto flex flex-col md:flex-row items-center justify-between text-left bg-[#0a1a3c] rounded-2xl p-5 md:p-10 text-white">
+        <div>
+          <h1
+            className="text-3xl md:text-5xl md:leading-[60px] font-semibold ">
+            Ready to Protect Your Products?
+          </h1>
+          <p className="text-xl">
+            Get in touch today for bulk supply, custom requirements, and the best pricing in  {cityName}.
+          </p>
+        </div>
+        <a href='/contact' className="px-6 py-3 text-slate-800 bg-white rounded-full text-sm mt-4">
+          Contact us
+        </a>
+      </div>
+    </section>
+
+    <section className="w-full py-3 md:py-6 px-6 bg-white">
+
+      <div className="max-w-5xl mx-auto">
+
+        {/* HEADING */}
+        <div className="text-center mb-5">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-gray-500 mt-2 md:mt-4">
+            Everything you need to know about our packaging solutions.
+          </p>
+        </div>
+
+        {/* FAQ LIST */}
+        <div className="space-y-2">
+
+          {faq.map((item, i) => (
+
+            <div
+              key={i}
+              className="border rounded-2xl overflow-hidden transition bg-[#FAFAFA]"
+            >
+
+              {/* QUESTION */}
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex items-center justify-between px-6 py-5 text-left"
+              >
+                <span className="font-semibold text-gray-900 text-lg">
+                  {item.q}
+                </span>
+
+                <span className="text-orange-500 text-2xl">
+                  {openIndex === i ? "−" : "+"}
+                </span>
+              </button>
+
+              {/* ANSWER */}
+              <div
+                className={`px-6 transition-all duration-500 overflow-hidden ${openIndex === i ? "max-h-[500px] pb-5" : "max-h-0"
+                  }`}
+              >
+                <p className="text-gray-600 leading-relaxed text-[15px]">
+                  {item.a}
+                </p>
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </>)
+}

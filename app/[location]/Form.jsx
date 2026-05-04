@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function ContactForm() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Form({ setOpen }) {
+  // const [isOpen, setIsOpen] = useState(true);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
 
@@ -13,14 +13,12 @@ export default function ContactForm() {
   const [product, setProduct] = useState("");
   const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 15000);
-    return () => clearTimeout(timer);
-  }, []);
+  //   useEffect(() => {
+  //     const timer = setTimeout(() => setIsOpen(true), 15000);
+  //     return () => clearTimeout(timer);
+  //   }, []);
 
-  if (!isOpen) return null;
-
-  const handleClose = () => setIsOpen(false);
+  const handleClose = () => setOpen(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +43,7 @@ export default function ContactForm() {
 
       const { data } = await axios.post(
         "https://brandbnalo.com/api/form/add",
-        formData
+        formData,
       );
 
       if (data?.success) {
@@ -60,9 +58,9 @@ Contact: ${phone}`;
         setTimeout(() => {
           window.open(
             `https://wa.me/917669988825?text=${encodeURIComponent(
-              whatsappText
+              whatsappText,
             )}`,
-            "_blank"
+            "_blank",
           );
         }, 1000);
 
@@ -85,8 +83,13 @@ Contact: ${phone}`;
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
-      <div className="relative rounded-3xl shadow-2xl p-10 max-w-sm md:max-w-2xl bg-white text-black bg-cover bg-center"
+    <div
+      onClick={() => setOpen(false)}
+      className="fixed inset-0 flex items-center justify-center bg-black/40 z-50"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative rounded-3xl shadow-2xl p-10 max-w-sm md:max-w-2xl bg-white text-black bg-cover bg-center"
       >
         {/* Close button */}
         <button
@@ -132,7 +135,6 @@ Contact: ${phone}`;
           </div>
 
           <div className="flex items-center bg-white rounded-md border border-black border-2 overflow-hidden">
-
             <span className="text-lg">🇮🇳</span>
             <input
               type="tel"
