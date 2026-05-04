@@ -31,16 +31,9 @@ link:"/our-blogs/why-dpack-trusted-packing-air-bag-manufacturer-india",
 ];
 
 export default function ArticlesSection() {
-  const [blogs, setBlogs] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(3);
 
-  useEffect(() => {
-    async function fetchBlogs() {
-      const data = await getBlogs();
-      setBlogs(data);
-    }
-    fetchBlogs();
-  }, []);
+
+
 
   return (
     <section className="w-full bg-slate-100 py-12 px-4 md:px-10 lg:px-20">
@@ -66,55 +59,24 @@ export default function ArticlesSection() {
             key={item.id}
             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500"
           >
-            {b.imageUrl && (
+        
               <Image
-                src={b.imageUrl}
-                alt={b.title}
+                src={item.img}
+                alt={item.title}
                 width={1200}
                 height={600}
-                className="w-full h-48 object-cover rounded-t-lg"
+                className="w-full h-58 object-cover rounded-t-lg"
               />
-            )}
+            
             <div className="p-4">
-              <h2 className="text-lg font-semibold mb-2">{b.title}</h2>
+              <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
               <p className="text-sm text-gray-500 mb-3">
-                {b.date
-                  ? new Date(b.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
-                  : "No date"}
+                {item.date}
               </p>
 
               {/* GRADIENT OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-70"></div>
 
          
-            </div>
-
-            {/* CONTENT */}
-            <div className="p-5">
-
-              {/* META */}
-
-
-              {/* TITLE */}
-              <h3 className="text-[16px] font-semibold leading-snug mb-4 group-hover:text-orange-500 transition">
-                {item.title}
-              </h3>
-
-              {/* FOOTER */}
-              <div className="flex justify-between items-center">
-
-                <button className="text-sm text-gray-700 hover:text-black flex items-center gap-1">
-                  Read More →
-                </button>
-
-
-
-              </div>
-
             </div>
 
           </Link>

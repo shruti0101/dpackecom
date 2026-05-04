@@ -401,7 +401,7 @@ Contact: ${form.phone}`;
 
                 {/* CTA */}
                 <Link href={`https://wa.me/+917669988825?text=Hi, I have seen your product on https://packingairbag.com and I am interested in ${item.name}`}
-                  target="_blank" className="text-md group-hover:text-orange-500 flex items-center gap-1 text-gray-700 hover:text-black">
+                  target="_blank" className="text-md bg-green-500 py-3 px-3 w-fit text-white  flex items-center gap-1  text-lg rounded-sm">
                   Whatsapp Now <ArrowUpRight size={14} />
                 </Link>
               </div>
