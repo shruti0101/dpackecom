@@ -37,6 +37,10 @@ export default function Form({ setOpen }) {
         place: "N/A",
       };
 
+      if (!/^\d{10}$/.test(formData.phone)) {
+        return alert("Enter a valid 10-digit phone number");
+      }
+
       const { data } = await axios.post(
         "https://brandbnalo.com/api/form/add",
         formData,
@@ -176,9 +180,8 @@ Contact: ${phone}`;
 
           {status && (
             <p
-              className={`text-center text-sm mt-2 font-medium ${
-                status.startsWith("✅") ? "text-green-600" : "text-red-600"
-              }`}
+              className={`text-center text-sm mt-2 font-medium ${status.startsWith("✅") ? "text-green-600" : "text-red-600"
+                }`}
             >
               {status}
             </p>

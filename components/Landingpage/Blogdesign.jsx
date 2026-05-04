@@ -3,6 +3,20 @@
 import Image from "next/image";
 import { Calendar, MessageCircle, User } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { client } from "@/lib/sanity";
+
+async function getBlogs() {
+  return client.fetch(
+    `*[_type == "blog"] | order(date desc){
+      title,
+      slug,
+      date,
+      excerpt,
+      "imageUrl": image.asset->url
+    }`
+  );
+}
 
 const articles = [
   {
@@ -36,6 +50,17 @@ const articles = [
 ];
 
 export default function ArticlesSection() {
+  const [blogs, setBlogs] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  useEffect(() => {
+    async function fetchBlogs() {
+      const data = await getBlogs();
+      setBlogs(data);
+    }
+    fetchBlogs();
+  }, []);
+
   return (
     <section className="w-full bg-slate-100 py-12 px-4 md:px-10 lg:px-20">
 
@@ -53,58 +78,42 @@ export default function ArticlesSection() {
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {articles.map((item) => (
-          <div
-            key={item.id}
-            className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {blogs.slice(0, visibleCount).map((b) => (
+          <article
+            key={b.slug?.current || b.title}
+            className="bg-white border rounded-lg shadow"
           >
-
-            {/* IMAGE */}
-            <div className="relative h-[220px] overflow-hidden">
-
+            {b.imageUrl && (
               <Image
-                src={item.img}
-                alt=""
-                fill
-                className="object-cover group-hover:scale-110 transition duration-700"
+                src={b.imageUrl}
+                alt={b.title}
+                width={1200}
+                height={600}
+                className="w-full h-48 object-cover rounded-t-lg"
               />
+            )}
+            <div className="p-4">
+              <h2 className="text-lg font-semibold mb-2">{b.title}</h2>
+              <p className="text-sm text-gray-500 mb-3">
+                {b.date
+                  ? new Date(b.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                  : "No date"}
+              </p>
 
-              {/* GRADIENT OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-70"></div>
-
-              {/* CATEGORY BADGE */}
-              <span className="absolute top-3 left-3 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
-                {item.tag}
-              </span>
-
+              <p className="text-gray-700 text-sm">{b.excerpt}</p>
+              <Link
+                href={`/our-blogs/${b.slug.current}`}
+                className="text-blue-600 font-medium hover:underline mt-3 block"
+              >
+                Read More →
+              </Link>
             </div>
-
-            {/* CONTENT */}
-            <div className="p-5">
-
-              {/* META */}
-
-
-              {/* TITLE */}
-              <h3 className="text-[16px] font-semibold leading-snug mb-4 group-hover:text-orange-500 transition">
-                {item.title}
-              </h3>
-
-              {/* FOOTER */}
-              <div className="flex justify-between items-center">
-
-                <Link href={"/our-blogs"} className="text-sm text-gray-700 hover:text-black flex items-center gap-1">
-                  Read More →
-                </Link>
-
-
-
-              </div>
-
-            </div>
-
-          </div>
+          </article>
         ))}
       </div>
     </section>

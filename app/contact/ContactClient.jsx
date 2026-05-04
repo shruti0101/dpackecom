@@ -21,7 +21,10 @@ export default function ContactPage() {
       place: formData.get("city"),
       message: formData.get("message"),
     };
-    if (!data.phone || data.phone.length < 10) return alert("Enter Valid Phone Number");
+    
+    if (!/^\d{10}$/.test(formData.phone)) {
+      return alert("Enter a valid 10-digit phone number");
+    }
 
     try {
       setLoading(true);

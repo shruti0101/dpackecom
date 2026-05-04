@@ -39,6 +39,10 @@ export default function ContactForm() {
         place: "N/A",
       };
 
+      if (!/^\d{10}$/.test(formData.phone)) {
+        return alert("Enter a valid 10-digit phone number");
+      }
+
       const { data } = await axios.post(
         "https://brandbnalo.com/api/form/add",
         formData
