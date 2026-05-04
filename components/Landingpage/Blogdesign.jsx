@@ -1,35 +1,32 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
-import { Calendar, MessageCircle, User } from "lucide-react";
+
 
 const articles = [
   {
     id: 1,
-    title: "How To Plop Hair For Bouncy, Beautiful Curls",
-    img: "/cat/2.png",
-    author: "Adnan Alvi",
-    date: "12 Mar 2025",
-    comments: 15,
-    tag: "Beauty",
+    title: "How Air Cushion Bags Reduce Packaging Costs",
+    img: "/blog1.jpg",
+    link:"/our-blogs/how-air-cushion-bags-reduce-packaging-costs",
+    date: "April 27, 2026",
+ 
   },
   {
     id: 2,
-    title: "Fast Fashion: How Clothes Are Linked To Climate Change",
-    img: "/cat/1.png",
-    author: "Hasib Sing",
-    date: "20 Apr 2025",
-    comments: 42,
-    tag: "Fashion",
+    title: "Why Dpack is a Trusted Packing Air Bag Manufacturer in India",
+    img: "/blog2.jpg",
+link:"/our-blogs/why-dpack-trusted-packing-air-bag-manufacturer-india",
+    date: "April 20, 2026",
+  
   },
   {
     id: 3,
-    title: "Which Foundation Formula Is Right For Your Skin?",
-    img: "/cat/3.png",
-    author: "Smith Jhon",
-    date: "07 Mar 2025",
-    comments: 36,
-    tag: "Skincare",
+    title: "Best Air Column Bag Manufacturer in India – Dpack",
+    img: "/blog3.jpg",
+ link:"/our-blogs/best-air-column-bag-manufacturer-india-dpack",
+    date: "April 20, 2026",
+  
   },
 
 ];
@@ -54,7 +51,8 @@ export default function ArticlesSection() {
       {/* GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {articles.map((item) => (
-          <div
+          <Link
+          href={item.link}
             key={item.id}
             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500"
           >
@@ -72,11 +70,7 @@ export default function ArticlesSection() {
               {/* GRADIENT OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-70"></div>
 
-              {/* CATEGORY BADGE */}
-              <span className="absolute top-3 left-3 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
-                {item.tag}
-              </span>
-
+         
             </div>
 
             {/* CONTENT */}
@@ -103,7 +97,7 @@ export default function ArticlesSection() {
 
             </div>
 
-          </div>
+          </Link>
         ))}
       </div>
     </section>
