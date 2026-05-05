@@ -236,7 +236,7 @@ Contact: ${form.phone}`;
           </h1>
 
           <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed mb-4">
-            Dpack is a trusted name in protective packaging solutions, known as a leading packing air bag manufacturer in {cityName} and a reliable supplier of high-quality air packaging products. With a strong focus on innovation, quality, and customer satisfaction, we help businesses protect their goods during storage, handling, and transportation.
+            Dpack is a trusted name in protective packaging solutions, known as a leading <a href='/' className='capitalize font-bold hover:underline'> packing air bag manufacturer in {cityName} </a> and a reliable supplier of high-quality air packaging products. With a strong focus on innovation, quality, and customer satisfaction, we help businesses protect their goods during storage, handling, and transportation.
           </p>
 
           <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed mb-6">
