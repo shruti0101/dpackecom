@@ -1,8 +1,4 @@
 // data.js
-
-
-
-
 export const categories = [
   // cat 1
   {
@@ -2071,16 +2067,16 @@ export const categories = [
         ],
 
         "images360": [
-          "/360/air-bubble-packaging-film/1.png",
-          "/360/air-bubble-packaging-film/2.png",
-          "/360/air-bubble-packaging-film/3.png",
-          "/360/air-bubble-packaging-film/4.png",
-          "/360/air-bubble-packaging-film/5.png",
-          "/360/air-bubble-packaging-film/6.png",
-          "/360/air-bubble-packaging-film/7.png",
-          "/360/air-bubble-packaging-film/8.png",
-          "/360/air-bubble-packaging-film/9.png",
-          "/360/air-bubble-packaging-film/10.png"
+          "/360/Air Bubble Roll/1.png",
+          "/360/Air Bubble Roll/2.png",
+          "/360/Air Bubble Roll/3.png",
+          "/360/Air Bubble Roll/4.png",
+          "/360/Air Bubble Roll/5.png",
+          "/360/Air Bubble Roll/6.png",
+          "/360/Air Bubble Roll/7.png",
+          "/360/Air Bubble Roll/8.png",
+          "/360/Air Bubble Roll/9.png",
+          "/360/Air Bubble Roll/10.png"
         ]
       },
     ],
@@ -2779,7 +2775,21 @@ export const categories = [
           //   "src": "/check/carton-airbag2.png",
           //   "alt": "Carton BOX Packaging Air Column Bag"
           // }
-        ]
+        ],
+
+        images360: [
+          '/360/Carton BOX Packaging Air Column Bag/1.png',
+          '/360/Carton BOX Packaging Air Column Bag/2.png',
+          '/360/Carton BOX Packaging Air Column Bag/3.png',
+          '/360/Carton BOX Packaging Air Column Bag/4.png',
+          '/360/Carton BOX Packaging Air Column Bag/5.png',
+          '/360/Carton BOX Packaging Air Column Bag/6.png',
+          '/360/Carton BOX Packaging Air Column Bag/7.png',
+          '/360/Carton BOX Packaging Air Column Bag/8.png',
+          '/360/Carton BOX Packaging Air Column Bag/9.png',
+          '/360/Carton BOX Packaging Air Column Bag/10.png',
+          '/360/Carton BOX Packaging Air Column Bag/11.png',
+        ],
       },
     ],
   },
@@ -3672,16 +3682,16 @@ export const categories = [
         ],
 
         "images360": [
-          "/360/air-bag-packing-bag-in-bag/1.png",
-          "/360/air-bag-packing-bag-in-bag/2.png",
-          "/360/air-bag-packing-bag-in-bag/3.png",
-          "/360/air-bag-packing-bag-in-bag/4.png",
-          "/360/air-bag-packing-bag-in-bag/5.png",
-          "/360/air-bag-packing-bag-in-bag/6.png",
-          "/360/air-bag-packing-bag-in-bag/7.png",
-          "/360/air-bag-packing-bag-in-bag/8.png",
-          "/360/air-bag-packing-bag-in-bag/9.png",
-          "/360/air-bag-packing-bag-in-bag/10.png"
+          "/360/Air Bag Packing Bag-in-Bag/1.png",
+          "/360/Air Bag Packing Bag-in-Bag/2.png",
+          "/360/Air Bag Packing Bag-in-Bag/3.png",
+          "/360/Air Bag Packing Bag-in-Bag/4.png",
+          "/360/Air Bag Packing Bag-in-Bag/5.png",
+          "/360/Air Bag Packing Bag-in-Bag/6.png",
+          "/360/Air Bag Packing Bag-in-Bag/7.png",
+          "/360/Air Bag Packing Bag-in-Bag/8.png",
+          "/360/Air Bag Packing Bag-in-Bag/9.png",
+          "/360/Air Bag Packing Bag-in-Bag/10.png"
         ]
       }
     ],
@@ -3777,7 +3787,18 @@ export const categories = [
           //   "alt": "Purse Gap Filler Pouch"
           // }
         ],
-
+        "images360": [
+          "/360/Purse Gap Filler Pouch/1.png",
+          "/360/Purse Gap Filler Pouch/2.png",
+          "/360/Purse Gap Filler Pouch/3.png",
+          "/360/Purse Gap Filler Pouch/4.png",
+          "/360/Purse Gap Filler Pouch/5.png",
+          "/360/Purse Gap Filler Pouch/6.png",
+          "/360/Purse Gap Filler Pouch/7.png",
+          "/360/Purse Gap Filler Pouch/8.png",
+          "/360/Purse Gap Filler Pouch/9.png",
+          "/360/Purse Gap Filler Pouch/10.png"
+        ]
       },
 
       {
@@ -4171,18 +4192,24 @@ export const categories = [
           }
         ],
 
-        "images360": [
-          "/360/inflatable-air-cushion-shoes/1.png",
-          "/360/inflatable-air-cushion-shoes/2.png",
-          "/360/inflatable-air-cushion-shoes/3.png",
-          "/360/inflatable-air-cushion-shoes/4.png",
-          "/360/inflatable-air-cushion-shoes/5.png",
-          "/360/inflatable-air-cushion-shoes/6.png",
-          "/360/inflatable-air-cushion-shoes/7.png",
-          "/360/inflatable-air-cushion-shoes/8.png",
-          "/360/inflatable-air-cushion-shoes/9.png",
-          "/360/inflatable-air-cushion-shoes/10.png"
-        ]
+        images360: [
+          '/360/Void or Gap Filling Air Cushion Bags/1.png',
+          '/360/Void or Gap Filling Air Cushion Bags/2.png',
+          '/360/Void or Gap Filling Air Cushion Bags/3.png',
+          '/360/Void or Gap Filling Air Cushion Bags/4.png',
+          '/360/Void or Gap Filling Air Cushion Bags/5.png',
+          '/360/Void or Gap Filling Air Cushion Bags/6.png',
+          '/360/Void or Gap Filling Air Cushion Bags/7.png',
+          '/360/Void or Gap Filling Air Cushion Bags/8.png',
+          '/360/Void or Gap Filling Air Cushion Bags/9.png',
+          '/360/Void or Gap Filling Air Cushion Bags/10.png',
+          '/360/Void or Gap Filling Air Cushion Bags/11.png',
+          '/360/Void or Gap Filling Air Cushion Bags/12.png',
+          '/360/Void or Gap Filling Air Cushion Bags/13.png',
+          '/360/Void or Gap Filling Air Cushion Bags/14.png',
+          '/360/Void or Gap Filling Air Cushion Bags/15.png',
+          '/360/Void or Gap Filling Air Cushion Bags/16.png',
+        ],
       },
 
       {
@@ -4277,18 +4304,24 @@ export const categories = [
           }
         ],
 
-        "images360": [
-          "/360/rf-gap-filler-pouch/1.png",
-          "/360/rf-gap-filler-pouch/2.png",
-          "/360/rf-gap-filler-pouch/3.png",
-          "/360/rf-gap-filler-pouch/4.png",
-          "/360/rf-gap-filler-pouch/5.png",
-          "/360/rf-gap-filler-pouch/6.png",
-          "/360/rf-gap-filler-pouch/7.png",
-          "/360/rf-gap-filler-pouch/8.png",
-          "/360/rf-gap-filler-pouch/9.png",
-          "/360/rf-gap-filler-pouch/10.png"
-        ]
+        images360: [
+          '/360/Void or Gap Filling Air Cushion Bags/1.png',
+          '/360/Void or Gap Filling Air Cushion Bags/2.png',
+          '/360/Void or Gap Filling Air Cushion Bags/3.png',
+          '/360/Void or Gap Filling Air Cushion Bags/4.png',
+          '/360/Void or Gap Filling Air Cushion Bags/5.png',
+          '/360/Void or Gap Filling Air Cushion Bags/6.png',
+          '/360/Void or Gap Filling Air Cushion Bags/7.png',
+          '/360/Void or Gap Filling Air Cushion Bags/8.png',
+          '/360/Void or Gap Filling Air Cushion Bags/9.png',
+          '/360/Void or Gap Filling Air Cushion Bags/10.png',
+          '/360/Void or Gap Filling Air Cushion Bags/11.png',
+          '/360/Void or Gap Filling Air Cushion Bags/12.png',
+          '/360/Void or Gap Filling Air Cushion Bags/13.png',
+          '/360/Void or Gap Filling Air Cushion Bags/14.png',
+          '/360/Void or Gap Filling Air Cushion Bags/15.png',
+          '/360/Void or Gap Filling Air Cushion Bags/16.png',
+        ],
       },
     ],
   },
