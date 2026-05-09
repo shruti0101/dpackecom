@@ -11,7 +11,7 @@ import TestimonialSlider from "@/components/Landingpage/Testimonials";
 import Dedicate from "@/components/Landingpage/Dedicate";
 // import Popup from "@/components/Popup";
 // import CityPage from "../components/City";
-
+import Whatsapp from "@/components/Whatsapp";
 import Otherproduct from "@/components/Landingpage/Otherpro";
 import Faq from "@/components/Landingpage/Faq";
 import Loactions from "@/components/Locations";
@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <>
       {/* <Popup></Popup> */}
+         <Whatsapp />
       <Hero />
 
       <About />

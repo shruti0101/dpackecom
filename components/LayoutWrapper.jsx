@@ -7,13 +7,18 @@ import Footer from "@/components/Landingpage/Footer";
 export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
 
-  // Hide Navbar/Footer on /studio routes
-  const hideLayout = pathname.startsWith("/studio" , "/login");
+  // Hide Navbar/Footer on these routes
+  const hideLayout =
+    pathname.startsWith("/studio") ||
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/admin");
 
   return (
     <>
       {!hideLayout && <Navbar />}
+
       {children}
+
       {!hideLayout && <Footer />}
     </>
   );

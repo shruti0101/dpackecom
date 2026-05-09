@@ -9,12 +9,35 @@ import {
   ChevronDown,
 } from "lucide-react";
 import SearchBar from "./SearchBar";
-import { categories } from "@/Data";
+// import { categories } from "@/Data";
 import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [categoryOpen, setCategoryOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+const [categories, setCategories] = useState([]);
+
+
+
+
+const fetchCategories = async () => {
+  try {
+    const res = await fetch("/api/categories");
+
+    const data = await res.json();
+
+    setCategories(data);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+// api call
+useEffect(() => {
+  fetchCategories();
+}, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,8 +118,8 @@ export default function Navbar() {
               {categories.map((item, i) => (
                 <div key={i} onMouseEnter={() => sethover(i)} onMouseLeave={() => sethover(null)}
                   className="relative">
-                  <Link href={`/categories/${item.id}`} onClick={() => { setOpen(false); setCategoryOpen(false) }}
-                    className="px-4 py-4 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600 hover:bg-gray-50 transition"
+                  <Link href={`/categories/${item.slug}`} onClick={() => { setOpen(false); setCategoryOpen(false) }}
+                    className="px-4 py-4 border-b capitalize border-gray-200 text-lg flex justify-between items-center text-gray-600 hover:bg-gray-50 transition"
                   >
                     {item.name}
                     <span className="transition-transform duration-200 group-hover:translate-x-1">
@@ -115,8 +138,8 @@ export default function Navbar() {
                       >
                         <div className="flex flex-col gap-2">
                           {item.products.map((prod, idx) => (
-                            <Link key={idx} href={`/products/${prod.id}`}
-                              className="text-base px-4 py-2 border-b border-gray-200 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200"
+                            <Link key={idx} href={`/products/${prod.slug}`}
+                              className="text-base capitalize px-4 py-2 border-b border-gray-200 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200"
                             >
                               {prod.name}
                             </Link>
@@ -138,7 +161,7 @@ export default function Navbar() {
 
           {/* NAV ITEMS */}
           <Link href="/" className="text-black hover:text-[#D95026] font-medium">Home</Link>
-          <Link href="/products" className="text-black hover:text-[#D95026] font-medium">Shop</Link>
+          <Link href="/shop" className="text-black hover:text-[#D95026] font-medium">Shop</Link>
           <Link href="/about" className="text-black hover:text-[#D95026] font-medium">About Us</Link>
           <Link href="/our-blogs" className="text-black hover:text-[#D95026] font-medium">News & Articles</Link>
           <Link href="/contact" className="text-black hover:text-[#D95026] font-medium">Contact Us</Link>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Truck, Headphones, ShieldCheck, Tag } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { categories } from "@/Data";
+
 import { motion, AnimatePresence } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -18,6 +18,9 @@ export default function HeroPixelPerfect() {
     { title: "Upgrade Your Style Today", subtitle: "Trending Now", img: "/bg2.jpeg" },
     { title: "New Arrivals Just Landed", subtitle: "Limited Offer", img: "/dpack banner (5).webp" },
   ];
+
+
+
 
   const features = [
     {
@@ -52,6 +55,27 @@ export default function HeroPixelPerfect() {
 
   const [active, setActive] = useState(0);
   const [hover, sethover] = useState(null);
+  const [categories , setCategories] = useState([])
+
+
+const fetchCategories = async ()=>{
+
+
+  try{
+    const res = await fetch("/api/categories")
+
+    const data = await res.json();
+    setCategories(data)
+  }catch(error){
+    console.log(error)
+  }
+}
+
+useEffect(()=>{
+fetchCategories();
+},[])
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
@@ -68,8 +92,8 @@ export default function HeroPixelPerfect() {
               className="relative"
             >
               <Link
-                href={`/categories/${item.id}`}
-                className="px-4 py-4 border-b border-gray-200 text-lg flex justify-between items-center text-gray-600 hover:bg-gray-50 transition"
+                href={`/categories/${item.slug}`}
+                className="px-4 py-4 border-b capitalize border-gray-200 text-lg flex justify-between items-center text-gray-600 hover:bg-gray-50 transition"
               >
                 {item.name}
                 <span className="transition-transform duration-200 group-hover:translate-x-1">
@@ -88,8 +112,8 @@ export default function HeroPixelPerfect() {
                   >
                     <div className="flex flex-col gap-2">
                       {item.products.map((prod, idx) => (
-                        <Link key={idx} href={`/products/${prod.id}`}
-                          className="text-base px-4 py-2 border-b border-gray-200 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200"
+                        <Link key={idx} href={`/products/${prod.slug}`}
+                          className="text-base capitalize px-4 py-2 border-b border-gray-200 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200"
                         >
                           {prod.name}
                         </Link>

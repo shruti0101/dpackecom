@@ -21,7 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
 import { FaCheckDouble } from "react-icons/fa6";
-import { categories } from '@/Data';
+// import { categories } from '@/Data';
 import Form from "./Form"
 import axios from 'axios';
 

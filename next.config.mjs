@@ -1,32 +1,18 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//      reactStrictMode: true,
-//   images: {
-//     domains: ['cdn.sanity.io'],
-//   },
-// };
-
-// export default nextConfig;
-
-
-
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    unoptimized: true, // Important for Next 15 static images
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cdn.sanity.io",
+        hostname:
+          "pub-6773b48348124a078cb55322f384ad44.r2.dev",
       },
-    ],
-    localPatterns: [
+
       {
-        pathname: "/**", // allow ALL public images
-        search: "",
+        protocol: "https",
+        hostname: "cdn.sanity.io",
       },
     ],
   },
