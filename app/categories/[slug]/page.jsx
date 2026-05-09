@@ -56,12 +56,12 @@ export default async function CategoryPage({
 
 <div className="absolute inset-0 bg-black/20"></div>
   {/* Content */}
-  <h2 className="relative z-10 bg-white text-[#F5522E] text-4xl md:text-6xl font-bold capitalize text-center px-4">
+  <h2 className="relative z-10 bg-white text-[#F5522E] text-4xl md:text-6xl font-bold capitalize text-center p-3">
     {category?.name}
   </h2>
 </section>
     
-    <div className="p-10">
+    <div className="max-w-7xl mx-auto px-4 py-10">
       {/* CATEGORY TITLE */}
 
 
@@ -72,7 +72,7 @@ export default async function CategoryPage({
     
 
       {/* PRODUCTS */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {products.map((product) => (
           <Link 
           href={`/products/${product.slug}`}
@@ -88,7 +88,7 @@ export default async function CategoryPage({
               alt={product.name}
               width={500}
               height={500}
-              className="h-80 w-full object-cover"
+              className="h-80 w-full object-contain"
               unoptimized
             />
 

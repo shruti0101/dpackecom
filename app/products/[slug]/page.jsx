@@ -5,17 +5,18 @@ import Product from "@/models/Product";
 import "@/models/Category";
 
 import ProductDetailsClient from "./ProductDetailsClient";
+import { connect } from "mongoose";
 
 // SEO META
-export async function generateMetadata({
-  params,
-}) {
-  await connectDB();
+export async function generateMetadata({ params }) {
 
-  const product =
-    await Product.findOne({
-      slug: params.slug,
-    });
+  await connectDB();
+  const { slug } = await params;
+
+  const product = await Product.findOne({
+    slug,
+  });
+
 
   if (!product) {
     return {
