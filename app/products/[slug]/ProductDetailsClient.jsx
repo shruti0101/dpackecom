@@ -178,9 +178,13 @@ export default function ProductDetailsClient({
             {/* PRODUCT INFO */}
             <div>
 
-              <h1 className="text-[50px] leading-[62px] font-extrabold text-black tracking-[-2px]">
+              <h2 className="text-[50px] leading-[62px] font-extrabold text-black tracking-[-2px]">
                 {product.name}
-              </h1>
+              </h2>
+
+                  <p className="text-[22px] my-3 text-black ">
+               ₹ {product.price}
+              </p>
 
               {/* STOCK */}
               <div className="flex items-center gap-4 mt-3">
@@ -411,7 +415,7 @@ export default function ProductDetailsClient({
           </div>
 
           {/* TABS */}
-          <div className="flex gap-4 ">
+          <div className="flex gap-4 mt-6">
 
             <button
               onClick={() =>

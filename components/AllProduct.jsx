@@ -120,6 +120,8 @@ const AllProduct = () => {
                     {product.name}
                   </h3>
 
+                  <p className="text-red-600 text-md">{product.price}</p>
+
                   <p className="text-gray-600 text-sm mt-3 line-clamp-3">
                     {
                       product.overview
