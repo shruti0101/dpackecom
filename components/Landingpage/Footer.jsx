@@ -76,6 +76,8 @@ export default function Footer() {
             <li className="hover:text-white cursor-pointer"><Link href={"/sitemap"}>Sitemap</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
             <li className="hover:text-white cursor-pointer"><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/return-refund-policy"}>Return & Refund Policy</Link></li>
+            <li className="hover:text-white cursor-pointer"><Link href={"/shipping-policy"}>Shipping Policy</Link></li>
           </ul>
         </div>
 

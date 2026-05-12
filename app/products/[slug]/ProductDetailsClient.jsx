@@ -160,7 +160,7 @@ export default function ProductDetailsClient({
                 width={1200}
                 height={500}
                 unoptimized
-                className="object-cover w-full "
+                className="object-cover w-full p-2 "
               />
 
               {/* DOWNLOAD */}

@@ -115,7 +115,7 @@ useEffect(() => {
             <div className={`absolute top-full left-0 w-[220px] bg-white shadow-xl rounded-lg z-50
           ${categoryOpen ? "block" : "hidden"} lg:block lg:opacity-0 lg:invisible 
           lg:group-hover:opacity-100 lg:group-hover:visible lg:transition-all lg:duration-300 `}>
-              {categories.map((item, i) => (
+              {categories?.map((item, i) => (
                 <div key={i} onMouseEnter={() => sethover(i)} onMouseLeave={() => sethover(null)}
                   className="relative">
                   <Link href={`/categories/${item.slug}`} onClick={() => { setOpen(false); setCategoryOpen(false) }}
@@ -152,7 +152,7 @@ useEffect(() => {
               ))}
 
               <div className="my-4">
-                <Link href="/products" className="px-4 py-2 text-md font-medium">
+                <Link href="/shop" className="px-4 py-2 text-md font-medium">
                   View All Products →
                 </Link>
               </div>

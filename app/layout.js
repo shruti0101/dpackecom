@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
+        <meta name="google-site-verification" content="w9z9Ioa-cPRPEUgByWYirDTa_gKeSomxwnwVy1MnY3Y" />
       </head>
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
      

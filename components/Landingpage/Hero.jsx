@@ -126,7 +126,7 @@ fetchCategories();
           ))}
 
           <div className="px-4 py-4 border-b border-b-gray-200">
-            <Link href="/products" className="text-md font-medium">
+            <Link href="/shop" className="text-md font-medium">
               View All Products →
             </Link>
           </div>
