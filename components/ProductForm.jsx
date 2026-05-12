@@ -35,6 +35,7 @@ export default function ProductForm() {
     category: "",
     slug: "",
     name: "",
+    price:"",
     metaTitle: "",
     metaDescription: "",
     overview: "",
@@ -285,6 +286,8 @@ const fetchProducts = async () => {
 
       name: product.name || "",
 
+   price: product.price || "",
+
       metaTitle:
         product.metaTitle || "",
 
@@ -483,6 +486,34 @@ const fetchProducts = async () => {
             required
           />
         </div>
+
+
+
+
+        {/* prod price */}
+
+  <div>
+          <label className="block mb-2 font-semibold">
+            Product Price
+          </label>
+
+          <input
+            type="text"
+            placeholder="Product Price"
+            className="border p-4 w-full rounded-xl"
+            value={form.price}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                price: e.target.value,
+              
+              })
+            }
+            required
+          />
+        </div>
+
+
 
         {/* SLUG */}
         <div>

@@ -29,6 +29,13 @@ const ProductSchema = new mongoose.Schema(
       required: true,
     },
 
+    price: {
+      type: Number,
+      required: true,
+    },
+
+
+
     metaTitle: {
       type: String,
     },

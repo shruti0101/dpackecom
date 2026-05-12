@@ -5,6 +5,7 @@
 import {
   useState,
 } from "react";
+import Link from "next/link"
 
 import Image from "next/image";
 
@@ -18,6 +19,7 @@ import {
   Linkedin,
   MessageCircle,
   ArrowUpRight,
+  LinkedinIcon,
 } from "lucide-react";
 
 import Product360Modal from "@/components/360View";
@@ -176,9 +178,13 @@ export default function ProductDetailsClient({
             {/* PRODUCT INFO */}
             <div>
 
-              <h1 className="text-[52px] leading-[62px] font-extrabold text-black tracking-[-2px]">
+              <h2 className="text-[50px] leading-[62px] font-extrabold text-black tracking-[-2px]">
                 {product.name}
-              </h1>
+              </h2>
+
+                  <p className="text-[22px] my-3 text-black ">
+               ₹ {product.price}
+              </p>
 
               {/* STOCK */}
               <div className="flex items-center gap-4 mt-3">
@@ -236,7 +242,7 @@ export default function ProductDetailsClient({
               {/* BUTTONS */}
               <div className="flex gap-4 mt-7">
 
-                <button className="bg-[#ff5a00] hover:bg-[#f04f00] transition-all text-white h-[54px] px-8 rounded-xl font-semibold flex items-center gap-3">
+                <a href="tel:+917669988825" className="bg-[#ff5a00] hover:bg-[#f04f00] transition-all text-white h-[54px] px-8 rounded-xl font-semibold flex items-center gap-3">
                   <ArrowUpRight
                     size={
                       18
@@ -246,9 +252,10 @@ export default function ProductDetailsClient({
                   Enquire
                   About
                   Product
-                </button>
+                </a>
 
-                <button className="bg-[#038b31] hover:bg-[#027528] transition-all text-white h-[54px] px-8 rounded-xl font-semibold flex items-center gap-3">
+                <Link href={`https://wa.me/+917669988825?text=Hi, I have seen your product on https://packingairbag.com and I am interested in ${product.name}`}
+                  target="_blank" className="bg-[#038b31] hover:bg-[#027528] transition-all text-white h-[54px] px-8 rounded-xl font-semibold flex items-center gap-3">
                   <MessageCircle
                     size={
                       18
@@ -257,7 +264,7 @@ export default function ProductDetailsClient({
 
                   Whatsapp
                   Us
-                </button>
+                </Link>
               </div>
 
               {/* LINE */}
@@ -300,21 +307,34 @@ export default function ProductDetailsClient({
                 </span>
 
                 <div className="flex gap-3 text-orange-500">
-                  <Facebook
+                  <Link href="https://www.facebook.com/Dpacksolutions/">
+                  
+                  <Facebook 
                     size={
                       16
                     }
-                  />
+                    />
+                  </Link>
+
+<Link href="">
+
                   <Instagram
                     size={
                       16
                     }
                   />
+</Link>
+
+
+<Link href="https://www.youtube.com/@Dpacksolutions">
+
                   <Youtube
                     size={
                       16
                     }
                   />
+</Link>
+
                   <Linkedin
                     size={
                       16
@@ -325,7 +345,7 @@ export default function ProductDetailsClient({
             </div>
 
             {/* RIGHT SIDEBAR */}
-            <div className="bg-[#efefef] border border-[#dddddd] rounded-2xl p-6 h-fit">
+            <div className="bg-[#efefef] border border-[#dddddd] rounded-2xl px-3 p-1 h-fit">
 
               <h3 className="text-[32px] font-bold text-[#f04200]">
                 DPACK
@@ -339,9 +359,9 @@ export default function ProductDetailsClient({
                 Products
               </p>
 
-              <div className="border-b my-6" />
+              <div className="border-b my-4" />
 
-              <h4 className="font-bold text-[20px] mb-4">
+              <h4 className="font-bold text-[20px] mb-3">
                 Why
                 Choose
                 DPACK
@@ -367,7 +387,7 @@ export default function ProductDetailsClient({
                 </li>
               </ul>
 
-              <h4 className="font-bold text-[20px] mt-8 mb-4">
+              <h4 className="font-bold text-[20px] mt-5 mb-4">
                 About
                 DPACK
               </h4>
@@ -395,7 +415,7 @@ export default function ProductDetailsClient({
           </div>
 
           {/* TABS */}
-          <div className="flex gap-4 ">
+          <div className="flex gap-4 mt-6">
 
             <button
               onClick={() =>

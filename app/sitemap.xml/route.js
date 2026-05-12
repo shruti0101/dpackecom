@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
 
-import { categories } from "@/Data";
+// import { categories } from "@/Data";
 import { client } from "@/lib/sanity";
 import { groq } from "next-sanity";
 
@@ -52,32 +52,32 @@ export async function GET() {
   `;
 
   // Categories
-  const categoryUrls = categories
-    .map(
-      (cat) => `
-      <url>
-        <loc>${baseUrl}/category/${cat.id}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>
-    `
-    )
-    .join("");
+  // const categoryUrls = categories
+  //   .map(
+  //     (cat) => `
+  //     <url>
+  //       <loc>${baseUrl}/category/${cat.id}</loc>
+  //       <lastmod>${new Date().toISOString()}</lastmod>
+  //       <changefreq>weekly</changefreq>
+  //       <priority>0.8</priority>
+  //     </url>
+  //   `
+  //   )
+  //   .join("");
 
   // Products
-  const productUrls = allProducts
-    .map(
-      (product) => `
-      <url>
-        <loc>${baseUrl}/products/${product.id}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-      </url>
-    `
-    )
-    .join("");
+  // const productUrls = allProducts
+  //   .map(
+  //     (product) => `
+  //     <url>
+  //       <loc>${baseUrl}/products/${product.id}</loc>
+  //       <lastmod>${new Date().toISOString()}</lastmod>
+  //       <changefreq>monthly</changefreq>
+  //       <priority>0.7</priority>
+  //     </url>
+  //   `
+  //   )
+  //   .join("");
 
   // Blogs
   const blogUrls = blogs
@@ -116,8 +116,8 @@ export async function GET() {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${homepage}
       ${staticPages}
-    ${categoryUrls}
-    ${productUrls}
+    // ${categoryUrls}
+    // ${productUrls}
     ${blogUrls}
 
 
