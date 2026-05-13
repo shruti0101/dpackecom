@@ -21,7 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
 import { FaCheckDouble } from "react-icons/fa6";
-// import { categories } from '@/Data';
+import { categories } from '@/Data';
 import Form from "./Form"
 import axios from 'axios';
 
@@ -335,7 +335,7 @@ Contact: ${form.phone}`;
         >
           <option value="">Select Product</option>
 
-          {categories.map((item, i) => (
+          {categories?.map((item, i) => (
             <option key={i} value={item.id}>
               {item.name}
             </option>
