@@ -55,9 +55,9 @@ export default function ProductDetailsClient({ product }) {
         {/* MAIN */}
         <div className="w-full mx-auto px-4 md:px-8 pt-6 ">
           {/* TOP SECTION */}
-          <div className="grid grid-cols-1 xl:grid-cols-[90px_1fr_470px_200px] gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-[90px_1fr_470px_200px] gap-8 items-start">
             {/* LEFT THUMBNAILS */}
-            <div className="flex xl:flex-col gap-4 ">
+            <div className="md:sticky md:top-0 self-start flex xl:flex-col gap-4">
               {product.images?.map((img, index) => (
                 <button
                   key={index}
@@ -101,7 +101,7 @@ export default function ProductDetailsClient({ product }) {
             </div>
 
             {/* CENTER IMAGE */}
-            <div className="md:sticky md:top-0 h-fit w-full self-start">
+            <div className="md:sticky md:top-0 self-start h-fit w-full">
               <Image
                 src={activeImage || "/placeholder.png"}
                 alt={product.name}
