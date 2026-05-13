@@ -35,10 +35,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-slate-50">
+    <div className="min-h-screen flex items-center justify-center p-5 bg-black">
       <form
         onSubmit={handleSubmit}
-        className={`w-full max-w-sm bg-white p-6 rounded shadow transform transition-opacity duration-700 ${
+        className={`w-full max-w-sm bg-black p-6 rounded shadow transform transition-opacity duration-700 ${
           fadeIn ? "opacity-100" : "opacity-0"
         }`}
       >
