@@ -11,8 +11,10 @@ import {
 import SearchBar from "./SearchBar";
 // import { categories } from "@/Data";
 import { motion, AnimatePresence } from "framer-motion";
+import Popup2 from "../Popup2";
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [openP, setOpenP] = useState(false)
   const [categoryOpen, setCategoryOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 const [categories, setCategories] = useState([]);
@@ -60,11 +62,22 @@ useEffect(() => {
       <div className="bg-white px-2 md:px-10 lg:px-20 py-1 flex flex-col lg:flex-row items-center justify-between gap-4 shadow-sm">
 
         {/* LOGO + MOBILE MENU */}
-        <div className="flex items-center justify-between w-full lg:w-auto">
-          <Link href={`/`} className="flex items-center sm:gap-1">
+        <div className="flex items-center justify-between w-full ">
+          <Link href={`/`} className="flex flex-col md:flex-row md:items-center sm:gap-1">
             <Image width={120} height={50} src="/logo.png" className="h-18 w-auto" alt="logo" />
+            
             <p className='border border-white flex text-sm text-orange-600 bg-orange-50 px-2 sm:px-3 py-1 rounded-full'>GSTIN: 07AFXPJ4168A2Z9</p>
           </Link>
+
+
+            <div className="w-30 md:hidden  mt-3 lg:mt-0 ">
+          <button onClick={()=>{setOpenP(true),console.log(openP)}} className="w-full text-xl  capitalize cursor-pointer bg-black text-white text-sm md:text-md px-2 py-2">
+            Get Quote
+          </button>
+        </div>
+      
+          
+
 
           {/* MOBILE MENU BUTTON */}
           <button
@@ -96,7 +109,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="bg-[#EDF5FF] border-t px-4 md:px-10 lg:px-9 flex flex-col lg:flex-row items-start lg:items-center justify-between">
+      <div className="bg-[#EDF5FF] border-t px-4 md:pl-10 lg:px-9 flex flex-col lg:flex-row items-start lg:items-center justify-between">
         {/* LEFT SIDE */}
         <div className={`flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 text-sm md:text-[17px] w-full ${open ? "block" : "hidden"} lg:flex`}>
           {/* BROWSE CATEGORIES */}
@@ -171,12 +184,15 @@ useEffect(() => {
         </div>
 
         {/* RIGHT SIDE */}
-        {/* <div className="w-50  mt-3 lg:mt-0 lg:block hidden">
-          <button className="w-full  capitalize cursor-pointer bg-black text-white text-sm md:text-md px-4 py-4">
-            download brochure
+        <div className="w-50   mt-3 lg:mt-0 lg:block hidden">
+          <button onClick={()=>{setOpenP(true),console.log(openP)}} className="w-full text-xl  capitalize cursor-pointer bg-black text-white text-sm md:text-md px-4 py-4">
+            Get Quote
           </button>
-        </div> */}
+        </div>
       </div>
+    {openP && <Popup2 isOpen={openP}
+  onClose={() => setOpenP(false)}
+/>}
     </section>
   </>)
 }
