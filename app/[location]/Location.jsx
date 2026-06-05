@@ -652,7 +652,8 @@ Contact: ${form.phone}`;
       </div>
     </section>
 
-    <section className='max-w-7xl mx-auto'>
+     <div className='bg-gray-50'>     
+    <section className='max-w-7xl bg-gray-50 mx-auto'>
       <div className="bg-gray-50 py-10 lg:px-15 px-4">
         <div className="flex items-center justify-between mx-auto mb-4">
           <h2 className="text-3xl font-semibold relative">
@@ -669,9 +670,9 @@ Contact: ${form.phone}`;
           {products.map((item, i) => (
             <SwiperSlide key={i}>
               <div onClick={() => { setSelected(item); setActiveImg(item.img); }}
-                className="group bg-white h-96 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
+                className="group bg-white h-92 rounded-2xl p-4 shadow-md hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] transition-all duration-500 relative overflow-hidden hover:-translate-y-2">
                 {/* IMAGE BOX */}
-                <div className="relative bg-[#F6F6F6] rounded-xl h-[300px] flex items-center justify-center overflow-hidden">
+                <div className="relative bg-[#F6F6F6] rounded-xl h-[242px] flex items-center justify-center overflow-hidden">
                   {/* NEW TAG */}
                   {item.tag && (
                     <span className="absolute top-10 left-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full z-10 shadow">
@@ -742,6 +743,7 @@ Contact: ${form.phone}`;
         </div>
       </div>
     </section>
+    </div>
 
     <section className='max-w-7xl mx-auto py-2 mt-5'>
       <div className="max-w-5xl  md:py-12 md:w-full max-md:text-center mx-2 md:mx-auto flex flex-col md:flex-row items-center justify-between text-left bg-[#0a1a3c] rounded-2xl p-5 md:p-10 text-white">
