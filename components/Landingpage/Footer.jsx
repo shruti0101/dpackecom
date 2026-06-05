@@ -178,7 +178,14 @@ export default function Footer() {
       {/* BOTTOM */}
       <div className="flex flex-wrap justify-between border-t border-white/10 mt-12 pt-6 text-sm text-white/60">
         <p>© 2026 D pack Solutions Pvt. Ltd. All rights reserved.</p>
-        <p>Website Designed By Promozione Branding Pvt. Ltd. <a href="https://promozionebranding.com/" className="hover:underline text-orange-600">Website Designing Company</a></p>
+        <p>Website Designed By  Inquiry Bazaar Pvt. Ltd.  {" "}
+        <a
+          target="_blank"
+          href="https://inquirybazaar.com/"
+          className="text-[#FAAC18] hover:underline"
+        >
+           B2B Marketplace
+        </a></p>
       </div>
     </footer>
   );
