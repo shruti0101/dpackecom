@@ -1,47 +1,42 @@
 export const dynamic = "force-dynamic";
 
-
-// import { categories } from "@/Data";
 import { client } from "@/lib/sanity";
 import { groq } from "next-sanity";
 
-// Function to fetch all blogs from Sanity
+const baseUrl = "https://packingairbag.com";
+
+// Blogs
 async function getAllBlogs() {
-  const query = groq`*[_type=="blog"]{slug, date}`;
-  return client.fetch(query);
+  return client.fetch(groq`
+    *[_type=="blog"]{
+      slug,
+      date
+    }
+  `);
+}
+
+// Products & Categories
+async function getProductsAndCategories() {
+  const [productsRes, categoriesRes] = await Promise.all([
+    fetch(`${baseUrl}/api/products`, {
+      cache: "no-store",
+    }),
+    fetch(`${baseUrl}/api/categories`, {
+      cache: "no-store",
+    }),
+  ]);
+
+  const products = await productsRes.json();
+  const categories = await categoriesRes.json();
+
+  return { products, categories };
 }
 
 export async function GET() {
-  const baseUrl = "https://packingairbag.com"; 
-
-  // Flatten all products
-  const allProducts = categories.flatMap((c) => c.products);
-
-  // Fetch blogs
   const blogs = await getAllBlogs();
+  const { products, categories } = await getProductsAndCategories();
 
-
-
-    // Static pages (About, Contact, Blog Listing)
-  const staticPages = [
-    { loc: `${baseUrl}/about`, priority: 0.8, changefreq: "yearly" },
-    { loc: `${baseUrl}/contact`, priority: 0.8, changefreq: "yearly" },
-    { loc: `${baseUrl}/products`, priority: 0.8, changefreq: "yearly" },
-    { loc: `${baseUrl}/our-blogs`, priority: 0.9, changefreq: "weekly" },
-  ]
-    .map(
-      (page) => `
-      <url>
-        <loc>${page.loc}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>${page.changefreq}</changefreq>
-        <priority>${page.priority}</priority>
-      </url>
-    `
-    )
-    .join("");
-
-   // Homepage
+  // Homepage
   const homepage = `
     <url>
       <loc>${baseUrl}</loc>
@@ -51,33 +46,56 @@ export async function GET() {
     </url>
   `;
 
+  // Static Pages
+  const staticPages = [
+    "/about",
+    "/contact",
+    "/shop",
+    "/our-blogs",
+    "/privacy-policy",
+    "/return-refund-policy",
+    "/shipping-policy",
+    "/terms-conditions",
+  ]
+    .map(
+      (page) => `
+      <url>
+        <loc>${baseUrl}${page}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    `
+    )
+    .join("");
+
   // Categories
-  // const categoryUrls = categories
-  //   .map(
-  //     (cat) => `
-  //     <url>
-  //       <loc>${baseUrl}/category/${cat.id}</loc>
-  //       <lastmod>${new Date().toISOString()}</lastmod>
-  //       <changefreq>weekly</changefreq>
-  //       <priority>0.8</priority>
-  //     </url>
-  //   `
-  //   )
-  //   .join("");
+  const categoryUrls = categories
+    .map(
+      (category) => `
+      <url>
+        <loc>${baseUrl}/categories/${category.slug}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    `
+    )
+    .join("");
 
   // Products
-  // const productUrls = allProducts
-  //   .map(
-  //     (product) => `
-  //     <url>
-  //       <loc>${baseUrl}/products/${product.id}</loc>
-  //       <lastmod>${new Date().toISOString()}</lastmod>
-  //       <changefreq>monthly</changefreq>
-  //       <priority>0.7</priority>
-  //     </url>
-  //   `
-  //   )
-  //   .join("");
+  const productUrls = products
+    .map(
+      (product) => `
+      <url>
+        <loc>${baseUrl}/products/${product.slug}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+      </url>
+    `
+    )
+    .join("");
 
   // Blogs
   const blogUrls = blogs
@@ -85,8 +103,9 @@ export async function GET() {
       (blog) => `
       <url>
         <loc>${baseUrl}/blog/${blog.slug.current}</loc>
-        <lastmod>${
-          blog.date ? new Date(blog.date).toISOString() : new Date().toISOString()
+        <lastmod>${blog.date
+          ? new Date(blog.date).toISOString()
+          : new Date().toISOString()
         }</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -95,33 +114,14 @@ export async function GET() {
     )
     .join("");
 
-
-
-
-//     const locationUrls = serviceLocations
-//   .map(
-//     (loc) => `
-//       <url>
-//         <loc>${baseUrl}${loc.href}</loc>
-//         <lastmod>${new Date().toISOString()}</lastmod>
-//         <changefreq>weekly</changefreq>
-//         <priority>0.7</priority>
-//       </url>
-//     `
-//   )
-//   .join("");
-
-
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${homepage}
-      ${staticPages}
-    // ${categoryUrls}
-    // ${productUrls}
-    ${blogUrls}
-
-
-  </urlset>`;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${homepage}
+${staticPages}
+${categoryUrls}
+${productUrls}
+${blogUrls}
+</urlset>`;
 
   return new Response(sitemap, {
     headers: {
