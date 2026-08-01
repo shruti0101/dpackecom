@@ -319,13 +319,18 @@ Contact: ${form.phone}`;
           onChange={handleChange}
         />
 
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number"
-          className="border border-black p-3 placeholder:text-black rounded-lg w-full"
-          onChange={handleChange}
-        />
+       <input
+  type="text"
+  name="phone"
+  placeholder="Phone Number"
+  maxLength={10}
+  inputMode="numeric"
+  className="border border-black p-3 placeholder:text-black rounded-lg w-full"
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^0-9]/g, ""); 
+    handleChange({ target: { name: "phone", value } });
+  }}
+/>
 
         {/* DROPDOWN */}
         <select
